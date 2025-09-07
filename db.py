@@ -3,12 +3,13 @@ from flask import g
 
 DATABASE = "database.db"
 
-def init
-
 def get_connection():
-    con = sqlite3.connect("database.db")
-    con.execute("PRAGMA foreign_keys = ON")
-    con.row_factory = sqlite3.Row
+    if "db" not in g:
+        g.db = sqlite3.connect(DATABASE)
+        g.db.execute("PRAGMA foreign_keys = ON")
+        g.db.row_factory = sqlite3.Row
+    return g.db
+
 
 def execute(sql, params=[]):
     con = get_connection()
