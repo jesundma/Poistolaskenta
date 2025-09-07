@@ -1,5 +1,5 @@
 # Poistolaskenta
-Tietokannat ja web-ohjelmointi julkinen repo kurssisovellusta varten
+Tietokannat ja web-ohjelmointi julkinen repo kurssisovellusta varten. Repossa on myös virtuaaliympäristön tiedostot, koska .gitignore ei sisältänyt kansiota. Virtuaaliympäristö poistetaan ennen lopullista palautusta.
 
 Sovellukseen lisätään projektiobjekteja, jotka sisältävät tietoja projektin investoinneista ja investointien ajankohdasta. Projekteille määritellään tieto poistotavasta (tasapoisto, menojäännöspoisto), projektin nimi, yksilöllinen projektitunniste ja muita mahdollisia projektiin liittyviä määritteitä. Tiedot talletetaan tietotauluun Projects, jossa projektin numerotunnus on yksilöllinen avain.
 
