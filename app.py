@@ -1,11 +1,13 @@
 from flask import Flask
-from flask import render_template, request, redirect, url_for
-from werkzeug.security import generate_password_hash
+from flask import render_template, request, redirect, url_for, session
+from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 import db
+import config
 import markupsafe
 
 app = Flask(__name__)
+app.secret_key = config.secret_key
 
 db.init_app(app)
 
@@ -35,9 +37,23 @@ def user_check():
 def index():
     return render_template('index.html')
 
-@app.route('/login')
+@app.route('/login', methods=["GET", "POST"])
 def login():
-    return render_template('login.html')
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+        sql = "SELECT password_hash FROM users WHERE username = ?"
+        password_hash = db.query(sql, [username])[0][0] 
+        print(password_hash, username, password, flush=True)
+
+        if check_password_hash(password_hash, password):
+            session["username"] = username
+            return redirect("/main_layout")
+        else:
+            return "Virhe: Does not Compute"
+    
+    return render_template("login.html")
+
 
 @app.route("/register")
 def register():
