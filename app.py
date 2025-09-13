@@ -1,23 +1,32 @@
 from flask import Flask
 from flask import render_template, request, redirect, url_for
 from werkzeug.security import generate_password_hash
+import sqlite3
 import db
 import markupsafe
 
 app = Flask(__name__)
 
-def users_exists():
-    sql = "SELECT COUNT(*) FROM Users"
-    con = get_connection()
-    result = con.execute(sql)
-    count = result.fetchone()[0]
-    con.close()
-    return count > 0
+db.init_app(app)
 
+def users_exists():
+    try:
+        sql = "SELECT COUNT(*) FROM Users"
+        con = db.get_connection()
+        result = con.execute(sql)
+        count = result.fetchone()[0]
+        con.close()
+        return count > 0
+    except sqlite3.OperationalError:
+        return None
 
 @app.route("/")
 def user_check():
-    if users_exist():
+    exists = users_exists()
+    if exists is None:
+        db.init_db()
+        return redirect(url_for("register"))
+    elif exists:
         return redirect(url_for("login"))
     else:
         return redirect(url_for("register"))
@@ -25,6 +34,10 @@ def user_check():
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 @app.route("/register")
 def register():
