@@ -4,6 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 import db
 import config
+import service_functions
 import markupsafe
 
 app = Flask(__name__)
