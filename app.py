@@ -43,6 +43,10 @@ def login():
 def register():
     return render_template("register.html")
 
+@app.route("/main_layout")
+def main_layout():
+    return render_template("main_layout.html")
+
 @app.route("/create", methods=["POST"])
 def create():
     username = request.form["username"]
@@ -58,4 +62,11 @@ def create():
     except sqlite3.IntegrityError:
         return "VIRHE: tunnus on jo varattu"
 
-    return "Tunnus luotu"
+    return render_template("post_register.html")
+
+@app.route("/post_register_redirect", methods=["POST"])
+def post_register_redirect():
+    next_page = request.form.get("next", "login")
+    if next_page not in ("login", "main_layout"):
+        next_page = "login"
+    return redirect(url_for(next_page))

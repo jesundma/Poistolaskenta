@@ -16,3 +16,11 @@ Projekteja voi syöttää yksitellen tai massasyöttönä, jälkimmäinen riippu
 Sovelluksessa on käyttäjähallinta, jolla määritellään tietoja lisännyt, muuttanut tai poistanut käyttäjä sekä oikeudet projektien käsittelyyn.
 
 Sovellus tuottaa ennalta määriteltyjä raportteja, joihin käyttäjä voi syöttää parametreja raporttien muodostamista varten. Raportteja voidaan muodostaa vuosittaisista investoinneista ja lasketuista poistoista.
+
+
+SOVELLUKSEN KÄYNNISTÄMINEN:
+
+- asenna flask- kirjasto komennolla: pip install flask
+- sovellus käynnistyy komennolla: flask run
+
+Jos sovellusta ei ole asennettu aiemmin tai sovellukseen ei ole määritelty käyttäjiä, sovellus luo tietokannan ja ohjaa luomaan ensimmäisen käyttäjän. Jos tietokannasta löytyy jo käyttäjiä, ohjaa sovellus kirjautumissivulle.
