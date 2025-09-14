@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+</head>
+<body>
+    <h1>Uuden projektin lisäys</h1>
+
+    <form action="{{  url_for('new_project') }}" method="POST">
+        <p>
+            Projektitunniste: <br />
+            <input type="text" name="project_id">
+        </p>
+        <p>
+            Projektinimi: <br />
+            <input type="text" name="project_name">
+        </p>
+        <p>
+            Poistomenetelmä (luokka): <br/>
+            <input type="text" name="project_depreciation_method">
+        </p>
+        <button type="submit">Tallenna tiedot</button>
+    </form>
+    <p><a href="{{  url_for('main_layout') }}">Takaisin pääsivulle</a></p>
+</body>

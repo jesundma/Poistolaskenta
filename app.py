@@ -87,3 +87,15 @@ def post_register_redirect():
     if next_page not in ("login", "main_layout"):
         next_page = "login"
     return redirect(url_for(next_page))
+
+@app.route("/new_project", methods=["GET", "POST"])
+def new_project():
+    if request.method == "POST":
+        project_id = request.form["project_id"]
+        project_name = request.form["project_name"]
+        project_depreciation_method = request.form["project_depreciation_method"]
+
+        # db functionality and move to service functions
+
+        return render_template("main_layout.html", message=f"Projekti {project_name} tallennettu")
+    return render_template("new_project.html")
