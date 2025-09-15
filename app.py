@@ -1,10 +1,10 @@
 from flask import Flask
 from flask import render_template, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
+from service_functions import get_next_project_id, insert_project
 import sqlite3
 import db
 import config
-import service_functions
 import markupsafe
 
 app = Flask(__name__)
@@ -91,11 +91,11 @@ def post_register_redirect():
 @app.route("/new_project", methods=["GET", "POST"])
 def new_project():
     if request.method == "POST":
-        project_id = request.form["project_id"]
         project_name = request.form["project_name"]
         project_depreciation_method = request.form["project_depreciation_method"]
 
-        # db functionality and move to service functions
+        project_id = insert_project(project_name, project_depreciation_method)
 
-        return render_template("main_layout.html", message=f"Projekti {project_name} tallennettu")
-    return render_template("new_project.html")
+        return render_template("main_layout.html", message=f"Projekti {project_name} tallennettu tunnuksella {project_id}")
+    next_id = get_next_project_id()
+    return render_template("new_project.html", next_id=next_id)

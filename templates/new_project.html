@@ -11,15 +11,15 @@
     <form action="{{  url_for('new_project') }}" method="POST">
         <p>
             Projektitunniste: <br />
-            <input type="text" name="project_id">
+            <input type="text" value="{{  next_id }}" readonly>
         </p>
         <p>
             Projektinimi: <br />
-            <input type="text" name="project_name">
+            <input type="text" name="project_name" required>
         </p>
         <p>
             Poistomenetelmä (luokka): <br/>
-            <input type="text" name="project_depreciation_method">
+            <input type="text" name="project_depreciation_method" required>
         </p>
         <button type="submit">Tallenna tiedot</button>
     </form>
