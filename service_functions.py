@@ -17,3 +17,8 @@ def insert_project(project_name: str, project_depreciation_method: int):
         [project_name, project_depreciation_method]
     )
     return last_insert_id()
+
+def get_projects():
+    sql = "SELECT project_id, project_name, project_depreciation_method FROM Projects"
+    result = query(sql)
+    return result

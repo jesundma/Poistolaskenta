@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Projektilistaus</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Projektilistaus</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Projektitunnus</th>
+                    <th>Projektinimi</th>
+                    <th>Poistomenetelmä</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if projects %}
+                    {% for project in projects %}
+                        <tr>
+                            <td>{{ project.project_id }}</td>
+                            <td>{{ project.project_name }}</td>
+                            <td>{{ project.project_depreciation_method }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="3">Ei projekteja tietokannassa</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

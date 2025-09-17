@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from service_functions import get_next_project_id, insert_project
+from service_functions import get_next_project_id, insert_project, get_projects
 import sqlite3
 import db
 import config
@@ -99,3 +99,20 @@ def new_project():
         return render_template("main_layout.html", message=f"Projekti {project_name} tallennettu tunnuksella {project_id}")
     next_id = get_next_project_id()
     return render_template("new_project.html", next_id=next_id)
+
+@app.route("/list_projects", methods=["GET"])
+def list_projects():
+
+    query_projects = get_projects()
+    
+    projects = []
+    
+    for row in query_projects:
+        project = {
+            "project_id": row["project_id"],
+            "project_name": row["project_name"],
+            "project_depreciation_method": row["project_depreciation_method"]
+        }
+        projects.append(project)
+    
+    return render_template("list_projects.html", projects=projects)
