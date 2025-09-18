@@ -33,3 +33,10 @@ def get_project_by_id(project_id):
     investments = query(sql, (project_id,))
     
     return investments
+
+def add_cashflow(project_id, investment_year, investment_amount):
+    sql = '''
+        INSERT INTO Investments (project_id, investment_year, investment_amount) 
+        VALUES (?, ?, ?)
+    '''
+    execute(sql, (project_id, investment_year, investment_amount))

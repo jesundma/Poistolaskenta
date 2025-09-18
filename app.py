@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from service_functions import get_next_project_id, insert_project, get_projects, get_project_by_id
+from service_functions import get_next_project_id, insert_project, get_projects, get_project_by_id, add_cashflow
 import sqlite3
 import db
 import config
@@ -127,3 +127,15 @@ def cashflow_project():
         return render_template('cashflow_project.html', project_id=project_id, investments=investments)
     else:
         return render_template('cashflow_project.html', project_id=project_id, investments=None)
+
+@app.route('/add_new_cashflow/<int:project_id>', methods=['GET', 'POST'])
+def add_new_cashflow(project_id):
+    if request.method == 'POST':
+        investment_year = request.form['investment_year']
+        investment_amount = request.form['investment_amount']
+        
+        add_cashflow(project_id, investment_year, investment_amount)
+
+        return redirect(url_for('cashflow_project', project_id=project_id))
+
+    return render_template('add_new_cashflow.html', project_id=project_id)

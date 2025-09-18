@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cashflows</title>
+</head>
 {% if investments %}
     <h2>Investoinnit</h2>
     <table>
@@ -19,3 +26,6 @@
 {% else %}
     <p>Ei investointeja tälle projektille.</p>
 {% endif %}
+<a href="{{ url_for('add_new_cashflow', project_id=project_id) }}">
+        <button>Lisää uusi kassavirta</button>
+</a>
