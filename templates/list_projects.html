@@ -25,7 +25,7 @@
                             <td>{{ project.project_name }}</td>
                             <td>{{ project.project_depreciation_method }}</td>
                             <td>
-                                <a href="cashflow_project.html?project_id={{ project.project_id }}">Projektin kassavirrat</a>
+                                <a href="{{ url_for('cashflow_project', project_id=project.project_id) }}" target="_blank">Projektin kassavirrat</a>
                             </td>
                         </tr>
                     {% endfor %}
@@ -37,5 +37,6 @@
             </tbody>
         </table>
     </div>
+    <p><a href="{{  url_for('main_layout') }}">Takaisin pääsivulle</a></p>
 </body>
 </html>
