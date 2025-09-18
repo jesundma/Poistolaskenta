@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from service_functions import get_next_project_id, insert_project, get_projects
+from service_functions import get_next_project_id, insert_project, get_projects, get_project_by_id
 import sqlite3
 import db
 import config
@@ -116,3 +116,14 @@ def list_projects():
         projects.append(project)
     
     return render_template("list_projects.html", projects=projects)
+
+@app.route('/cashflow_project')
+def cashflow_project():
+    project_id = request.args.get('project_id')
+    
+    investments = get_project_by_id(project_id)
+
+    if investments:
+        return render_template('cashflow_project.html', project_id=project_id, investments=investments)
+    else:
+        return render_template('cashflow_project.html', project_id=project_id, investments=None)

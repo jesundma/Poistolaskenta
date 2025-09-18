@@ -5,7 +5,7 @@ CREATE TABLE Users (
 );
 
 CREATE TABLE Projects (
-    project_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    project_id INTEGER PRIMARY KEY,
     project_name TEXT NOT NULL,
     project_depreciation_method INT
 );

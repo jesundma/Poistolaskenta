@@ -22,3 +22,14 @@ def get_projects():
     sql = "SELECT project_id, project_name, project_depreciation_method FROM Projects"
     result = query(sql)
     return result
+
+def get_project_by_id(project_id):
+
+    sql = '''
+        SELECT investment_year, investment_amount 
+        FROM Investments 
+        WHERE project_id = ?
+    '''
+    investments = query(sql, (project_id,))
+    
+    return investments

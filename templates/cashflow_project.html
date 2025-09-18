@@ -1,0 +1,21 @@
+{% if investments %}
+    <h2>Investoinnit</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Vuosi</th>
+                <th>Investointimäärä</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for investment in investments %}
+                <tr>
+                    <td>{{ investment[0] }}</td>
+                    <td>{{ investment[1] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>Ei investointeja tälle projektille.</p>
+{% endif %}
