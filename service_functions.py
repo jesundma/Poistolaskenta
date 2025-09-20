@@ -3,6 +3,7 @@ All sql functions here, app.py should be clean and contain only logic for requir
 presenting data and rendering pages.
 """
 from db import execute, query, last_insert_id
+import sqlite3
 
 def get_next_project_id():
     result = query("SELECT MAX(project_id) AS max_id FROM Projects")
@@ -11,17 +12,47 @@ def get_next_project_id():
         return 1
     return max_id + 1
 
-def insert_project(project_name: str, project_depreciation_method: int):
+def insert_project(project_name: str, classes: list[tuple[str, str]]):
+
+    """
+    Insert a project and its class definitions.
+
+    :param project_name: Name of the project
+    :param classes: List of (title, value) pairs for project definitions
+    :return: ID of the newly created project
+    """
+
     execute(
-        "INSERT INTO Projects (project_name, project_depreciation_method) VALUES (?, ?)",
-        [project_name, project_depreciation_method]
+        "INSERT INTO Projects (project_name) VALUES (?)",
+        [project_name]
     )
-    return last_insert_id()
+    project_id = last_insert_id()
+
+    sql = "INSERT INTO project_definitions (project_id, title, value) VALUES (?, ?, ?)"
+    for class_title, class_value in classes:
+        execute(sql, [project_id, class_title, class_value])
+
+    return project_id
 
 def get_projects():
-    sql = "SELECT project_id, project_name, project_depreciation_method FROM Projects"
+    sql = "SELECT project_id, project_name FROM Projects"
     result = query(sql)
-    return result
+    return [dict(row) for row in result]
+
+from db import query
+
+def get_project_definitions(project_id: int):
+
+    sql = """
+        SELECT title, value
+        FROM project_definitions
+        WHERE project_id = ?
+        ORDER BY id
+    """
+
+    result = query(sql, [project_id])
+    
+    return [{"title": row["title"], "value": row["value"]} for row in result]
 
 def get_project_by_id(project_id):
 
@@ -40,3 +71,35 @@ def add_cashflow(project_id, investment_year, investment_amount):
         VALUES (?, ?, ?)
     '''
     execute(sql, (project_id, investment_year, investment_amount))
+
+def delete_project_by_id(project_id: int):
+
+    execute("DELETE FROM project_definitions WHERE project_id = ?", [project_id])
+
+    execute("DELETE FROM Projects WHERE project_id = ?", [project_id])
+
+def get_all_classes():
+
+    """
+    Used to get all classes (project definitions) for create project template
+    """
+
+    sql = "SELECT title, value FROM classes ORDER BY id"
+    result = query(sql)
+
+    classes = {}
+    for title, value in result:
+        if title not in classes:
+            classes[title] = []
+        classes[title].append(value)
+
+    return classes
+
+def add_user_to_db(username: str, password_hash: str) -> bool:
+
+    sql = "INSERT INTO Users (username, password_hash) VALUES (?, ?)"
+    try:
+        execute(sql, [username, password_hash])
+        return True
+    except sqlite3.IntegrityError:
+        return False

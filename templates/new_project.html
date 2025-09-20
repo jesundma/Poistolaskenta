@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page</title>
 </head>
-<body>
-    <h1>Uuden projektin lisäys</h1>
 
-    <form action="{{  url_for('new_project') }}" method="POST">
-        <p>
-            Projektitunniste: <br />
-            <input type="text" value="{{  next_id }}" readonly>
-        </p>
-        <p>
-            Projektinimi: <br />
-            <input type="text" name="project_name" required>
-        </p>
-        <p>
-            Poistomenetelmä (luokka): <br/>
-            <input type="text" name="project_depreciation_method" required>
-        </p>
-        <button type="submit">Tallenna tiedot</button>
+<h1>Uusi projekti (ID: {{ next_id }})</h1>
+
+<body>
+    <form method="post">
+        <label for="project_name">Projektin nimi:</label>
+        <input type="text" name="project_name" id="project_name" required>
+
+        <h3>Määrittelyt</h3>
+        {% for title, values in all_classes.items() %}
+            <label for="{{ title }}">{{ title }}:</label>
+            <select name="classes">
+                {% for value in values %}
+                    <option value="{{ title }}:{{ value }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+            <br>
+        {% endfor %}
+
+        <button type="submit">Tallenna projekti</button>
     </form>
-    <p><a href="{{  url_for('main_layout') }}">Takaisin pääsivulle</a></p>
 </body>

@@ -6,8 +6,7 @@ CREATE TABLE Users (
 
 CREATE TABLE Projects (
     project_id INTEGER PRIMARY KEY,
-    project_name TEXT NOT NULL,
-    project_depreciation_method INT
+    project_name TEXT NOT NULL
 );
 
 CREATE TABLE ProjectTypes (
@@ -25,28 +24,30 @@ CREATE TABLE Investments (
 );
 
 CREATE TABLE Inserted (
-    user_id INT,
+    inserting_user INT,
     project_id INT,
     inserted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES Users(id),
+    FOREIGN KEY (inserting_user) REFERENCES Users(id),
     FOREIGN KEY (project_id) REFERENCES Projects(project_id)
 );
 
 CREATE TABLE Modified (
-    user_id INT,
+    modifying_user INT,
     project_id INT,
     modified_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES Users(id),
+    FOREIGN KEY (modifying_user) REFERENCES Users(id),
     FOREIGN KEY (project_id) REFERENCES Projects(project_id)
 );
 
-CREATE TABLE classes (
+CREATE TABLE Classes (
     id INTEGER PRIMARY KEY,
     title TEXT,
     value TEXT
 );
 
-CREATE TABLE project_definitions (
+CREATE TABLE Project_definitions (
     id INTEGER PRIMARY KEY,
-    project_id INTEGER REFERENCES Projects
-)
+    project_id INTEGER REFERENCES Projects,
+    title TEXT,
+    value TEXT
+);

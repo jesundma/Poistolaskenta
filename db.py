@@ -31,11 +31,13 @@ def query(sql, params=[]):
     return result
 
 def init_db():
-    con = get_connection()
-    with open("schema.sql", "r") as f:
-        sql = f.read()
-    con.executescript(sql)
-    con.commit()
+    with sqlite3.connect(DATABASE) as con:
+        con.execute("PRAGMA foreign_keys = ON")
+        with open("schema.sql") as f:
+            con.executescript(f.read())
+        with open("project_definitions.sql") as f:
+            con.executescript(f.read())
+        con.commit()
 
 def init_app(app):
     app.teardown_appcontext(close_connection)

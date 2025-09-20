@@ -8,12 +8,21 @@
 <body>
     <div class="container">
         <h1>Projektilistaus</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul style="color: green;">
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
         <table>
             <thead>
                 <tr>
                     <th>Projektitunnus</th>
                     <th>Projektinimi</th>
-                    <th>Poistomenetelmä</th>
+                    <th>Määrittelyt</th>
                     <th>Toiminnot</th>
                 </tr>
             </thead>
@@ -23,11 +32,24 @@
                         <tr>
                             <td>{{ project.project_id }}</td>
                             <td>{{ project.project_name }}</td>
-                            <td>{{ project.project_depreciation_method }}</td>
                             <td>
-                                <a href="{{ url_for('cashflow_project', project_id=project.project_id) }}" target="_blank">Projektin kassavirrat</a>
+                                {% if project.definitions %}
+                                    <ul>
+                                    {% for title, value in project.definitions.items() %}
+                                        <li><strong>{{ title }}:</strong> {{ value if value is string else value | join(", ") }}</li>
+                                    {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    Ei määrittelyjä
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{{ url_for('cashflow_project', project_id=project.project_id) }}">
+                                    <button>Projektin kassavirrat</button>
+                                </a>
                                 <a href="{{ url_for('delete_project', project_id=project.project_id) }}">
                                     <button>Projektin poistaminen</button>
+                                </a>
                             </td>
                         </tr>
                     {% endfor %}
@@ -39,6 +61,6 @@
             </tbody>
         </table>
     </div>
-    <p><a href="{{  url_for('main_layout') }}">Takaisin pääsivulle</a></p>
+    <p><a href="{{ url_for('main_layout') }}">Takaisin pääsivulle</a></p>
 </body>
 </html>

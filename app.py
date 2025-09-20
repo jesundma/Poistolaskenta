@@ -1,35 +1,35 @@
-from flask import Flask
-from flask import render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
-from service_functions import get_next_project_id, insert_project, get_projects, get_project_by_id, add_cashflow
+import service_functions
 import sqlite3
 import db
 import config
 import markupsafe
 
 app = Flask(__name__)
-app.secret_key = config.secret_key
-
-db.init_app(app)
+app.config["SECRET_KEY"] = config.secret_key
 
 def users_exists():
+    
+    sql = "SELECT COUNT(*) FROM Users"
+    con = db.get_connection()
     try:
-        sql = "SELECT COUNT(*) FROM Users"
-        con = db.get_connection()
         result = con.execute(sql)
         count = result.fetchone()[0]
-        con.close()
         return count > 0
     except sqlite3.OperationalError:
         return None
+    finally:
+        con.close()
+
+with app.app_context():
+    if users_exists() is None:
+        db.init_db()
 
 @app.route("/")
 def user_check():
     exists = users_exists()
-    if exists is None:
-        db.init_db()
-        return redirect(url_for("register"))
-    elif exists:
+    if exists:
         return redirect(url_for("login"))
     else:
         return redirect(url_for("register"))
@@ -66,17 +66,20 @@ def main_layout():
 
 @app.route("/create", methods=["POST"])
 def create():
-    username = request.form["username"]
-    password1 = request.form["password1"]
-    password2 = request.form["password2"]
+    username = request.form.get("username")
+    password1 = request.form.get("password1")
+    password2 = request.form.get("password2")
+
+    if not username or not password1 or not password2:
+        return "VIRHE: kaikki kentät on täytettävä"
+
     if password1 != password2:
         return "VIRHE: salasanat eivät ole samat"
+
     password_hash = generate_password_hash(password1)
 
-    try:
-        sql = "INSERT INTO users (username, password_hash) VALUES (?, ?)"
-        db.execute(sql, [username, password_hash])
-    except sqlite3.IntegrityError:
+    success = service_functions.add_user_to_db(username, password_hash)
+    if not success:
         return "VIRHE: tunnus on jo varattu"
 
     return render_template("post_register.html")
@@ -90,43 +93,82 @@ def post_register_redirect():
 
 @app.route("/new_project", methods=["GET", "POST"])
 def new_project():
+
     if request.method == "POST":
         project_name = request.form["project_name"]
-        project_depreciation_method = request.form["project_depreciation_method"]
+        all_classes = service_functions.get_all_classes()
+        classes = []
+        for entry in request.form.getlist("classes"):
+            if entry:
+                class_title, class_value = entry.split(":")
+                if class_title not in all_classes:
+                    abort(403)
+                if class_value not in all_classes[class_title]:
+                    abort(403)
+                classes.append((class_title, class_value))
 
-        project_id = insert_project(project_name, project_depreciation_method)
+        project_id = service_functions.insert_project(project_name, classes)
 
-        return render_template("main_layout.html", message=f"Projekti {project_name} tallennettu tunnuksella {project_id}")
-    next_id = get_next_project_id()
-    return render_template("new_project.html", next_id=next_id)
+        return render_template(
+            "main_layout.html",
+            message=f"Projekti {project_name} tallennettu tunnuksella {project_id}"
+        )
+
+    next_id = service_functions.get_next_project_id()
+    all_classes = service_functions.get_all_classes()
+    return render_template("new_project.html", next_id=next_id, all_classes=all_classes)
 
 @app.route("/list_projects", methods=["GET"])
 def list_projects():
 
-    query_projects = get_projects()
-    
+    query_projects = service_functions.get_projects()
+
     projects = []
-    
+
     for row in query_projects:
+        project_id = row["project_id"]
+        project_name = row["project_name"]
+
+        definitions_rows = service_functions.get_project_definitions(project_id)
+        definitions = {}
+        for d in definitions_rows:
+            title = d["title"]
+            value = d["value"]
+            if title not in definitions:
+                definitions[title] = []
+            definitions[title].append(value)
+        
+        for title in definitions:
+            if len(definitions[title]) == 1:
+                definitions[title] = definitions[title][0]
+
         project = {
-            "project_id": row["project_id"],
-            "project_name": row["project_name"],
-            "project_depreciation_method": row["project_depreciation_method"]
+            "project_id": project_id,
+            "project_name": project_name,
+            "definitions": definitions
         }
         projects.append(project)
-    
+
     return render_template("list_projects.html", projects=projects)
 
-@app.route('/cashflow_project')
-def cashflow_project():
-    project_id = request.args.get('project_id')
-    
-    investments = get_project_by_id(project_id)
+@app.route("/cashflow_project/<int:project_id>")
+def cashflow_project(project_id):
 
-    if investments:
-        return render_template('cashflow_project.html', project_id=project_id, investments=investments)
-    else:
-        return render_template('cashflow_project.html', project_id=project_id, investments=None)
+    investments = service_functions.get_project_by_id(project_id)
+
+    return render_template(
+        'cashflow_project.html',
+        project_id=project_id,
+        investments=investments
+    )
+
+@app.route("/delete_project/<int:project_id>")
+def delete_project(project_id):
+
+    service_functions.delete_project_by_id(project_id)
+    flash(f"Projekti {project_id} poistettu")
+
+    return redirect(url_for("list_projects"))
 
 @app.route('/add_new_cashflow/<int:project_id>', methods=['GET', 'POST'])
 def add_new_cashflow(project_id):
@@ -134,7 +176,7 @@ def add_new_cashflow(project_id):
         investment_year = request.form['investment_year']
         investment_amount = request.form['investment_amount']
         
-        add_cashflow(project_id, investment_year, investment_amount)
+        service_functions.add_cashflow(project_id, investment_year, investment_amount)
 
         return redirect(url_for('cashflow_project', project_id=project_id))
 
