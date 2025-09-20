@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash, abort
 from werkzeug.security import generate_password_hash, check_password_hash
 import service_functions
 import sqlite3
@@ -43,18 +43,21 @@ def login():
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-        sql = "SELECT password_hash FROM users WHERE username = ?"
-        password_hash = db.query(sql, [username])[0][0] 
-        print(password_hash, username, password, flush=True)
+
+        user = service_functions.get_user_by_username(username)
+        if not user:
+            return "Virhe: käyttäjää ei löydy"
+
+        user_id, password_hash = user
 
         if check_password_hash(password_hash, password):
             session["username"] = username
+            session["user_id"] = user_id
             return redirect("/main_layout")
         else:
-            return "Virhe: Does not Compute"
-    
-    return render_template("login.html")
+            return "Virhe: salasana väärin"
 
+    return render_template("login.html")
 
 @app.route("/register")
 def register():
@@ -94,10 +97,12 @@ def post_register_redirect():
 @app.route("/new_project", methods=["GET", "POST"])
 def new_project():
 
+    all_classes = service_functions.get_all_classes()
+
     if request.method == "POST":
         project_name = request.form["project_name"]
-        all_classes = service_functions.get_all_classes()
         classes = []
+
         for entry in request.form.getlist("classes"):
             if entry:
                 class_title, class_value = entry.split(":")
@@ -107,7 +112,11 @@ def new_project():
                     abort(403)
                 classes.append((class_title, class_value))
 
-        project_id = service_functions.insert_project(project_name, classes)
+        user_id = session.get("user_id")
+        if not user_id:
+            abort(403)
+
+        project_id = service_functions.insert_project(project_name, classes, user_id)
 
         return render_template(
             "main_layout.html",
@@ -115,7 +124,6 @@ def new_project():
         )
 
     next_id = service_functions.get_next_project_id()
-    all_classes = service_functions.get_all_classes()
     return render_template("new_project.html", next_id=next_id, all_classes=all_classes)
 
 @app.route("/list_projects", methods=["GET"])

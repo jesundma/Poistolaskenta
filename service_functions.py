@@ -12,13 +12,14 @@ def get_next_project_id():
         return 1
     return max_id + 1
 
-def insert_project(project_name: str, classes: list[tuple[str, str]]):
+def insert_project(project_name: str, classes: list[tuple[str, str]], inserting_user: int):
 
     """
     Insert a project and its class definitions.
 
     :param project_name: Name of the project
     :param classes: List of (title, value) pairs for project definitions
+    :param inserting_user: ID of the user creating the project
     :return: ID of the newly created project
     """
 
@@ -31,6 +32,11 @@ def insert_project(project_name: str, classes: list[tuple[str, str]]):
     sql = "INSERT INTO project_definitions (project_id, title, value) VALUES (?, ?, ?)"
     for class_title, class_value in classes:
         execute(sql, [project_id, class_title, class_value])
+    
+    execute(
+        "INSERT INTO Inserted (inserting_user, project_id) VALUES (?, ?)",
+        [inserting_user, project_id]
+    )
 
     return project_id
 
@@ -38,8 +44,6 @@ def get_projects():
     sql = "SELECT project_id, project_name FROM Projects"
     result = query(sql)
     return [dict(row) for row in result]
-
-from db import query
 
 def get_project_definitions(project_id: int):
 
@@ -103,3 +107,11 @@ def add_user_to_db(username: str, password_hash: str) -> bool:
         return True
     except sqlite3.IntegrityError:
         return False
+
+def get_user_by_username(username: str):
+
+    sql = "SELECT id, password_hash FROM Users WHERE username = ?"
+    row = query(sql, [username])
+    if row:
+        return row[0]
+    return None

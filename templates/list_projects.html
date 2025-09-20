@@ -23,6 +23,8 @@
                     <th>Projektitunnus</th>
                     <th>Projektinimi</th>
                     <th>Määrittelyt</th>
+                    <th>Luonut</th>
+                    <th>Muutokset</th>
                     <th>Toiminnot</th>
                 </tr>
             </thead>
@@ -41,6 +43,27 @@
                                     </ul>
                                 {% else %}
                                     Ei määrittelyjä
+                                {% endif %}
+                            </td>
+                            <td>{% if project.created %}
+                                <strong>Käyttäjä:</strong> {{ project.created.user }}<br>
+                                <strong>Aika:</strong> {{ project.created.time }}
+                                {% else %}
+                                    Ei tietoa
+                                {% endif %}
+                            </td>
+                            <td>{% if project.changes %}
+                            <div style="width: 200px; height: 100px; overflow-y: auto; border: 1px solid #ccc; padding: 5px;">
+                                <ul style="margin: 0; padding-left: 20px;">
+                                    {% for change in project.changes %}
+                                    <li>
+                                        <strong>{{ change.user }}</strong> – {{ change.time }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                                {% else %}
+                                    Ei muutoksia
                                 {% endif %}
                             </td>
                             <td>
