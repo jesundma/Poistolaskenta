@@ -39,3 +39,14 @@ CREATE TABLE Modified (
     FOREIGN KEY (user_id) REFERENCES Users(id),
     FOREIGN KEY (project_id) REFERENCES Projects(project_id)
 );
+
+CREATE TABLE classes (
+    id INTEGER PRIMARY KEY,
+    title TEXT,
+    value TEXT
+);
+
+CREATE TABLE project_definitions (
+    id INTEGER PRIMARY KEY,
+    project_id INTEGER REFERENCES Projects
+)
