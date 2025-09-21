@@ -151,6 +151,52 @@ def new_project():
         existing_classes=existing_classes,
         mode=mode
     )
+
+@app.route("/edit_project/<int:project_id>", methods=["GET", "POST"])
+def edit_project(project_id):
+    all_classes = service_functions.get_all_classes()
+    project = service_functions.get_project_by_id(project_id)
+    if not project:
+        abort(404)
+
+    definitions_rows = service_functions.get_project_definitions(project_id)
+    existing_classes = {d["title"]: d["value"] for d in definitions_rows}
+    mode = "edit"
+
+    if request.method == "POST":
+        project_name = request.form["project_name"]
+        classes = []
+
+        for entry in request.form.getlist("classes"):
+            if entry:
+                class_title, class_value = entry.split(":")
+                if class_title not in all_classes:
+                    abort(403)
+                if class_value not in all_classes[class_title]:
+                    abort(403)
+                classes.append((class_title, class_value))
+
+        user_id = session.get("user_id")
+        if not user_id:
+            abort(403)
+
+        # Update existing project
+        service_functions.update_project(project_id, project_name, classes)
+
+        return render_template(
+            "main_layout.html",
+            message=f"Projekti {project_name} päivitetty"
+        )
+
+    return render_template(
+        "project_form.html",
+        next_id=project_id,
+        all_classes=all_classes,
+        existing_classes=existing_classes,
+        mode=mode,
+        project=project
+    )
+
 @app.route("/list_projects", methods=["GET"])
 def list_projects():
 

@@ -66,6 +66,16 @@ def get_project_definitions(project_id: int):
 def get_project_by_id(project_id):
 
     sql = '''
+        SELECT project_id, project_name
+        FROM Projects
+        WHERE project_id = ?
+    '''
+    rows = query(sql, (project_id,))
+    return rows[0] if rows else None
+
+def get_project_investments(project_id):
+
+    sql = '''
         SELECT investment_year, investment_amount 
         FROM Investments 
         WHERE project_id = ?
@@ -80,6 +90,24 @@ def add_cashflow(project_id, investment_year, investment_amount):
         VALUES (?, ?, ?)
     '''
     execute(sql, (project_id, investment_year, investment_amount))
+
+def update_project(project_id, project_name, classes):
+
+    execute(
+        "UPDATE Projects SET project_name = ? WHERE project_id = ?",
+        (project_name, project_id)
+    )
+
+    execute(
+        "DELETE FROM Project_definitions WHERE project_id = ?",
+        (project_id,)
+    )
+
+    for title, value in classes:
+        execute(
+            "INSERT INTO Project_definitions (project_id, title, value) VALUES (?, ?, ?)",
+            (project_id, title, value)
+        )
 
 def delete_project_by_id(project_id: int):
 
