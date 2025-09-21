@@ -38,3 +38,33 @@ INSERT INTO Project_definitions (project_id, title, value) VALUES (9, 'Poistomen
 
 INSERT INTO Project_definitions (project_id, title, value) VALUES (10, 'Projektityyppi', 'Muutostyö');
 INSERT INTO Project_definitions (project_id, title, value) VALUES (10, 'Poistomenetelmä', 'Menojäännös 20 %');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 1, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 2, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 3, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 4, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 5, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 6, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 7, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 8, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 9, '2025-09-21 23:59:59');
+
+INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
+VALUES (1, 10, '2025-09-21 23:59:59');

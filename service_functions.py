@@ -132,7 +132,9 @@ def update_project(project_id, project_name, classes, modifying_user: int):
 
 def delete_project_by_id(project_id: int):
 
-    execute("DELETE FROM project_definitions WHERE project_id = ?", [project_id])
+    execute("DELETE FROM Project_definitions WHERE project_id = ?", [project_id])
+
+    execute("DELETE FROM Inserted WHERE project_id = ?", [project_id])
 
     execute("DELETE FROM Projects WHERE project_id = ?", [project_id])
 

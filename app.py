@@ -258,6 +258,21 @@ def cashflow_project(project_id):
 
 @app.route("/delete_project/<int:project_id>")
 def delete_project(project_id):
+    user_id = session.get("user_id")
+    if not user_id:
+        abort(403)
+
+    sql = "SELECT inserting_user FROM Inserted WHERE project_id = ?"
+    result = service_functions.query(sql, (project_id,))
+    if not result:
+        flash(f"Tietokantavirhe, projektille {project_id} ei löytynyt luojaa")
+        return redirect(url_for("list_projects"))
+
+    inserting_user = result[0]["inserting_user"]
+
+    if user_id != inserting_user:
+        flash(f"Et ole {project_id} luoja")
+        return redirect(url_for("list_projects"))
 
     service_functions.delete_project_by_id(project_id)
     flash(f"Projekti {project_id} poistettu")
