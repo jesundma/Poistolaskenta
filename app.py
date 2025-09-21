@@ -146,8 +146,10 @@ def new_project():
 @app.route("/list_projects", methods=["GET"])
 def list_projects():
 
-    query_projects = service_functions.get_projects()
+    search_name = request.args.get("project_name", "").strip()
 
+    query_projects = service_functions.get_projects(search_name if search_name else None)
+    
     projects = []
 
     for row in query_projects:

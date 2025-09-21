@@ -40,10 +40,15 @@ def insert_project(project_name: str, classes: list[tuple[str, str]], inserting_
 
     return project_id
 
-def get_projects():
+def get_projects(search_name=None):
     sql = "SELECT project_id, project_name FROM Projects"
-    result = query(sql)
-    return [dict(row) for row in result]
+    params = []
+
+    if search_name:
+        sql += " WHERE LOWER(project_name) LIKE ?"
+        params.append(f"%{search_name.lower()}%")
+
+    return query(sql, params)
 
 def get_project_definitions(project_id: int):
 
