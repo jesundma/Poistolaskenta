@@ -151,6 +151,23 @@ def get_all_classes():
 
     return classes
 
+def get_project_creator(project_id):
+
+    sql = """
+        SELECT u.id AS user_id, u.username AS username, i.inserted_at AS time
+        FROM Inserted i
+        JOIN Users u ON i.inserting_user = u.id
+        WHERE i.project_id = ?
+    """
+    result = query(sql, (project_id,))
+    if result:
+        return {
+            "user_id": result[0]["user_id"],
+            "user": result[0]["username"],
+            "time": result[0]["time"]
+        }
+    return None
+
 def add_user_to_db(username: str, password_hash: str) -> bool:
 
     sql = "INSERT INTO Users (username, password_hash) VALUES (?, ?)"

@@ -33,7 +33,7 @@
             <button type="submit">Hae</button>
             <a href="{{ url_for('list_projects') }}"><button type="button">Näytä kaikki</button></a>
         </form>
-                
+
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <ul style="color: green;">
@@ -71,11 +71,13 @@
                                     Ei määrittelyjä
                                 {% endif %}
                             </td>
-                            <td>{% if project.created %}
-                                <strong>Käyttäjä:</strong> {{ project.created.user }}<br>
-                                <strong>Aika:</strong> {{ project.created.time }}
+                            <td>
+                                {% if project.created %}
+                                    <strong>Käyttäjä ID:</strong> {{ project.created.user_id }}<br>
+                                    <strong>Käyttäjä:</strong> {{ project.created.user }}<br>
+                                    <strong>Aika:</strong> {{ project.created.time }}
                                 {% else %}
-                                    Ei tietoa
+                                    Tiedot puuttuvat
                                 {% endif %}
                             </td>
                             <td>{% if project.changes %}

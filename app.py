@@ -199,7 +199,6 @@ def edit_project(project_id):
 
 @app.route("/list_projects", methods=["GET"])
 def list_projects():
-
     search_name = request.args.get("project_name", "").strip()
     search_type = request.args.get("project_type", "").strip()
     search_method = request.args.get("depreciation_method", "").strip()
@@ -215,6 +214,7 @@ def list_projects():
     depreciation_methods = all_classes.get("Poistomenetelmä", [])
 
     projects = []
+
     for row in query_projects:
         project_id = row["project_id"]
         project_name = row["project_name"]
@@ -224,18 +224,19 @@ def list_projects():
         for d in definitions_rows:
             title = d["title"]
             value = d["value"]
-            if title not in definitions:
-                definitions[title] = []
-            definitions[title].append(value)
-
+            definitions.setdefault(title, []).append(value)
+        
         for title in definitions:
             if len(definitions[title]) == 1:
                 definitions[title] = definitions[title][0]
 
+        creator_info = service_functions.get_project_creator(project_id)
+
         projects.append({
             "project_id": project_id,
             "project_name": project_name,
-            "definitions": definitions
+            "definitions": definitions,
+            "created": creator_info
         })
 
     return render_template(
