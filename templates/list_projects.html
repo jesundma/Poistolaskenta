@@ -78,6 +78,9 @@
                                 <a href="{{ url_for('cashflow_project', project_id=project.project_id) }}">
                                     <button>Projektin kassavirrat</button>
                                 </a>
+                                <a href="{{ url_for('change_project', project_id=project.project_id) }}">
+                                    <button>Projektin tietojen muuttaminen</button>
+                                </a>
                                 <a href="{{ url_for('delete_project', project_id=project.project_id) }}">
                                     <button>Projektin poistaminen</button>
                                 </a>

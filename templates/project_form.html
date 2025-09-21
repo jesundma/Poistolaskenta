@@ -6,24 +6,27 @@
     <title>Main page</title>
 </head>
 
-<h1>Uusi projekti (ID: {{ next_id }})</h1>
+    <h1>{{ "Muokkaa projektia" if mode=="edit" else "Uusi projekti" }} (ID: {{ next_id }})</h1>
 
-<body>
     <form method="post">
         <label for="project_name">Projektin nimi:</label>
-        <input type="text" name="project_name" id="project_name" required>
+        <input type="text" name="project_name" id="project_name"
+               value="{{ project.project_name if project else '' }}" required>
 
         <h3>Määrittelyt</h3>
         {% for title, values in all_classes.items() %}
             <label for="{{ title }}">{{ title }}:</label>
             <select name="classes">
                 {% for value in values %}
-                    <option value="{{ title }}:{{ value }}">{{ value }}</option>
+                    <option value="{{ title }}:{{ value }}"
+                        {% if existing_classes.get(title) == value %}selected{% endif %}>
+                        {{ value }}
+                    </option>
                 {% endfor %}
             </select>
             <br>
         {% endfor %}
 
-        <button type="submit">Tallenna projekti</button>
+        <button type="submit">{{ "Päivitä projekti" if mode=="edit" else "Tallenna projekti" }}</button>
     </form>
 </body>

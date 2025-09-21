@@ -115,7 +115,9 @@ def post_register_redirect():
 def new_project():
 
     all_classes = service_functions.get_all_classes()
-
+    existing_classes = {}
+    mode = "new"
+    
     if request.method == "POST":
         project_name = request.form["project_name"]
         classes = []
@@ -141,8 +143,14 @@ def new_project():
         )
 
     next_id = service_functions.get_next_project_id()
-    return render_template("new_project.html", next_id=next_id, all_classes=all_classes)
-
+    
+    return render_template(
+        "project_form.html",
+        next_id=next_id,
+        all_classes=all_classes,
+        existing_classes=existing_classes,
+        mode=mode
+    )
 @app.route("/list_projects", methods=["GET"])
 def list_projects():
 
