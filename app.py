@@ -26,6 +26,23 @@ with app.app_context():
     if users_exists() is None:
         db.init_db()
 
+protected_routes = [
+    'new_project',
+    'list_projects',
+    'cashflow_project',
+    'add_new_cashflow',
+    'delete_project'
+]
+
+def login_required():
+    if "user_id" not in session:
+        return redirect(url_for("login"))
+
+@app.before_request
+def before_request():
+    if request.endpoint in protected_routes:
+        return login_required()
+
 @app.route("/")
 def user_check():
     exists = users_exists()
@@ -180,6 +197,7 @@ def delete_project(project_id):
 
 @app.route('/add_new_cashflow/<int:project_id>', methods=['GET', 'POST'])
 def add_new_cashflow(project_id):
+
     if request.method == 'POST':
         investment_year = request.form['investment_year']
         investment_amount = request.form['investment_amount']
@@ -189,3 +207,12 @@ def add_new_cashflow(project_id):
         return redirect(url_for('cashflow_project', project_id=project_id))
 
     return render_template('add_new_cashflow.html', project_id=project_id)
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return render_template("logout.html")
+
+if __name__ == "__main__":
+    print(app.url_map)
+    app.run(debug=True)

@@ -6,12 +6,11 @@
     <title>Main page</title>
 </head>
 <body>
-    <h1>This will be the Main page for all functionalities</h1>
+    <h1>Päävalikko</h1>
     <p>
         Olet kirjautunut käyttäjätunnuksella {{  session.username }}
     </p>
-
-
+    
     <p>
         <a href="{{ url_for('new_project') }}">Lisää uusi projekti</a>
     </p>
@@ -21,6 +20,9 @@
     {% endif %}
     <p>
         <a href="{{ url_for('list_projects') }}">Hae projektilistaus</a>
+    </p>
+    <p>
+        <a href="{{ url_for('logout') }}">Kirjaudu ulos</a>
     </p>
 
 </body>
