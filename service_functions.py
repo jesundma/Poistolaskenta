@@ -40,13 +40,29 @@ def insert_project(project_name: str, classes: list[tuple[str, str]], inserting_
 
     return project_id
 
-def get_projects(search_name=None):
-    sql = "SELECT project_id, project_name FROM Projects"
+def get_projects(search_name=None, search_type=None, search_method=None):
+    sql = """
+        SELECT p.project_id, p.project_name
+        FROM Projects p
+        LEFT JOIN Project_definitions d1 
+            ON p.project_id = d1.project_id AND d1.title = 'Projektityyppi'
+        LEFT JOIN Project_definitions d2 
+            ON p.project_id = d2.project_id AND d2.title = 'Poistomenetelmä'
+        WHERE 1=1
+    """
     params = []
 
     if search_name:
-        sql += " WHERE LOWER(project_name) LIKE ?"
-        params.append(f"%{search_name.lower()}%")
+        sql += " AND p.project_name LIKE ?"
+        params.append(f"%{search_name}%")
+
+    if search_type:
+        sql += " AND d1.value = ?"
+        params.append(search_type)
+
+    if search_method:
+        sql += " AND d2.value = ?"
+        params.append(search_method)
 
     return query(sql, params)
 
@@ -121,10 +137,6 @@ def delete_project_by_id(project_id: int):
     execute("DELETE FROM Projects WHERE project_id = ?", [project_id])
 
 def get_all_classes():
-
-    """
-    Used to get all classes (project definitions) for create project template
-    """
 
     sql = "SELECT title, value FROM classes ORDER BY id"
     result = query(sql)

@@ -201,11 +201,20 @@ def edit_project(project_id):
 def list_projects():
 
     search_name = request.args.get("project_name", "").strip()
+    search_type = request.args.get("project_type", "").strip()
+    search_method = request.args.get("depreciation_method", "").strip()
 
-    query_projects = service_functions.get_projects(search_name if search_name else None)
-    
+    query_projects = service_functions.get_projects(
+        search_name=search_name,
+        search_type=search_type,
+        search_method=search_method
+    )
+
+    all_classes = service_functions.get_all_classes()
+    project_types = all_classes.get("Projektityyppi", [])
+    depreciation_methods = all_classes.get("Poistomenetelmä", [])
+
     projects = []
-
     for row in query_projects:
         project_id = row["project_id"]
         project_name = row["project_name"]
@@ -218,24 +227,28 @@ def list_projects():
             if title not in definitions:
                 definitions[title] = []
             definitions[title].append(value)
-        
+
         for title in definitions:
             if len(definitions[title]) == 1:
                 definitions[title] = definitions[title][0]
 
-        project = {
+        projects.append({
             "project_id": project_id,
             "project_name": project_name,
             "definitions": definitions
-        }
-        projects.append(project)
+        })
 
-    return render_template("list_projects.html", projects=projects)
+    return render_template(
+        "list_projects.html",
+        projects=projects,
+        project_types=project_types,
+        depreciation_methods=depreciation_methods
+    )
 
 @app.route("/cashflow_project/<int:project_id>")
 def cashflow_project(project_id):
 
-    investments = service_functions.get_project_by_id(project_id)
+    investments = service_functions.get_project_investments(project_id)
 
     return render_template(
         'cashflow_project.html',

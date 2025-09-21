@@ -9,13 +9,31 @@
     <div class="container">
         <h1>Projektilistaus</h1>
         <form method="GET" action="{{ url_for('list_projects') }}">
-            <input type="text" name="project_name" placeholder="Hae projektin nimi" value="{{ request.args.get('project_name', '') }}">
-            <input type="text" name="project_type" placeholder="Hae projektityyppi" disabled>
-            <input type="text" name="depreciation_method" placeholder="Hae poistomenetelmä" disabled>
+            <input type="text" name="project_name" placeholder="Hae projektin nimi"
+                value="{{ request.args.get('project_name', '') }}">
+
+            <select name="project_type">
+                <option value="">-- Projektityyppi --</option>
+                    {% for t in project_types %}
+                        <option value="{{ t }}" {% if request.args.get('project_type') == t %}selected{% endif %}>
+                            {{ t }}
+                        </option>
+                    {% endfor %}
+            </select>
+
+            <select name="depreciation_method">
+                <option value="">-- Poistomenetelmä --</option>
+                    {% for m in depreciation_methods %}
+                        <option value="{{ m }}" {% if request.args.get('depreciation_method') == m %}selected{% endif %}>
+                            {{ m }}
+                        </option>
+                    {% endfor %}
+            </select>
+
             <button type="submit">Hae</button>
-             <a href="{{ url_for('list_projects') }}"><button type="button">Näytä kaikki</button></a>
+            <a href="{{ url_for('list_projects') }}"><button type="button">Näytä kaikki</button></a>
         </form>
-        
+                
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <ul style="color: green;">
