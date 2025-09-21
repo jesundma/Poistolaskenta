@@ -91,7 +91,7 @@ def add_cashflow(project_id, investment_year, investment_amount):
     '''
     execute(sql, (project_id, investment_year, investment_amount))
 
-def update_project(project_id, project_name, classes):
+def update_project(project_id, project_name, classes, modifying_user: int):
 
     execute(
         "UPDATE Projects SET project_name = ? WHERE project_id = ?",
@@ -108,6 +108,11 @@ def update_project(project_id, project_name, classes):
             "INSERT INTO Project_definitions (project_id, title, value) VALUES (?, ?, ?)",
             (project_id, title, value)
         )
+    
+    execute(        
+        "INSERT INTO Modified (modifying_user, project_id) VALUES (?, ?)",
+        [modifying_user, project_id]
+    )
 
 def delete_project_by_id(project_id: int):
 

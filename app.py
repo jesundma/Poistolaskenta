@@ -31,6 +31,7 @@ protected_routes = [
     'list_projects',
     'cashflow_project',
     'add_new_cashflow',
+    'edit_project',
     'delete_project'
 ]
 
@@ -180,8 +181,7 @@ def edit_project(project_id):
         if not user_id:
             abort(403)
 
-        # Update existing project
-        service_functions.update_project(project_id, project_name, classes)
+        service_functions.update_project(project_id, project_name, classes, user_id)
 
         return render_template(
             "main_layout.html",
