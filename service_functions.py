@@ -2,7 +2,7 @@
 All sql functions here, app.py should be clean and contain only logic for required data, 
 presenting data and rendering pages.
 """
-from db import execute, query, last_insert_id
+from db import execute, query, last_insert_id, get_connection
 import sqlite3
 
 def get_next_project_id():
@@ -169,14 +169,15 @@ def get_project_creator(project_id):
     return None
 
 def add_user_to_db(username: str, password_hash: str) -> bool:
-
     sql = "INSERT INTO Users (username, password_hash) VALUES (?, ?)"
+    con = get_connection()
     try:
         execute(sql, [username, password_hash])
         return True
     except sqlite3.IntegrityError:
+        con.rollback()
         return False
-
+    
 def get_user_by_username(username: str):
 
     sql = "SELECT id, password_hash FROM Users WHERE username = ?"

@@ -101,7 +101,8 @@ def create():
 
     success = service_functions.add_user_to_db(username, password_hash)
     if not success:
-        return "VIRHE: tunnus on jo varattu"
+        flash(f"Tunnus on jo varattu, käytä toista tunnusta")
+        return render_template("register.html")
 
     return render_template("post_register.html")
 
