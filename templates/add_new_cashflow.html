@@ -10,6 +10,7 @@
     <p>Tervetuloa kassavirtojen lisäämiseen projektille {{ project_id }}.</p>
 
     <form method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
         <label for="investment_year">Vuosi:</label>
         <input type="number" name="investment_year" required>
         <br>

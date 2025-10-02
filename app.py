@@ -45,6 +45,11 @@ def generate_csrf_token():
     session["csrf_token"] = token
     return token
 
+"""
+    validate_csrf is helper function, if specific validation from route 
+    required. Not called from the code currently.
+"""
+
 def validate_csrf():
     form_token = request.form.get("csrf_token")
     return form_token and form_token == session.get("csrf_token")
@@ -96,7 +101,7 @@ def login():
 
 @app.route("/register")
 def register():
-    return render_template("register.html")
+    return render_template("register.html", csrf_token=generate_csrf_token())
 
 @app.route("/main_layout")
 def main_layout():
@@ -121,7 +126,7 @@ def create():
         flash(f"Tunnus on jo varattu, käytä toista tunnusta")
         return render_template("register.html")
 
-    return render_template("post_register.html")
+    return render_template("post_register.html", csrf_token=generate_csrf_token())
 
 @app.route("/post_register_redirect", methods=["POST"])
 def post_register_redirect():
@@ -168,7 +173,7 @@ def new_project():
         next_id=next_id,
         all_classes=all_classes,
         existing_classes=existing_classes,
-        mode=mode
+        mode=mode, csrf_token=generate_csrf_token()
     )
 
 @app.route("/edit_project/<int:project_id>", methods=["GET", "POST"])
@@ -212,7 +217,8 @@ def edit_project(project_id):
         all_classes=all_classes,
         existing_classes=existing_classes,
         mode=mode,
-        project=project
+        project=project,
+        csrf_token=generate_csrf_token()
     )
 
 @app.route("/list_projects", methods=["GET"])
@@ -261,7 +267,8 @@ def list_projects():
         "list_projects.html",
         projects=projects,
         project_types=project_types,
-        depreciation_methods=depreciation_methods
+        depreciation_methods=depreciation_methods,
+        csrf_token=generate_csrf_token()
     )
 
 @app.route("/cashflow_project/<int:project_id>")
@@ -309,7 +316,7 @@ def add_new_cashflow(project_id):
 
         return redirect(url_for('cashflow_project', project_id=project_id))
 
-    return render_template('add_new_cashflow.html', project_id=project_id)
+    return render_template('add_new_cashflow.html', project_id=project_id, csrf_token=generate_csrf_token())
 
 @app.route("/logout")
 def logout():
