@@ -320,16 +320,33 @@ def add_new_cashflow(project_id):
 
 @app.route("/project/<int:project_id>/rights", methods=["GET", "POST"])
 def rights_project(project_id):
+    current_user_id = session.get("user_id")
+    creator_id = service_functions.get_project_creator_id(project_id)
+
+    if current_user_id != creator_id:
+        flash("Vain projektin luoja voi muuttaa oikeuksia.", "error")
+        return redirect(url_for("list_projects"))
+
     if request.method == "POST":
-        # Later: handle granting/revoking rights
+        if not validate_csrf():
+            abort(400, description="CSRF tietovirhe")
+
+        permissions = {int(uid): True for uid in request.form.getlist("user_id")}
+
+        all_users = service_functions.get_project_permissions(project_id)
+        for user in all_users:
+            if user["id"] not in permissions:
+                permissions[user["id"]] = False
+
+        service_functions.update_project_permissions(project_id, current_user_id, permissions)
         flash(f"Oikeuksia päivitetty projektille {project_id}", "success")
         return redirect(url_for("rights_project", project_id=project_id))
 
-    users = service_functions.get_all_users()
-    
+    users = service_functions.get_project_permissions(project_id)
     return render_template("rights_project.html",
                            project_id=project_id,
-                           users=users)
+                           users=users,
+                           csrf_token=generate_csrf_token())
 
 @app.route("/logout")
 def logout():

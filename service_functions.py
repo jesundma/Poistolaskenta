@@ -189,3 +189,28 @@ def get_user_by_username(username: str):
 def get_all_users():
     sql = "SELECT id, username FROM Users"
     return query(sql)
+
+def get_project_creator_id(project_id: int):
+    sql = "SELECT inserting_user FROM Inserted WHERE project_id = ?"
+    result = query(sql, (project_id,))
+    return result[0]["inserting_user"] if result else None
+
+def get_project_permissions(project_id: int):
+    sql = """
+        SELECT u.id, u.username, 
+               COALESCE(pp.can_modify, 0) AS can_modify
+        FROM Users u
+        LEFT JOIN ProjectPermissions pp 
+            ON u.id = pp.user_id AND pp.project_id = ?
+        ORDER BY u.username
+    """
+    return query(sql, (project_id,))
+
+def update_project_permissions(project_id: int, granted_by: int, permissions: dict[int, bool]):
+    execute("DELETE FROM ProjectPermissions WHERE project_id = ?", (project_id,))
+    sql = """
+        INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by)
+        VALUES (?, ?, ?, ?)
+    """
+    for user_id, can_modify in permissions.items():
+        execute(sql, (project_id, user_id, 1 if can_modify else 0, granted_by))

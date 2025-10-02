@@ -8,6 +8,7 @@
 <body>
     <p>Valitse seuraava toiminto:</p>
     <form method="post" action="{{  url_for("post_register_redirect") }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
       <button type="submit" name="next" value="login">Siirry kirjautumissivulle</button>
       <button type="submit" name="next" value="main_layout">Siirry pääsivulle</button>
     </form>
