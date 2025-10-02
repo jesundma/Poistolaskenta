@@ -8,6 +8,7 @@
 <body>
   <form action="/login" method="post">
     <p>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
         <label for="username">Käyttäjätunnus</label>: <br />
         <input type="text" name="username" id="username" />
     </p>

@@ -4,7 +4,8 @@ import service_functions
 import sqlite3
 import db
 import config
-import markupsafe
+#import markupsafe # check whether required
+import secrets
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = config.secret_key
@@ -39,10 +40,26 @@ def login_required():
     if "user_id" not in session:
         return redirect(url_for("login"))
 
+def generate_csrf_token():
+    token = secrets.token_hex(16)
+    session["csrf_token"] = token
+    return token
+
+def validate_csrf():
+    form_token = request.form.get("csrf_token")
+    return form_token and form_token == session.get("csrf_token")
+
 @app.before_request
 def before_request():
     if request.endpoint in protected_routes:
         return login_required()
+
+@app.before_request
+def before_request_csrf():
+    if request.method in ("POST", "PUT", "DELETE"):
+        form_token = request.form.get("csrf_token")
+        if not form_token or form_token != session.get("csrf_token"):
+            abort(400, description="CSRF tietovirhe")
 
 @app.route("/")
 def user_check():
@@ -74,8 +91,8 @@ def login():
             return redirect("/main_layout")
         else:
             return "Virhe: salasana väärin"
-
-    return render_template("login.html")
+        
+    return render_template("login.html", csrf_token=generate_csrf_token())
 
 @app.route("/register")
 def register():
