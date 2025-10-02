@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Projektin oikeuksien hallinta</title>
+    </head>
+    <body>
+        <h1>Projektin {{ project_id }} oikeuksien hallinta</h1>
+
+        <form method="post">
+            <table border="1" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th>Käyttäjä</th>
+                        <th>Muokkausoikeus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>
+                            <input type="checkbox" name="can_modify_{{ user.id }}"
+                                {% if user.can_modify %}checked{% endif %}>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        <br>
+        <button type="submit">Tallenna muutokset</button>
+        </form>
+
+        <p><a href="{{ url_for('list_projects') }}">Takaisin projektilistaukseen</a></p>
+
+    </body>
+</html>

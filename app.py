@@ -318,6 +318,19 @@ def add_new_cashflow(project_id):
 
     return render_template('add_new_cashflow.html', project_id=project_id, csrf_token=generate_csrf_token())
 
+@app.route("/project/<int:project_id>/rights", methods=["GET", "POST"])
+def rights_project(project_id):
+    if request.method == "POST":
+        # Later: handle granting/revoking rights
+        flash(f"Oikeuksia päivitetty projektille {project_id}", "success")
+        return redirect(url_for("rights_project", project_id=project_id))
+
+    users = service_functions.get_all_users()
+    
+    return render_template("rights_project.html",
+                           project_id=project_id,
+                           users=users)
+
 @app.route("/logout")
 def logout():
     session.clear()

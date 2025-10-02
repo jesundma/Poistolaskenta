@@ -185,3 +185,7 @@ def get_user_by_username(username: str):
     if row:
         return row[0]
     return None
+
+def get_all_users():
+    sql = "SELECT id, username FROM Users"
+    return query(sql)

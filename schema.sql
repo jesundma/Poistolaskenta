@@ -51,3 +51,15 @@ CREATE TABLE Project_definitions (
     title TEXT,
     value TEXT
 );
+
+CREATE TABLE ProjectPermissions (
+    project_id INTEGER,
+    user_id INTEGER,
+    can_modify BOOLEAN NOT NULL DEFAULT 0,
+    granted_by INTEGER,
+    granted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (project_id, user_id),
+    FOREIGN KEY (project_id) REFERENCES Projects(project_id),
+    FOREIGN KEY (user_id) REFERENCES Users(id),
+    FOREIGN KEY (granted_by) REFERENCES Users(id)
+);
