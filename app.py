@@ -327,22 +327,42 @@ def rights_project(project_id):
         return redirect(url_for("login"))
 
     # Capture current filters from query parameters
-    filters = request.args.to_dict()  # safely get all filters
+    project_name = request.args.get("project_name") or ""
+    project_type = request.args.get("project_type") or ""
+    depreciation_method = request.args.get("depreciation_method") or ""
 
     creator_id = service_functions.get_project_creator_id(project_id)
     if creator_id is None:
         flash("Projektia ei löytynyt.", "error")
-        return redirect(url_for("list_projects", **filters))
+        return redirect(url_for(
+            "list_projects",
+            project_name=project_name,
+            project_type=project_type,
+            depreciation_method=depreciation_method
+        ))
 
+    # User without permission
     if user_id != creator_id:
         flash("Vain projektin luoja voi muuttaa oikeuksia.", "error")
 
-        # Show list_projects with the current filters
-        projects = service_functions.get_projects(
-            filters.get("project_name"),
-            filters.get("project_type"),
-            filters.get("depreciation_method")
+        # Get projects with filters
+        projects_rows = service_functions.get_projects(
+            search_name=project_name,
+            search_type=project_type,
+            search_method=depreciation_method
         )
+
+        # Enrich projects
+        projects = []
+        for row in projects_rows:
+            project = dict(row)
+            definitions = service_functions.get_project_definitions(project["project_id"])
+            project["definitions"] = {d["title"]: d["value"] for d in definitions}
+            project["created"] = service_functions.get_project_creator(project["project_id"])
+            project["changes"] = []  # or implement modifications later
+            projects.append(project)
+
+        # Dropdown options
         all_classes = service_functions.get_all_classes()
         project_types = all_classes.get("Projektityyppi", [])
         depreciation_methods = all_classes.get("Poistomenetelmä", [])
@@ -352,9 +372,13 @@ def rights_project(project_id):
             projects=projects,
             project_types=project_types,
             depreciation_methods=depreciation_methods,
+            search_name=project_name,
+            search_type=project_type,
+            search_method=depreciation_method,
             request=request
         )
 
+    # Handle POST: update permissions
     if request.method == "POST":
         permissions = {}
         for user in service_functions.get_all_users():
@@ -366,9 +390,15 @@ def rights_project(project_id):
         service_functions.update_project_permissions(project_id, creator_id, permissions)
         flash("Oikeudet päivitetty.", "success")
 
-        # Redirect back with the same filters
-        return redirect(url_for("rights_project", project_id=project_id, **filters))
+        return redirect(url_for(
+            "rights_project",
+            project_id=project_id,
+            project_name=project_name,
+            project_type=project_type,
+            depreciation_method=depreciation_method
+        ))
 
+    # GET: show rights form
     users = service_functions.get_project_permissions(project_id)
 
     return render_template(
@@ -376,7 +406,10 @@ def rights_project(project_id):
         project_id=project_id,
         users=users,
         creator_id=creator_id,
-        csrf_token=generate_csrf_token()
+        csrf_token=generate_csrf_token(),
+        project_name=project_name,
+        project_type=project_type,
+        depreciation_method=depreciation_method
     )
     
 @app.route("/logout")
