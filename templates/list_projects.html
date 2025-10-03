@@ -106,7 +106,12 @@
                                 <a href="{{ url_for('delete_project', project_id=project.project_id) }}">
                                     <button>Projektin poistaminen</button>
                                 </a>
-                                <a href="{{ url_for('rights_project', project_id=project.project_id) }}">
+                                <a href="{{ url_for('rights_project',
+                                                    project_id=project.project_id,
+                                                    project_name=request.args.get('project_name'),
+                                                    project_type=request.args.get('project_type'),
+                                                    depreciation_method=request.args.get('depreciation_method')
+                                                    ) }}">
                                     <button>Projektin oikeuksien muuttaminen</button>
                                 </a>
                             </td>

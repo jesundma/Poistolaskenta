@@ -131,10 +131,12 @@ def update_project(project_id, project_name, classes, modifying_user: int):
     )
 
 def delete_project_by_id(project_id: int):
-
+    # individual deletion from each table, SQLite3 ON CASCADE did not work
     execute("DELETE FROM Project_definitions WHERE project_id = ?", [project_id])
-
     execute("DELETE FROM Inserted WHERE project_id = ?", [project_id])
+    execute("DELETE FROM Modified WHERE project_id = ?", [project_id])
+    execute("DELETE FROM Investments WHERE project_id = ?", [project_id])
+    execute("DELETE FROM ProjectPermissions WHERE project_id = ?", [project_id])
 
     execute("DELETE FROM Projects WHERE project_id = ?", [project_id])
 
@@ -215,30 +217,28 @@ def get_user_project_permission(project_id: int, user_id: int):
     rows = query(sql, (project_id, user_id))
     return rows[0] if rows else None
 
-def update_project_permissions(project_id: int, granted_by: int, permissions: dict[int, bool]):
-    # Find project creator from Inserted table
-    row = query("SELECT inserting_user FROM Inserted WHERE project_id = ?", (project_id,))
-    if not row:
-        raise ValueError("Projektia ei löydy")
-    creator_id = row[0]["inserting_user"]
-
-    # Only creator can grant/revoke rights
-    if granted_by != creator_id:
-        raise PermissionError("Vain projektin luoja voi muuttaa oikeuksia.")
-
-    # Delete all permissions except creator
-    execute("DELETE FROM ProjectPermissions WHERE project_id = ? AND user_id != ?", (project_id, creator_id))
+def update_project_permissions(project_id, creator_id, permissions):
 
     sql = """
         INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by)
         VALUES (?, ?, ?, ?)
+        ON CONFLICT(project_id, user_id) DO UPDATE SET
+            can_modify=excluded.can_modify,
+            granted_by=excluded.granted_by,
+            granted_at=CURRENT_TIMESTAMP
     """
 
-    # Add permissions for all users except creator
-    for user_id, can_modify in permissions.items():
-        if user_id == creator_id:
-            continue
-        execute(sql, (project_id, user_id, 1 if can_modify else 0, granted_by))
-
-    # Ensure creator always has modify rights
     execute(sql, (project_id, creator_id, 1, creator_id))
+
+    for user_id, can_modify in permissions.items():
+        execute(sql, (project_id, user_id, 1 if can_modify else 0, creator_id))
+
+def get_project_modifications(project_id: int):
+    sql = """
+        SELECT u.username AS user, m.modified_at AS time
+        FROM Modified m
+        JOIN Users u ON m.modifying_user = u.id
+        WHERE m.project_id = ?
+        ORDER BY m.modified_at DESC
+    """
+    return query(sql, (project_id,))

@@ -228,52 +228,48 @@ def edit_project(project_id):
 
 @app.route("/list_projects", methods=["GET"])
 def list_projects():
-    search_name = request.args.get("project_name", "").strip()
-    search_type = request.args.get("project_type", "").strip()
-    search_method = request.args.get("depreciation_method", "").strip()
+    # Get current filter values from query string
+    search_name = request.args.get("project_name") or None
+    search_type = request.args.get("project_type") or None
+    search_method = request.args.get("depreciation_method") or None
 
-    query_projects = service_functions.get_projects(
+    # Query projects with optional filters
+    projects = service_functions.get_projects(
         search_name=search_name,
         search_type=search_type,
         search_method=search_method
     )
 
+    # Get all class options for the dropdowns
     all_classes = service_functions.get_all_classes()
     project_types = all_classes.get("Projektityyppi", [])
     depreciation_methods = all_classes.get("Poistomenetelmä", [])
 
-    projects = []
+    # Optionally enrich projects with definitions, creator, and changes
+    for i, project_row in enumerate(projects):
+        project = dict(project_row)  # convert row to dict
+        definitions = service_functions.get_project_definitions(project["project_id"])
+        project["definitions"] = {d["title"]: d["value"] for d in definitions}
 
-    for row in query_projects:
-        project_id = row["project_id"]
-        project_name = row["project_name"]
+        # Creator info
+        project["created"] = service_functions.get_project_creator(project["project_id"])
 
-        definitions_rows = service_functions.get_project_definitions(project_id)
-        definitions = {}
-        for d in definitions_rows:
-            title = d["title"]
-            value = d["value"]
-            definitions.setdefault(title, []).append(value)
-        
-        for title in definitions:
-            if len(definitions[title]) == 1:
-                definitions[title] = definitions[title][0]
+        # Changes / modifications
+        changes = service_functions.get_project_modifications(project["project_id"])
+        project["changes"] = changes if changes else []
 
-        creator_info = service_functions.get_project_creator(project_id)
+        projects[i] = project  # replace the original row with dict
 
-        projects.append({
-            "project_id": project_id,
-            "project_name": project_name,
-            "definitions": definitions,
-            "created": creator_info
-        })
-
+    # Render template with filters preserved
     return render_template(
         "list_projects.html",
         projects=projects,
         project_types=project_types,
         depreciation_methods=depreciation_methods,
-        csrf_token=generate_csrf_token()
+        search_name=search_name,
+        search_type=search_type,
+        search_method=search_method,
+        request=request  # optional, if your template uses request.args
     )
 
 @app.route("/cashflow_project/<int:project_id>")
@@ -325,24 +321,64 @@ def add_new_cashflow(project_id):
 
 @app.route("/project/<int:project_id>/rights", methods=["GET", "POST"])
 def rights_project(project_id):
-    project = service_functions.get_project_by_id(project_id)
-    if not project:
-        abort(404)
+    user_id = session.get("user_id")
+    if not user_id:
+        flash("Et ole kirjautunut sisään.", "error")
+        return redirect(url_for("login"))
 
-    creator_id = service_functions.get_project_creator_id(project_id)  # <- FIX
-    if not creator_id:
-        abort(404)
+    # Capture current filters from query parameters
+    filters = request.args.to_dict()  # safely get all filters
 
-    permissions = service_functions.get_project_permissions(project_id)
-    permissions = [p for p in permissions if p["id"] != creator_id]
+    creator_id = service_functions.get_project_creator_id(project_id)
+    if creator_id is None:
+        flash("Projektia ei löytynyt.", "error")
+        return redirect(url_for("list_projects", **filters))
+
+    if user_id != creator_id:
+        flash("Vain projektin luoja voi muuttaa oikeuksia.", "error")
+
+        # Show list_projects with the current filters
+        projects = service_functions.get_projects(
+            filters.get("project_name"),
+            filters.get("project_type"),
+            filters.get("depreciation_method")
+        )
+        all_classes = service_functions.get_all_classes()
+        project_types = all_classes.get("Projektityyppi", [])
+        depreciation_methods = all_classes.get("Poistomenetelmä", [])
+
+        return render_template(
+            "list_projects.html",
+            projects=projects,
+            project_types=project_types,
+            depreciation_methods=depreciation_methods,
+            request=request
+        )
+
+    if request.method == "POST":
+        permissions = {}
+        for user in service_functions.get_all_users():
+            if user["id"] == creator_id:
+                continue
+            can_modify = f"can_modify_{user['id']}" in request.form
+            permissions[user["id"]] = can_modify
+
+        service_functions.update_project_permissions(project_id, creator_id, permissions)
+        flash("Oikeudet päivitetty.", "success")
+
+        # Redirect back with the same filters
+        return redirect(url_for("rights_project", project_id=project_id, **filters))
+
+    users = service_functions.get_project_permissions(project_id)
 
     return render_template(
         "rights_project.html",
-        project=project,
-        permissions=permissions,
+        project_id=project_id,
+        users=users,
         creator_id=creator_id,
+        csrf_token=generate_csrf_token()
     )
-
+    
 @app.route("/logout")
 def logout():
     session.clear()

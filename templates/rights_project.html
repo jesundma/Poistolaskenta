@@ -9,6 +9,10 @@
 
         <form method="post">
             <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="project_name" value="{{ request.args.get('project_name', '') }}">
+            <input type="hidden" name="project_type" value="{{ request.args.get('project_type', '') }}">
+            <input type="hidden" name="depreciation_method" value="{{ request.args.get('depreciation_method', '') }}">
+            
             <table border="1" cellpadding="5">
                 <thead>
                     <tr>
