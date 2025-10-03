@@ -183,6 +183,15 @@ def edit_project(project_id):
     if not project:
         abort(404)
 
+    user_id = session.get("user_id")
+    if not user_id:
+        abort(403)
+
+    permission = service_functions.get_user_project_permission(project_id, user_id)
+    if not permission or not permission["can_modify"]:
+        flash("Sinulla ei ole oikeutta muokata tätä projektia.", "error")
+        return redirect(url_for("list_projects"))
+
     definitions_rows = service_functions.get_project_definitions(project_id)
     existing_classes = {d["title"]: d["value"] for d in definitions_rows}
     mode = "edit"
@@ -199,10 +208,6 @@ def edit_project(project_id):
                 if class_value not in all_classes[class_title]:
                     abort(403)
                 classes.append((class_title, class_value))
-
-        user_id = session.get("user_id")
-        if not user_id:
-            abort(403)
 
         service_functions.update_project(project_id, project_name, classes, user_id)
 
@@ -297,7 +302,7 @@ def delete_project(project_id):
     inserting_user = result[0]["inserting_user"]
 
     if user_id != inserting_user:
-        flash(f"Et ole {project_id} luoja")
+        flash(f"Et ole projektin {project_id} luoja", "error")
         return redirect(url_for("list_projects"))
 
     service_functions.delete_project_by_id(project_id)
@@ -320,33 +325,23 @@ def add_new_cashflow(project_id):
 
 @app.route("/project/<int:project_id>/rights", methods=["GET", "POST"])
 def rights_project(project_id):
-    current_user_id = session.get("user_id")
-    creator_id = service_functions.get_project_creator_id(project_id)
+    project = service_functions.get_project_by_id(project_id)
+    if not project:
+        abort(404)
 
-    if current_user_id != creator_id:
-        flash("Vain projektin luoja voi muuttaa oikeuksia.", "error")
-        return redirect(url_for("list_projects"))
+    creator_id = service_functions.get_project_creator_id(project_id)  # <- FIX
+    if not creator_id:
+        abort(404)
 
-    if request.method == "POST":
-        if not validate_csrf():
-            abort(400, description="CSRF tietovirhe")
+    permissions = service_functions.get_project_permissions(project_id)
+    permissions = [p for p in permissions if p["id"] != creator_id]
 
-        permissions = {int(uid): True for uid in request.form.getlist("user_id")}
-
-        all_users = service_functions.get_project_permissions(project_id)
-        for user in all_users:
-            if user["id"] not in permissions:
-                permissions[user["id"]] = False
-
-        service_functions.update_project_permissions(project_id, current_user_id, permissions)
-        flash(f"Oikeuksia päivitetty projektille {project_id}", "success")
-        return redirect(url_for("rights_project", project_id=project_id))
-
-    users = service_functions.get_project_permissions(project_id)
-    return render_template("rights_project.html",
-                           project_id=project_id,
-                           users=users,
-                           csrf_token=generate_csrf_token())
+    return render_template(
+        "rights_project.html",
+        project=project,
+        permissions=permissions,
+        creator_id=creator_id,
+    )
 
 @app.route("/logout")
 def logout():

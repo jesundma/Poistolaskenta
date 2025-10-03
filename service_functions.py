@@ -81,11 +81,11 @@ def get_project_definitions(project_id: int):
 
 def get_project_by_id(project_id):
 
-    sql = '''
+    sql = """
         SELECT project_id, project_name
         FROM Projects
         WHERE project_id = ?
-    '''
+    """
     rows = query(sql, (project_id,))
     return rows[0] if rows else None
 
@@ -206,11 +206,39 @@ def get_project_permissions(project_id: int):
     """
     return query(sql, (project_id,))
 
+def get_user_project_permission(project_id: int, user_id: int):
+    sql = """
+        SELECT can_modify
+        FROM ProjectPermissions
+        WHERE project_id = ? AND user_id = ?
+    """
+    rows = query(sql, (project_id, user_id))
+    return rows[0] if rows else None
+
 def update_project_permissions(project_id: int, granted_by: int, permissions: dict[int, bool]):
-    execute("DELETE FROM ProjectPermissions WHERE project_id = ?", (project_id,))
+    # Find project creator from Inserted table
+    row = query("SELECT inserting_user FROM Inserted WHERE project_id = ?", (project_id,))
+    if not row:
+        raise ValueError("Projektia ei löydy")
+    creator_id = row[0]["inserting_user"]
+
+    # Only creator can grant/revoke rights
+    if granted_by != creator_id:
+        raise PermissionError("Vain projektin luoja voi muuttaa oikeuksia.")
+
+    # Delete all permissions except creator
+    execute("DELETE FROM ProjectPermissions WHERE project_id = ? AND user_id != ?", (project_id, creator_id))
+
     sql = """
         INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by)
         VALUES (?, ?, ?, ?)
     """
+
+    # Add permissions for all users except creator
     for user_id, can_modify in permissions.items():
+        if user_id == creator_id:
+            continue
         execute(sql, (project_id, user_id, 1 if can_modify else 0, granted_by))
+
+    # Ensure creator always has modify rights
+    execute(sql, (project_id, creator_id, 1, creator_id))

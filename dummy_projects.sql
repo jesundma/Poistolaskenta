@@ -68,3 +68,14 @@ VALUES (1, 9, '2025-09-21 23:59:59');
 
 INSERT INTO Inserted (inserting_user, project_id, inserted_at) 
 VALUES (1, 10, '2025-09-21 23:59:59');
+
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (1, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (2, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (3, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (4, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (5, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (6, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (7, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (8, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (9, 1, 1, 1);
+INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by) VALUES (10, 1, 1, 1);
