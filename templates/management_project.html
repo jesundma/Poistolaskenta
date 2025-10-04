@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektihallinta - {{ project.project_name }}</title>
+</head>
+<body>
+    <h1>Projektihallinta: {{ project.project_name }}</h1>
+
+    <!-- Creator info -->
+    <section>
+        <h2>Projektin luoja</h2>
+        {% if creator %}
+            <p><strong>Käyttäjä ID:</strong> {{ creator.user_id }}</p>
+            <p><strong>Käyttäjä:</strong> {{ creator.user }}</p>
+            <p><strong>Aika:</strong> {{ creator.time }}</p>
+        {% else %}
+            <p>Tiedot puuttuvat</p>
+        {% endif %}
+    </section>
+
+    <!-- Modifications -->
+    <section>
+        <h2>Muutokset</h2>
+        {% if changes %}
+            <div style="max-height:300px; overflow-y:auto; border:1px solid #ccc; padding:5px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Käyttäjä</th>
+                            <th>Aika</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for change in changes %}
+                        <tr>
+                            <td>{{ change.user }}</td>
+                            <td>{{ change.time }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p>Ei muutoksia</p>
+        {% endif %}
+    </section>
+
+    <!-- Actions -->
+    <section>
+        <h2>Toiminnot</h2>
+        <div>
+            <a href="{{ url_for('edit_project', project_id=project.project_id) }}">
+                <button>Projektin tietojen muuttaminen</button>
+            </a>
+            <a href="{{ url_for('rights_project', project_id=project.project_id) }}">
+                <button>Projektin oikeuksien muuttaminen</button>
+            </a>
+            <a href="{{ url_for('delete_project', project_id=project.project_id) }}">
+                <button style="color:red;">Projektin poistaminen</button>
+            </a>
+        </div>
+    </section>
+
+    <p><a href="{{ url_for('list_projects') }}">Takaisin projektilistaukseen</a></p>
+</body>
+</html>

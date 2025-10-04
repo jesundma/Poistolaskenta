@@ -28,3 +28,6 @@ Sovelluksen käynnistämisen jälkeen voidaan tietokantaan halutessa lisätä es
 Jos sovellusta ei ole asennettu aiemmin tai sovellukseen ei ole määritelty käyttäjiä, sovellus luo tietokannan ja ohjaa luomaan ensimmäisen käyttäjän. Jos tietokannasta löytyy jo käyttäjiä, ohjaa sovellus kirjautumissivulle.
 
 Käyttäjäoikeudet toimivat projektin luoja- tasolla. Vain projektin luoja pystyy poistamaan projektin. Projektin muuttajat tallentuvat kantaan Modified- tauluun, mutta vielä kaikilla käyttäjillä on mahdollisuus muokata mitä tahansa projektia.
+
+Tunnettuja virheitä ja ongelmia:
+- projektisuodatin ei säily, jos käyttäjä yrittää muuttaa projektin oikeuksia ja saa sitä koskevan virheilmoituksen

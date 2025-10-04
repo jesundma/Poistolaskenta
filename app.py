@@ -319,6 +319,28 @@ def add_new_cashflow(project_id):
 
     return render_template('add_new_cashflow.html', project_id=project_id, csrf_token=generate_csrf_token())
 
+@app.route("/management_project/<int:project_id>")
+def management_project(project_id):
+    # Get the project basic info
+    project = service_functions.get_project_by_id(project_id)
+    if not project:
+        flash("Projektia ei löytynyt.", "error")
+        return redirect(url_for("list_projects"))
+
+    # Get creator info
+    creator = service_functions.get_project_creator(project_id)
+
+    # Get modifications history
+    changes = service_functions.get_project_modifications(project_id)
+
+    # Render management page
+    return render_template(
+        "management_project.html",
+        project=project,
+        creator=creator,
+        changes=changes
+    )
+
 @app.route("/project/<int:project_id>/rights", methods=["GET", "POST"])
 def rights_project(project_id):
     user_id = session.get("user_id")
