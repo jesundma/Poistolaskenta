@@ -233,43 +233,28 @@ def list_projects():
     search_type = request.args.get("project_type") or None
     search_method = request.args.get("depreciation_method") or None
 
-    # Query projects with optional filters
     projects = service_functions.get_projects(
         search_name=search_name,
         search_type=search_type,
         search_method=search_method
     )
 
-    # Get all class options for the dropdowns
     all_classes = service_functions.get_all_classes()
     project_types = all_classes.get("Projektityyppi", [])
     depreciation_methods = all_classes.get("Poistomenetelmä", [])
 
-    # Optionally enrich projects with definitions, creator, and changes
     for i, project_row in enumerate(projects):
         project = dict(project_row)  # convert row to dict
         definitions = service_functions.get_project_definitions(project["project_id"])
         project["definitions"] = {d["title"]: d["value"] for d in definitions}
+        projects[i] = project  # replace the original row with enriched dict
 
-        # Creator info
-        project["created"] = service_functions.get_project_creator(project["project_id"])
-
-        # Changes / modifications
-        changes = service_functions.get_project_modifications(project["project_id"])
-        project["changes"] = changes if changes else []
-
-        projects[i] = project  # replace the original row with dict
-
-    # Render template with filters preserved
     return render_template(
         "list_projects.html",
         projects=projects,
         project_types=project_types,
         depreciation_methods=depreciation_methods,
-        search_name=search_name,
-        search_type=search_type,
-        search_method=search_method,
-        request=request  # optional, if your template uses request.args
+        request=request
     )
 
 @app.route("/cashflow_project/<int:project_id>")
@@ -348,7 +333,6 @@ def rights_project(project_id):
         flash("Et ole kirjautunut sisään.", "error")
         return redirect(url_for("login"))
 
-    # Capture current filters from query parameters
     project_name = request.args.get("project_name") or ""
     project_type = request.args.get("project_type") or ""
     depreciation_method = request.args.get("depreciation_method") or ""
@@ -363,7 +347,6 @@ def rights_project(project_id):
             depreciation_method=depreciation_method
         ))
 
-    # User without permission
     if user_id != creator_id:
         flash("Vain projektin luoja voi muuttaa oikeuksia.", "error")
 
@@ -400,7 +383,6 @@ def rights_project(project_id):
             request=request
         )
 
-    # Handle POST: update permissions
     if request.method == "POST":
         permissions = {}
         for user in service_functions.get_all_users():
@@ -420,7 +402,6 @@ def rights_project(project_id):
             depreciation_method=depreciation_method
         ))
 
-    # GET: show rights form
     users = service_functions.get_project_permissions(project_id)
 
     return render_template(
