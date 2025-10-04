@@ -130,6 +130,19 @@ def get_project_creator(project_id):
         }
     return None
 
+def get_project_modifications(project_id: int):
+    sql = """
+        SELECT 
+            u.username AS user, 
+            m.modified_at AS time,
+            m.modification_type AS modification
+        FROM Modified m
+        JOIN Users u ON m.modifying_user = u.id
+        WHERE m.project_id = ?
+        ORDER BY m.modified_at DESC
+    """
+    return query(sql, (project_id,))
+
 def log_modification(project_id: int, modifying_user: int, modification_type: str):
 
     sql = """
@@ -143,7 +156,7 @@ def add_cashflow(project_id, investment_year, investment_amount, modifying_user:
         INSERT INTO Investments (project_id, investment_year, investment_amount) 
         VALUES (?, ?, ?)
         ON CONFLICT (project_id, investment_year) DO UPDATE SET
-            investment = excluded.investment_amount
+            investment_amount = excluded.investment_amount
     '''
     execute(sql, (project_id, investment_year, investment_amount))
 
@@ -167,10 +180,7 @@ def update_project(project_id, project_name, classes, modifying_user: int):
             (project_id, title, value)
         )
     
-    execute(        
-        "INSERT INTO Modified (modifying_user, project_id) VALUES (?, ?)",
-        [modifying_user, project_id]
-    )
+    log_modification(project_id, modifying_user, "Projektin tietoja päivitetty")
 
 def delete_project_by_id(project_id: int):
     # individual deletion from each table, SQLite3 ON CASCADE did not work
@@ -244,13 +254,3 @@ def update_project_permissions(project_id, creator_id, permissions):
 
     for user_id, can_modify in permissions.items():
         execute(sql, (project_id, user_id, 1 if can_modify else 0, creator_id))
-
-def get_project_modifications(project_id: int):
-    sql = """
-        SELECT u.username AS user, m.modified_at AS time
-        FROM Modified m
-        JOIN Users u ON m.modifying_user = u.id
-        WHERE m.project_id = ?
-        ORDER BY m.modified_at DESC
-    """
-    return query(sql, (project_id,))
