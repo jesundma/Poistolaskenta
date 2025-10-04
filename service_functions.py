@@ -100,17 +100,54 @@ def get_project_investments(project_id):
     
     return investments
 
+def get_all_classes():
+
+    sql = "SELECT title, value FROM classes ORDER BY id"
+    result = query(sql)
+
+    classes = {}
+    for title, value in result:
+        if title not in classes:
+            classes[title] = []
+        classes[title].append(value)
+
+    return classes
+
+def get_project_creator(project_id):
+
+    sql = """
+        SELECT u.id AS user_id, u.username AS username, i.inserted_at AS time
+        FROM Inserted i
+        JOIN Users u ON i.inserting_user = u.id
+        WHERE i.project_id = ?
+    """
+    result = query(sql, (project_id,))
+    if result:
+        return {
+            "user_id": result[0]["user_id"],
+            "user": result[0]["username"],
+            "time": result[0]["time"]
+        }
+    return None
+
+def log_modification(project_id: int, modifying_user: int, modification_type: str):
+
+    sql = """
+        INSERT INTO Modified (modifying_user, project_id, modification_type)
+        VALUES (?, ?, ?)
+    """
+    execute(sql, (modifying_user, project_id, modification_type))
+
 def add_cashflow(project_id, investment_year, investment_amount, modifying_user: int):
     sql = '''
         INSERT INTO Investments (project_id, investment_year, investment_amount) 
         VALUES (?, ?, ?)
+        ON CONFLICT (project_id, investment_year) DO UPDATE SET
+            investment = excluded.investment_amount
     '''
     execute(sql, (project_id, investment_year, investment_amount))
 
-    execute(
-        "INSERT INTO Modified (modifying_user, project_id) VALUES (?, ?)",
-        (modifying_user, project_id)
-    )
+    log_modification(project_id, modifying_user, "Kassavirtoja lisätty")
 
 def update_project(project_id, project_name, classes, modifying_user: int):
 
@@ -144,36 +181,6 @@ def delete_project_by_id(project_id: int):
     execute("DELETE FROM ProjectPermissions WHERE project_id = ?", [project_id])
 
     execute("DELETE FROM Projects WHERE project_id = ?", [project_id])
-
-def get_all_classes():
-
-    sql = "SELECT title, value FROM classes ORDER BY id"
-    result = query(sql)
-
-    classes = {}
-    for title, value in result:
-        if title not in classes:
-            classes[title] = []
-        classes[title].append(value)
-
-    return classes
-
-def get_project_creator(project_id):
-
-    sql = """
-        SELECT u.id AS user_id, u.username AS username, i.inserted_at AS time
-        FROM Inserted i
-        JOIN Users u ON i.inserting_user = u.id
-        WHERE i.project_id = ?
-    """
-    result = query(sql, (project_id,))
-    if result:
-        return {
-            "user_id": result[0]["user_id"],
-            "user": result[0]["username"],
-            "time": result[0]["time"]
-        }
-    return None
 
 def add_user_to_db(username: str, password_hash: str) -> bool:
     sql = "INSERT INTO Users (username, password_hash) VALUES (?, ?)"

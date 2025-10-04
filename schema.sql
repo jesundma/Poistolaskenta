@@ -34,6 +34,7 @@ CREATE TABLE Inserted (
 CREATE TABLE Modified (
     modifying_user INT,
     project_id INT,
+    modification_type TEXT,
     modified_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (modifying_user) REFERENCES Users(id),
     FOREIGN KEY (project_id) REFERENCES Projects(project_id)
