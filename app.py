@@ -416,7 +416,21 @@ def rights_project(project_id):
         project_type=project_type,
         depreciation_method=depreciation_method
     )
-    
+
+@app.route("/user_statistics")
+def user_statistics():
+    user_id = session.get("user_id")
+    if not user_id:
+        flash("Kirjaudu sisään nähdäksesi tilastosi.", "error")
+        return redirect(url_for("login"))
+
+    projects = service_functions.get_projects_created_by_user(user_id)
+
+    return render_template(
+        "user_statistics.html",
+        projects=projects
+    )
+
 @app.route("/logout")
 def logout():
     session.clear()

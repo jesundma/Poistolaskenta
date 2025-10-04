@@ -219,6 +219,16 @@ def get_project_creator_id(project_id: int):
     result = query(sql, (project_id,))
     return result[0]["inserting_user"] if result else None
 
+def get_projects_created_by_user(user_id: int):
+    sql = """
+        SELECT p.project_id, p.project_name, i.inserted_at
+        FROM Projects p
+        JOIN Inserted i ON p.project_id = i.project_id
+        WHERE i.inserting_user = ?
+        ORDER BY i.inserted_at DESC
+    """
+    return query(sql, (user_id,))
+
 def get_project_permissions(project_id: int):
     sql = """
         SELECT u.id, u.username, 
