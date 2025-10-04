@@ -100,12 +100,17 @@ def get_project_investments(project_id):
     
     return investments
 
-def add_cashflow(project_id, investment_year, investment_amount):
+def add_cashflow(project_id, investment_year, investment_amount, modifying_user: int):
     sql = '''
         INSERT INTO Investments (project_id, investment_year, investment_amount) 
         VALUES (?, ?, ?)
     '''
     execute(sql, (project_id, investment_year, investment_amount))
+
+    execute(
+        "INSERT INTO Modified (modifying_user, project_id) VALUES (?, ?)",
+        (modifying_user, project_id)
+    )
 
 def update_project(project_id, project_name, classes, modifying_user: int):
 

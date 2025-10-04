@@ -293,16 +293,21 @@ def delete_project(project_id):
 
 @app.route('/add_new_cashflow/<int:project_id>', methods=['GET', 'POST'])
 def add_new_cashflow(project_id):
-
     if request.method == 'POST':
         investment_year = request.form['investment_year']
         investment_amount = request.form['investment_amount']
-        
-        service_functions.add_cashflow(project_id, investment_year, investment_amount)
+
+        modifying_user = session.get("user_id")
+
+        service_functions.add_cashflow(project_id, investment_year, investment_amount, modifying_user)
 
         return redirect(url_for('cashflow_project', project_id=project_id))
 
-    return render_template('add_new_cashflow.html', project_id=project_id, csrf_token=generate_csrf_token())
+    return render_template(
+        'add_new_cashflow.html',
+        project_id=project_id,
+        csrf_token=generate_csrf_token()
+    )
 
 @app.route("/management_project/<int:project_id>")
 def management_project(project_id):
