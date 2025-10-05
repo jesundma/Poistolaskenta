@@ -234,7 +234,7 @@ def get_projects_created_by_user(user_id: int):
         FROM Projects p
         JOIN Inserted i ON p.project_id = i.project_id
         WHERE i.inserting_user = ?
-        ORDER BY i.inserted_at DESC
+        ORDER BY p.project_id ASC
     """
     return query(sql, (user_id,))
 
