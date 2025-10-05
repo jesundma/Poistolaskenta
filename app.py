@@ -85,7 +85,7 @@ def login():
 
         user = service_functions.get_user_by_username(username)
         if not user:
-            return "Virhe: käyttäjää ei löydy"
+            return redirect("/login")
 
         user_id, password_hash = user
 
@@ -94,7 +94,7 @@ def login():
             session["user_id"] = user_id
             return redirect("/main_layout")
         else:
-            return "Virhe: salasana väärin"
+            return redirect("/login")
         
     return render_template("login.html", csrf_token=generate_csrf_token())
 
