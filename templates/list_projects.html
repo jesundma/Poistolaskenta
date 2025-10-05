@@ -2,59 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projektilistaus</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Projektilistaus</h1>
-        <form method="GET" action="{{ url_for('list_projects') }}">
-            <input type="text" name="project_name" placeholder="Hae projektin nimi"
-                value="{{ request.args.get('project_name', '') }}">
+<div class="container">
+    <h1>Projektilistaus</h1>
 
-            <select name="project_type">
-                <option value="">-- Projektityyppi --</option>
-                    {% for t in project_types %}
-                        <option value="{{ t }}" {% if request.args.get('project_type') == t %}selected{% endif %}>
-                            {{ t }}
-                        </option>
-                    {% endfor %}
-            </select>
+    <form method="GET" action="{{ url_for('list_projects') }}">
+        <input type="text" name="project_name" placeholder="Hae projektin nimi"
+               value="{{ request.args.get('project_name', '') }}">
 
-            <select name="depreciation_method">
-                <option value="">-- Poistomenetelmä --</option>
-                    {% for m in depreciation_methods %}
-                        <option value="{{ m }}" {% if request.args.get('depreciation_method') == m %}selected{% endif %}>
-                            {{ m }}
-                        </option>
-                    {% endfor %}
-            </select>
+        <select name="project_type">
+            <option value="">-- Projektityyppi --</option>
+            {% for t in project_types %}
+                <option value="{{ t }}" {% if request.args.get('project_type') == t %}selected{% endif %}>
+                    {{ t }}
+                </option>
+            {% endfor %}
+        </select>
 
-            <button type="submit">Hae</button>
-            <a href="{{ url_for('list_projects') }}"><button type="button">Näytä kaikki</button></a>
-        </form>
+        <select name="depreciation_method">
+            <option value="">-- Poistomenetelmä --</option>
+            {% for m in depreciation_methods %}
+                <option value="{{ m }}" {% if request.args.get('depreciation_method') == m %}selected{% endif %}>
+                    {{ m }}
+                </option>
+            {% endfor %}
+        </select>
 
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                <ul>
-                    {% for category, message in messages %}
-                        <li style="color: {% if category == 'error' %}red{% else %}green{% endif %};">
-                        {{ message }}
-                        </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            {% endwith %}
-        <table>
-            <thead>
-                <tr>
+        <button type="submit">Hae</button>
+        <a href="{{ url_for('list_projects') }}"><button type="button">Näytä kaikki</button></a>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li style="color: {% if category == 'error' %}red{% else %}green{% endif %};">
+                    {{ message }}
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <table>
+        <thead>
+        <tr>
             <th>Projektitunnus</th>
             <th>Projektinimi</th>
             <th>Määrittelyt</th>
             <th>Toiminnot</th>
         </tr>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
         {% if projects %}
             {% for project in projects %}
                 <tr>
@@ -86,10 +88,29 @@
                 <td colspan="4">Ei projekteja tietokannassa</td>
             </tr>
         {% endif %}
-    </tbody>
-</table>
-    </div>
-    <p><a href="{{ url_for('main_layout') }}">Takaisin pääsivulle</a></p>
+        </tbody>
+    </table>
 
+    <!-- Pagination -->
+    <div class="pagination">
+        {% if page > 1 %}
+            <a href="{{ url_for('list_projects', page=page-1, project_name=request.args.get('project_name'), project_type=request.args.get('project_type'), depreciation_method=request.args.get('depreciation_method')) }}">Edellinen</a>
+        {% endif %}
+
+        {% for p in range(1, page_count+1) %}
+            {% if p == page %}
+                <strong>[{{ p }}]</strong>
+            {% else %}
+                <a href="{{ url_for('list_projects', page=p, project_name=request.args.get('project_name'), project_type=request.args.get('project_type'), depreciation_method=request.args.get('depreciation_method')) }}">{{ p }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page < page_count %}
+            <a href="{{ url_for('list_projects', page=page+1, project_name=request.args.get('project_name'), project_type=request.args.get('project_type'), depreciation_method=request.args.get('depreciation_method')) }}">Seuraava</a>
+        {% endif %}
+    </div>
+
+    <p><a href="{{ url_for('main_layout') }}">Takaisin pääsivulle</a></p>
+</div>
 </body>
 </html>

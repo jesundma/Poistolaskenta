@@ -1,4 +1,5 @@
 database.db
+seed.py
 
 venv/
 env/

@@ -40,9 +40,9 @@ def insert_project(project_name: str, classes: list[tuple[str, str]], inserting_
 
     return project_id
 
-def get_projects(search_name=None, search_type=None, search_method=None):
+def get_projects(search_name=None, search_type=None, search_method=None, limit=None, offset=None):
     sql = """
-        SELECT p.project_id, p.project_name
+        SELECT DISTINCT p.project_id, p.project_name
         FROM Projects p
         LEFT JOIN Project_definitions d1 
             ON p.project_id = d1.project_id AND d1.title = 'Projektityyppi'
@@ -63,6 +63,15 @@ def get_projects(search_name=None, search_type=None, search_method=None):
     if search_method:
         sql += " AND d2.value = ?"
         params.append(search_method)
+
+    sql += " ORDER BY p.project_id ASC"
+
+    if limit is not None:
+        sql += " LIMIT ?"
+        params.append(limit)
+    if offset is not None:
+        sql += " OFFSET ?"
+        params.append(offset)
 
     return query(sql, params)
 
@@ -264,3 +273,37 @@ def update_project_permissions(project_id, creator_id, permissions):
 
     for user_id, can_modify in permissions.items():
         execute(sql, (project_id, user_id, 1 if can_modify else 0, creator_id))
+
+def count_projects(search_name=None, search_type=None, search_method=None):
+    """
+        This query is used for page pagination. Query will count each distinct project
+        (each project has distinct id).
+    """
+
+
+    sql = """
+        SELECT COUNT(DISTINCT p.project_id) AS cnt
+        FROM Projects p
+        LEFT JOIN Project_definitions d1 
+            ON p.project_id = d1.project_id AND d1.title = 'Projektityyppi'
+        LEFT JOIN Project_definitions d2 
+            ON p.project_id = d2.project_id AND d2.title = 'Poistomenetelmä'
+        WHERE 1=1
+    """
+    params = []
+
+    if search_name:
+        sql += " AND p.project_name LIKE ?"
+        params.append(f"%{search_name}%")
+
+    if search_type:
+        sql += " AND d1.value = ?"
+        params.append(search_type)
+
+    if search_method:
+        sql += " AND d2.value = ?"
+        params.append(search_method)
+
+    result = query(sql, params)
+    return result[0]["cnt"] if result else 0
+

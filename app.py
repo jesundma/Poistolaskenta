@@ -6,6 +6,7 @@ import db
 import config
 #import markupsafe # check whether required
 import secrets
+import math #math required for pagination
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = config.secret_key
@@ -41,18 +42,16 @@ def login_required():
         return redirect(url_for("login"))
 
 def generate_csrf_token():
+
+    """ 
+        Generate csfr token for CSFR protection. No expiration time set, logout function 
+        has session.clear() to remove the cookie. Closing browser without logout seem to 
+        invalidate cookie but testing is required
+    """
+
     token = secrets.token_hex(16)
     session["csrf_token"] = token
     return token
-
-"""
-    validate_csrf is helper function, if specific validation from route 
-    required. Not called from the code currently.
-"""
-
-def validate_csrf():
-    form_token = request.form.get("csrf_token")
-    return form_token and form_token == session.get("csrf_token")
 
 @app.before_request
 def before_request():
@@ -226,35 +225,55 @@ def edit_project(project_id):
         csrf_token=generate_csrf_token()
     )
 
-@app.route("/list_projects", methods=["GET"])
-def list_projects():
-    # Get current filter values from query string
+@app.route("/list_projects")
+@app.route("/list_projects/<int:page>")
+def list_projects(page=1):
+
+    page_size = 5
+
     search_name = request.args.get("project_name") or None
     search_type = request.args.get("project_type") or None
     search_method = request.args.get("depreciation_method") or None
 
-    projects = service_functions.get_projects(
+    # Total count for pagination
+    total_count = service_functions.count_projects(
         search_name=search_name,
         search_type=search_type,
         search_method=search_method
     )
+    page_count = max(math.ceil(total_count / page_size), 1)
+
+    if page < 1:
+        return redirect(url_for("list_projects", page=1, **request.args))
+    if page > page_count:
+        return redirect(url_for("list_projects", page=page_count, **request.args))
+
+    projects = service_functions.get_projects(
+        search_name=search_name,
+        search_type=search_type,
+        search_method=search_method,
+        limit=page_size,
+        offset=(page - 1) * page_size
+    )
+
+    for i, project_row in enumerate(projects):
+        project = dict(project_row)
+        definitions = service_functions.get_project_definitions(project["project_id"])
+        project["definitions"] = {d["title"]: d["value"] for d in definitions}
+        projects[i] = project
 
     all_classes = service_functions.get_all_classes()
     project_types = all_classes.get("Projektityyppi", [])
     depreciation_methods = all_classes.get("Poistomenetelmä", [])
-
-    for i, project_row in enumerate(projects):
-        project = dict(project_row)  # convert row to dict
-        definitions = service_functions.get_project_definitions(project["project_id"])
-        project["definitions"] = {d["title"]: d["value"] for d in definitions}
-        projects[i] = project  # replace the original row with enriched dict
 
     return render_template(
         "list_projects.html",
         projects=projects,
         project_types=project_types,
         depreciation_methods=depreciation_methods,
-        request=request
+        request=request,
+        page=page,
+        page_count=page_count
     )
 
 @app.route("/cashflow_project/<int:project_id>")
@@ -329,7 +348,7 @@ def management_project(project_id):
     )
 
 @app.route("/project/<int:project_id>/rights", methods=["GET", "POST"])
-def rights_project(project_id):
+def rights_project(project_id): #tree structure error in VS, not collapsing correctly
     user_id = session.get("user_id")
     if not user_id:
         flash("Et ole kirjautunut sisään.", "error")

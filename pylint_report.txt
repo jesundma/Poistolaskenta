@@ -1,0 +1,1243 @@
+[{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0105:pointless-string-statement",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/pointless-string-statement.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "String statement has no effect",
+	"source": "Pylint",
+	"startLineNumber": 48,
+	"startColumn": 1,
+	"endLineNumber": 51,
+	"endColumn": 4,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W1309:f-string-without-interpolation",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/f-string-without-interpolation.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Using an f-string that does not have any interpolated variables",
+	"source": "Pylint",
+	"startLineNumber": 126,
+	"startColumn": 15,
+	"endLineNumber": 126,
+	"endColumn": 63,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0114:missing-module-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-module-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing module docstring",
+	"source": "Pylint",
+	"startLineNumber": 1,
+	"startColumn": 1,
+	"endLineNumber": 1,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0411:wrong-import-order",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "standard import \"sqlite3\" should be placed before third party imports \"flask.Flask\", \"werkzeug.security.generate_password_hash\" and first party import \"service_functions\" ",
+	"source": "Pylint",
+	"startLineNumber": 4,
+	"startColumn": 1,
+	"endLineNumber": 4,
+	"endColumn": 15,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0411:wrong-import-order",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "standard import \"secrets\" should be placed before third party imports \"flask.Flask\", \"werkzeug.security.generate_password_hash\" and first party imports \"service_functions\", \"db\", \"config\" ",
+	"source": "Pylint",
+	"startLineNumber": 8,
+	"startColumn": 1,
+	"endLineNumber": 8,
+	"endColumn": 15,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 13,
+	"startColumn": 1,
+	"endLineNumber": 13,
+	"endColumn": 17,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 14,
+	"startColumn": 1,
+	"endLineNumber": 14,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 39,
+	"startColumn": 1,
+	"endLineNumber": 39,
+	"endColumn": 19,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 43,
+	"startColumn": 1,
+	"endLineNumber": 43,
+	"endColumn": 24,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 53,
+	"startColumn": 1,
+	"endLineNumber": 53,
+	"endColumn": 18,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 58,
+	"startColumn": 1,
+	"endLineNumber": 58,
+	"endColumn": 19,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 63,
+	"startColumn": 1,
+	"endLineNumber": 63,
+	"endColumn": 24,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 70,
+	"startColumn": 1,
+	"endLineNumber": 70,
+	"endColumn": 15,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 76,
+	"startColumn": 1,
+	"endLineNumber": 76,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 78,
+	"startColumn": 1,
+	"endLineNumber": 78,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 82,
+	"startColumn": 1,
+	"endLineNumber": 82,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 99,
+	"startColumn": 1,
+	"endLineNumber": 99,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 103,
+	"startColumn": 1,
+	"endLineNumber": 103,
+	"endColumn": 13,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 107,
+	"startColumn": 1,
+	"endLineNumber": 107,
+	"endColumn": 16,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 111,
+	"startColumn": 1,
+	"endLineNumber": 111,
+	"endColumn": 11,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 132,
+	"startColumn": 1,
+	"endLineNumber": 132,
+	"endColumn": 27,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 139,
+	"startColumn": 1,
+	"endLineNumber": 139,
+	"endColumn": 16,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 144,
+	"startColumn": 1,
+	"endLineNumber": 144,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 170,
+	"startColumn": 1,
+	"endLineNumber": 170,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 180,
+	"startColumn": 1,
+	"endLineNumber": 180,
+	"endColumn": 17,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 230,
+	"startColumn": 1,
+	"endLineNumber": 230,
+	"endColumn": 18,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 261,
+	"startColumn": 1,
+	"endLineNumber": 261,
+	"endColumn": 21,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 272,
+	"startColumn": 1,
+	"endLineNumber": 272,
+	"endColumn": 19,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 295,
+	"startColumn": 1,
+	"endLineNumber": 295,
+	"endColumn": 21,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0301:line-too-long",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/line-too-long.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Line too long (102/100)",
+	"source": "Pylint",
+	"startLineNumber": 302,
+	"startColumn": 1,
+	"endLineNumber": 302,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 313,
+	"startColumn": 1,
+	"endLineNumber": 313,
+	"endColumn": 23,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 332,
+	"startColumn": 1,
+	"endLineNumber": 332,
+	"endColumn": 19,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 421,
+	"startColumn": 1,
+	"endLineNumber": 421,
+	"endColumn": 20,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 435,
+	"startColumn": 1,
+	"endLineNumber": 435,
+	"endColumn": 11,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/app.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0304:missing-final-newline",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Final newline missing",
+	"source": "Pylint",
+	"startLineNumber": 441,
+	"startColumn": 1,
+	"endLineNumber": 441,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0411:wrong-import-order",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "standard import \"sqlite3\" should be placed before first party import \"db.execute\" ",
+	"source": "Pylint",
+	"startLineNumber": 6,
+	"startColumn": 1,
+	"endLineNumber": 6,
+	"endColumn": 15,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 8,
+	"startColumn": 1,
+	"endLineNumber": 8,
+	"endColumn": 24,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 35,
+	"startColumn": 1,
+	"endLineNumber": 35,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 43,
+	"startColumn": 1,
+	"endLineNumber": 43,
+	"endColumn": 17,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 69,
+	"startColumn": 1,
+	"endLineNumber": 69,
+	"endColumn": 28,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 79,
+	"startColumn": 1,
+	"endLineNumber": 79,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 82,
+	"startColumn": 1,
+	"endLineNumber": 82,
+	"endColumn": 22,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 92,
+	"startColumn": 1,
+	"endLineNumber": 92,
+	"endColumn": 28,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 100,
+	"startColumn": 1,
+	"endLineNumber": 100,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 103,
+	"startColumn": 1,
+	"endLineNumber": 103,
+	"endColumn": 20,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 116,
+	"startColumn": 1,
+	"endLineNumber": 116,
+	"endColumn": 24,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 133,
+	"startColumn": 1,
+	"endLineNumber": 133,
+	"endColumn": 30,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 146,
+	"startColumn": 1,
+	"endLineNumber": 146,
+	"endColumn": 21,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 154,
+	"startColumn": 1,
+	"endLineNumber": 154,
+	"endColumn": 17,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 165,
+	"startColumn": 1,
+	"endLineNumber": 165,
+	"endColumn": 19,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 182,
+	"startColumn": 1,
+	"endLineNumber": 182,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 185,
+	"startColumn": 1,
+	"endLineNumber": 185,
+	"endColumn": 25,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 195,
+	"startColumn": 1,
+	"endLineNumber": 195,
+	"endColumn": 19,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 204,
+	"startColumn": 1,
+	"endLineNumber": 204,
+	"endColumn": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 205,
+	"startColumn": 1,
+	"endLineNumber": 205,
+	"endColumn": 25,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 213,
+	"startColumn": 1,
+	"endLineNumber": 213,
+	"endColumn": 18,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 217,
+	"startColumn": 1,
+	"endLineNumber": 217,
+	"endColumn": 27,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 222,
+	"startColumn": 1,
+	"endLineNumber": 222,
+	"endColumn": 33,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 232,
+	"startColumn": 1,
+	"endLineNumber": 232,
+	"endColumn": 28,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 243,
+	"startColumn": 1,
+	"endLineNumber": 243,
+	"endColumn": 32,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0116:missing-function-docstring",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-function-docstring.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Missing function or method docstring",
+	"source": "Pylint",
+	"startLineNumber": 252,
+	"startColumn": 1,
+	"endLineNumber": 252,
+	"endColumn": 31,
+	"origin": "extHost1"
+},{
+	"resource": "/home/jesundma/poistolaskenta/service_functions.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0304:missing-final-newline",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Final newline missing",
+	"source": "Pylint",
+	"startLineNumber": 266,
+	"startColumn": 1,
+	"endLineNumber": 266,
+	"endColumn": 1,
+	"origin": "extHost1"
+}]Please ask your administrator.
+
+Pylint asennettu ja ei asennettu, liitetty 5.10.2025 10:44
