@@ -113,19 +113,22 @@ def create():
     password2 = request.form.get("password2")
 
     if not username or not password1 or not password2:
-        return "VIRHE: kaikki kentät on täytettävä"
+        flash("Kaikki kentät on täytettävä", "error")
+        return render_template("register.html", csrf_token=generate_csrf_token())
 
     if password1 != password2:
-        return "VIRHE: salasanat eivät ole samat"
+        flash("Salasanat eivät ole samat", "error")
+        return render_template("register.html", csrf_token=generate_csrf_token())
 
     password_hash = generate_password_hash(password1)
 
     success = service_functions.add_user_to_db(username, password_hash)
     if not success:
-        flash(f"Tunnus on jo varattu, käytä toista tunnusta")
-        return render_template("register.html")
+        flash(f"Tunnus on jo varattu, käytä toista tunnusta", "error")
+        return render_template("register.html", csrf_token=generate_csrf_token())
 
-    return render_template("post_register.html", csrf_token=generate_csrf_token())
+    flash("Tunnus luotu onnistuneesti!", "success")
+    return render_template("register.html", csrf_token=generate_csrf_token())
 
 @app.route("/post_register_redirect", methods=["POST"])
 def post_register_redirect():
