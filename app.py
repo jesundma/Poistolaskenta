@@ -163,6 +163,8 @@ def new_project():
 
         project_id = service_functions.insert_project(project_name, classes, user_id)
 
+        service_functions.update_project_permissions(project_id, user_id, {})
+
         return render_template(
             "main_layout.html",
             message=f"Projekti {project_name} tallennettu tunnuksella {project_id}"

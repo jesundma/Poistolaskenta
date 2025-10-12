@@ -259,20 +259,29 @@ def get_user_project_permission(project_id: int, user_id: int):
     return rows[0] if rows else None
 
 def update_project_permissions(project_id, creator_id, permissions):
+    """
+    permissions: dict of {user_id: can_modify} only for users who should have rights.
+    Table ProjectPermissions has column can_modify, which is kept for possible changes
+    in rights logic.
+    """
 
     sql = """
         INSERT INTO ProjectPermissions (project_id, user_id, can_modify, granted_by)
         VALUES (?, ?, ?, ?)
         ON CONFLICT(project_id, user_id) DO UPDATE SET
-            can_modify=excluded.can_modify,
-            granted_by=excluded.granted_by,
-            granted_at=CURRENT_TIMESTAMP
+            can_modify = excluded.can_modify,
+            granted_by = excluded.granted_by,
+            granted_at = CURRENT_TIMESTAMP
     """
 
     execute(sql, (project_id, creator_id, 1, creator_id))
 
+    # Insert/update only users who are explicitly granted rights
     for user_id, can_modify in permissions.items():
-        execute(sql, (project_id, user_id, 1 if can_modify else 0, creator_id))
+        if user_id == creator_id:
+            continue  # skip creator, already inserted
+        if can_modify:  # only insert if the user is granted modify rights
+            execute(sql, (project_id, user_id, 1, creator_id))
 
 def count_projects(search_name=None, search_type=None, search_method=None):
     """
