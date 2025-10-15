@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}?v=1">
 </head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
     <h1>{{ "Muokkaa projektia" if mode=="edit" else "Uusi projekti" }} (ID: {{ next_id }})</h1>
 
@@ -12,7 +23,9 @@
         <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
         <label for="project_name">Projektin nimi:</label>
         <input type="text" name="project_name" id="project_name"
-               value="{{ project.project_name if project else '' }}" required>
+               value="{{ project.project_name if project else '' }}" required
+               oninvalid="this.setCustomValidity('Projektin nimi ei voi olla tyhjä')"
+               oninput="this.setCustomValidity('')">
 
         <h3>Määrittelyt</h3>
         {% for title, values in all_classes.items() %}

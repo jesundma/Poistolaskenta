@@ -161,6 +161,11 @@ def new_project():
         if not user_id:
             abort(403)
 
+        if not (10 < len(project_name) < 100):
+            flash("Käytä projektin nimessä vähintään 10 merkkiä, mutta ei 100 merkkiä enempää", "error")
+            return redirect(url_for("new_project"))
+
+
         project_id = service_functions.insert_project(project_name, classes, user_id)
 
         service_functions.update_project_permissions(project_id, user_id, {})
