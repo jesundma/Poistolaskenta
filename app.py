@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash, abort
+from flask import Flask, render_template, request, redirect, url_for, session, flash, abort, get_flashed_messages
 from werkzeug.security import generate_password_hash, check_password_hash
 import service_functions
 import sqlite3
@@ -34,7 +34,8 @@ protected_routes = [
     'cashflow_project',
     'add_new_cashflow',
     'edit_project',
-    'delete_project'
+    'delete_project',
+    'user_statistics'
 ]
 
 def login_required():
@@ -322,18 +323,49 @@ def delete_project(project_id):
 
 @app.route('/add_new_cashflow/<int:project_id>', methods=['GET', 'POST'])
 def add_new_cashflow(project_id):
-    if request.method == 'POST':
-        investment_year = request.form['investment_year']
-        investment_amount = request.form['investment_amount']
 
+    if request.method == "POST":
+
+        investment_year = request.form.get("investment_year", "").strip()
+        investment_amount = request.form.get("investment_amount", "").strip()
         modifying_user = session.get("user_id")
 
-        service_functions.add_cashflow(project_id, investment_year, investment_amount, modifying_user)
+        # Validate year
+        if not investment_year:
+            flash("Vuosi pitää täyttää.", "error")
+        else:
+            try:
+                investment_year = int(investment_year)
+                if investment_year < 1:
+                    flash("Vuosi pitää olla positiivinen.", "error")
+            except ValueError:
+                flash("Vuoden täytyy olla kokonaisluku.", "error")
 
-        return redirect(url_for('cashflow_project', project_id=project_id))
+        if not investment_amount:
+            flash("Investointimäärä pitää täyttää.", "error")
+        else:
+            try:
+                investment_amount = float(investment_amount)
+                if investment_amount % 100 != 0:
+                    flash("Investointimäärän tulee olla sadan kokonaisluku.", "error")
+            except ValueError:
+                flash("Investointimäärä täytyy olla numero.", "error")
+
+        if len(get_flashed_messages()) > 0:
+            return render_template(
+                "add_new_cashflow.html",
+                project_id=project_id,
+                csrf_token=generate_csrf_token(),
+                entered_year=investment_year,
+                entered_amount=investment_amount
+            )
+
+        service_functions.add_cashflow(project_id, investment_year, investment_amount, modifying_user)
+        flash(f"Kassavirta tallennettu: {investment_year}, {investment_amount} €", "success")
+        return redirect(url_for("cashflow_project", project_id=project_id))
 
     return render_template(
-        'add_new_cashflow.html',
+        "add_new_cashflow.html",
         project_id=project_id,
         csrf_token=generate_csrf_token()
     )
