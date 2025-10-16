@@ -109,26 +109,34 @@ def main_layout():
 
 @app.route("/create", methods=["POST"])
 def create():
-    username = request.form.get("username")
-    password1 = request.form.get("password1")
-    password2 = request.form.get("password2")
+    username = request.form.get("username", "").strip()
+    password1 = request.form.get("password1", "")
+    password2 = request.form.get("password2", "")
 
     if not username or not password1 or not password2:
-        flash("Kaikki kentät on täytettävä", "error")
+        flash(f"Kaikki kentät on täytettävä", "error")
+        return render_template("register.html", csrf_token=generate_csrf_token())
+
+    if len(username) < 6:
+        flash(f"Käyttäjätunnuksen tulee olla vähintään 6 merkkiä: {username}", "error")
+        return render_template("register.html", csrf_token=generate_csrf_token())
+
+    if len(password1) < 8:
+        flash(f"Salasanan tulee olla vähintään 8 merkkiä", "error")
         return render_template("register.html", csrf_token=generate_csrf_token())
 
     if password1 != password2:
-        flash("Salasanat eivät ole samat", "error")
+        flash(f"Salasanat eivät ole samat käyttäjälle: {username}", "error")
         return render_template("register.html", csrf_token=generate_csrf_token())
 
     password_hash = generate_password_hash(password1)
 
     success = service_functions.add_user_to_db(username, password_hash)
     if not success:
-        flash(f"Tunnus on jo varattu, käytä toista tunnusta", "error")
+        flash(f"Tunnus '{username}' on jo varattu, käytä toista tunnusta", "error")
         return render_template("register.html", csrf_token=generate_csrf_token())
 
-    flash("Tunnus luotu onnistuneesti!", "success")
+    flash(f"Tunnus '{username}' luotu onnistuneesti!", "success")
     return render_template("register.html", csrf_token=generate_csrf_token())
 
 @app.route("/post_register_redirect", methods=["POST"])

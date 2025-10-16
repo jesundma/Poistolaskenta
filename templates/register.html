@@ -3,17 +3,13 @@
 
 <head>
   <title>Rekisteröinti</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
 </head>
-
   {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
-      <ul>
-        {% for category, message in messages %}
-          <li style="color: {% if category == 'error' %}red{% elif category == 'success' %}green{% else %}black{% endif %};">
-            {{ message }}
-          </li>
-        {% endfor %}
-      </ul>
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+      {% endfor %}
     {% endif %}
   {% endwith %}
 
@@ -21,20 +17,49 @@
   <form action="/create" method="post" autocomplete="off">
     <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
     <h1>Uuden käyttäjän luominen</h1>
+
     <p>
-      Tunnus: <br />
-      <input type="text" name="username" value=""  autocomplete="new-username"/>
+      <div class="tooltip">
+        Tunnus: <br />
+        <input 
+          type="text" 
+          name="username" 
+          value="" 
+          autocomplete="new-username" 
+        />
+        <span class="tooltiptext">Syötä käyttäjätunnus (vähintään 6 merkkiä)</span>
+      </div>
     </p>
+
     <p>
-      Salasana: <br />
-      <input type="password" name="password1" value="" autocomplete="new-password"/>
+      <div class="tooltip">
+        Salasana: <br />
+        <input 
+          type="password" 
+          name="password1" 
+          value="" 
+          autocomplete="new-password" 
+        />
+        <span class="tooltiptext">Salasanan tulee olla vähintään 8 merkkiä</span>
+      </div>
     </p>
+
     <p>
-      Salasana uudestaan: <br />
-      <input type="password" name="password2" value="" autocomplete="new-password"/>
+      <div class="tooltip">
+        Salasana uudestaan: <br />
+        <input 
+          type="password" 
+          name="password2" 
+          value="" 
+          autocomplete="new-password" 
+        />
+        <span class="tooltiptext">Toista salasana</span>
+      </div>
     </p>
+
     <input type="submit" value="Luo tunnus" />
   </form>
+
   <p><a href="{{ url_for('main_layout') }}">Takaisin pääsivulle</a></p>
 </body>
 
