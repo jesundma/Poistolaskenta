@@ -1,0 +1,227 @@
+2025-10-17 12:53:57,243 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-17 12:53:57,243 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-17 12:54:03,108 [INFO] Clearing Users, Projects, and Investments
+2025-10-17 12:54:48,368 [INFO] 500 users inserted
+2025-10-17 12:55:33,526 [INFO] 1000 users inserted
+2025-10-17 12:55:33,534 [INFO] Inserted 1000 users in 90.41 seconds
+2025-10-17 12:55:33,552 [INFO] 1000 projects inserted with 5000 cashflows
+2025-10-17 12:55:33,566 [INFO] 2000 projects inserted with 10000 cashflows
+2025-10-17 12:55:33,580 [INFO] 3000 projects inserted with 15000 cashflows
+2025-10-17 12:55:33,594 [INFO] 4000 projects inserted with 20000 cashflows
+2025-10-17 12:55:33,608 [INFO] 5000 projects inserted with 25000 cashflows
+2025-10-17 12:55:33,636 [INFO] 6000 projects inserted with 30000 cashflows
+2025-10-17 12:55:33,650 [INFO] 7000 projects inserted with 35000 cashflows
+2025-10-17 12:55:33,664 [INFO] 8000 projects inserted with 40000 cashflows
+2025-10-17 12:55:33,679 [INFO] 9000 projects inserted with 45000 cashflows
+2025-10-17 12:55:33,693 [INFO] 10000 projects inserted with 50000 cashflows
+2025-10-17 12:55:33,721 [INFO] 11000 projects inserted with 55000 cashflows
+2025-10-17 12:55:33,735 [INFO] 12000 projects inserted with 60000 cashflows
+2025-10-17 12:55:33,750 [INFO] 13000 projects inserted with 65000 cashflows
+2025-10-17 12:55:33,765 [INFO] 14000 projects inserted with 70000 cashflows
+2025-10-17 12:55:33,779 [INFO] 15000 projects inserted with 75000 cashflows
+2025-10-17 12:55:33,807 [INFO] 16000 projects inserted with 80000 cashflows
+2025-10-17 12:55:33,821 [INFO] 17000 projects inserted with 85000 cashflows
+2025-10-17 12:55:33,836 [INFO] 18000 projects inserted with 90000 cashflows
+2025-10-17 12:55:33,850 [INFO] 19000 projects inserted with 95000 cashflows
+2025-10-17 12:55:33,865 [INFO] 20000 projects inserted with 100000 cashflows
+2025-10-17 12:55:33,895 [INFO] 21000 projects inserted with 105000 cashflows
+2025-10-17 12:55:33,909 [INFO] 22000 projects inserted with 110000 cashflows
+2025-10-17 12:55:33,924 [INFO] 23000 projects inserted with 115000 cashflows
+2025-10-17 12:55:33,938 [INFO] 24000 projects inserted with 120000 cashflows
+2025-10-17 12:55:33,953 [INFO] 25000 projects inserted with 125000 cashflows
+2025-10-17 12:55:33,980 [INFO] 26000 projects inserted with 130000 cashflows
+2025-10-17 12:55:33,995 [INFO] 27000 projects inserted with 135000 cashflows
+2025-10-17 12:55:34,009 [INFO] 28000 projects inserted with 140000 cashflows
+2025-10-17 12:55:34,023 [INFO] 29000 projects inserted with 145000 cashflows
+2025-10-17 12:55:34,037 [INFO] 30000 projects inserted with 150000 cashflows
+2025-10-17 12:55:34,067 [INFO] 31000 projects inserted with 155000 cashflows
+2025-10-17 12:55:34,082 [INFO] 32000 projects inserted with 160000 cashflows
+2025-10-17 12:55:34,096 [INFO] 33000 projects inserted with 165000 cashflows
+2025-10-17 12:55:34,111 [INFO] 34000 projects inserted with 170000 cashflows
+2025-10-17 12:55:34,126 [INFO] 35000 projects inserted with 175000 cashflows
+2025-10-17 12:55:34,155 [INFO] 36000 projects inserted with 180000 cashflows
+2025-10-17 12:55:34,170 [INFO] 37000 projects inserted with 185000 cashflows
+2025-10-17 12:55:34,184 [INFO] 38000 projects inserted with 190000 cashflows
+2025-10-17 12:55:34,199 [INFO] 39000 projects inserted with 195000 cashflows
+2025-10-17 12:55:34,213 [INFO] 40000 projects inserted with 200000 cashflows
+2025-10-17 12:55:34,241 [INFO] 41000 projects inserted with 205000 cashflows
+2025-10-17 12:55:34,256 [INFO] 42000 projects inserted with 210000 cashflows
+2025-10-17 12:55:34,272 [INFO] 43000 projects inserted with 215000 cashflows
+2025-10-17 12:55:34,286 [INFO] 44000 projects inserted with 220000 cashflows
+2025-10-17 12:55:34,301 [INFO] 45000 projects inserted with 225000 cashflows
+2025-10-17 12:55:34,328 [INFO] 46000 projects inserted with 230000 cashflows
+2025-10-17 12:55:34,343 [INFO] 47000 projects inserted with 235000 cashflows
+2025-10-17 12:55:34,357 [INFO] 48000 projects inserted with 240000 cashflows
+2025-10-17 12:55:34,371 [INFO] 49000 projects inserted with 245000 cashflows
+2025-10-17 12:55:34,387 [INFO] 50000 projects inserted with 250000 cashflows
+2025-10-17 12:55:34,430 [INFO] 51000 projects inserted with 255000 cashflows
+2025-10-17 12:55:34,445 [INFO] 52000 projects inserted with 260000 cashflows
+2025-10-17 12:55:34,460 [INFO] 53000 projects inserted with 265000 cashflows
+2025-10-17 12:55:34,474 [INFO] 54000 projects inserted with 270000 cashflows
+2025-10-17 12:55:34,489 [INFO] 55000 projects inserted with 275000 cashflows
+2025-10-17 12:55:34,521 [INFO] 56000 projects inserted with 280000 cashflows
+2025-10-17 12:55:34,536 [INFO] 57000 projects inserted with 285000 cashflows
+2025-10-17 12:55:34,551 [INFO] 58000 projects inserted with 290000 cashflows
+2025-10-17 12:55:34,566 [INFO] 59000 projects inserted with 295000 cashflows
+2025-10-17 12:55:34,580 [INFO] 60000 projects inserted with 300000 cashflows
+2025-10-17 12:55:34,615 [INFO] 61000 projects inserted with 305000 cashflows
+2025-10-17 12:55:34,632 [INFO] 62000 projects inserted with 310000 cashflows
+2025-10-17 12:55:34,646 [INFO] 63000 projects inserted with 315000 cashflows
+2025-10-17 12:55:34,660 [INFO] 64000 projects inserted with 320000 cashflows
+2025-10-17 12:55:34,675 [INFO] 65000 projects inserted with 325000 cashflows
+2025-10-17 12:55:34,706 [INFO] 66000 projects inserted with 330000 cashflows
+2025-10-17 12:55:34,720 [INFO] 67000 projects inserted with 335000 cashflows
+2025-10-17 12:55:34,735 [INFO] 68000 projects inserted with 340000 cashflows
+2025-10-17 12:55:34,749 [INFO] 69000 projects inserted with 345000 cashflows
+2025-10-17 12:55:34,763 [INFO] 70000 projects inserted with 350000 cashflows
+2025-10-17 12:55:34,801 [INFO] 71000 projects inserted with 355000 cashflows
+2025-10-17 12:55:34,815 [INFO] 72000 projects inserted with 360000 cashflows
+2025-10-17 12:55:34,831 [INFO] 73000 projects inserted with 365000 cashflows
+2025-10-17 12:55:34,846 [INFO] 74000 projects inserted with 370000 cashflows
+2025-10-17 12:55:34,860 [INFO] 75000 projects inserted with 375000 cashflows
+2025-10-17 12:55:34,891 [INFO] 76000 projects inserted with 380000 cashflows
+2025-10-17 12:55:34,906 [INFO] 77000 projects inserted with 385000 cashflows
+2025-10-17 12:55:34,920 [INFO] 78000 projects inserted with 390000 cashflows
+2025-10-17 12:55:34,935 [INFO] 79000 projects inserted with 395000 cashflows
+2025-10-17 12:55:34,949 [INFO] 80000 projects inserted with 400000 cashflows
+2025-10-17 12:55:34,978 [INFO] 81000 projects inserted with 405000 cashflows
+2025-10-17 12:55:34,992 [INFO] 82000 projects inserted with 410000 cashflows
+2025-10-17 12:55:35,007 [INFO] 83000 projects inserted with 415000 cashflows
+2025-10-17 12:55:35,022 [INFO] 84000 projects inserted with 420000 cashflows
+2025-10-17 12:55:35,036 [INFO] 85000 projects inserted with 425000 cashflows
+2025-10-17 12:55:35,068 [INFO] 86000 projects inserted with 430000 cashflows
+2025-10-17 12:55:35,084 [INFO] 87000 projects inserted with 435000 cashflows
+2025-10-17 12:55:35,100 [INFO] 88000 projects inserted with 440000 cashflows
+2025-10-17 12:55:35,114 [INFO] 89000 projects inserted with 445000 cashflows
+2025-10-17 12:55:35,129 [INFO] 90000 projects inserted with 450000 cashflows
+2025-10-17 12:55:35,158 [INFO] 91000 projects inserted with 455000 cashflows
+2025-10-17 12:55:35,174 [INFO] 92000 projects inserted with 460000 cashflows
+2025-10-17 12:55:35,188 [INFO] 93000 projects inserted with 465000 cashflows
+2025-10-17 12:55:35,203 [INFO] 94000 projects inserted with 470000 cashflows
+2025-10-17 12:55:35,219 [INFO] 95000 projects inserted with 475000 cashflows
+2025-10-17 12:55:35,248 [INFO] 96000 projects inserted with 480000 cashflows
+2025-10-17 12:55:35,263 [INFO] 97000 projects inserted with 485000 cashflows
+2025-10-17 12:55:35,278 [INFO] 98000 projects inserted with 490000 cashflows
+2025-10-17 12:55:35,292 [INFO] 99000 projects inserted with 495000 cashflows
+2025-10-17 12:55:35,307 [INFO] 100000 projects inserted with 500000 cashflows
+2025-10-17 12:55:35,316 [INFO] Inserted 100000 projects with 500000 cashflows in 1.78 seconds
+2025-10-17 12:55:35,317 [INFO] Database seeding completed
+2025-10-17 12:55:35,317 [INFO] Database seeded successfully.
+2025-10-17 12:55:35,318 [INFO] GET /seed took 92.21s
+2025-10-17 12:55:35,319 [INFO] 127.0.0.1 - - [17/Oct/2025 12:55:35] "GET /seed HTTP/1.1" 200 -
+2025-10-17 13:42:46,386 [ERROR] Exception on /list_projects [GET]
+Traceback (most recent call last):
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 941, in finalize_request
+    response = self.process_response(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 80, in after_request
+    elapsed_time = round(time.time() - g.start_time, 2)
+                                       ^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: start_time
+2025-10-17 13:42:46,398 [ERROR] Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 941, in finalize_request
+    response = self.process_response(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 80, in after_request
+    elapsed_time = round(time.time() - g.start_time, 2)
+                                       ^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: start_time
+2025-10-17 13:42:46,400 [INFO] 127.0.0.1 - - [17/Oct/2025 13:42:46] "[35m[1mGET /list_projects HTTP/1.1[0m" 500 -
+2025-10-17 13:43:13,818 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-17 13:43:13,818 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-17 13:43:19,214 [ERROR] Exception on /list_projects [GET]
+Traceback (most recent call last):
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 941, in finalize_request
+    response = self.process_response(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 80, in after_request
+    elapsed_time = round(time.time() - g.start_time, 2)
+                                       ^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: start_time
+2025-10-17 13:43:19,219 [ERROR] Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 941, in finalize_request
+    response = self.process_response(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 80, in after_request
+    elapsed_time = round(time.time() - g.start_time, 2)
+                                       ^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: start_time
+2025-10-17 13:43:19,220 [INFO] 127.0.0.1 - - [17/Oct/2025 13:43:19] "[35m[1mGET /list_projects HTTP/1.1[0m" 500 -
+2025-10-17 13:48:11,160 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-17 13:48:11,160 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-17 13:48:16,430 [WARNING] GET /list_projects has not start time set
+2025-10-17 13:48:16,431 [INFO] 127.0.0.1 - - [17/Oct/2025 13:48:16] "[32mGET /list_projects HTTP/1.1[0m" 302 -
+2025-10-17 13:48:16,439 [INFO] GET /login took 0.01s
+2025-10-17 13:48:16,439 [INFO] 127.0.0.1 - - [17/Oct/2025 13:48:16] "GET /login HTTP/1.1" 200 -
+2025-10-17 13:48:23,227 [INFO] POST /login took 0.01s
+2025-10-17 13:48:23,227 [INFO] 127.0.0.1 - - [17/Oct/2025 13:48:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-17 13:48:23,233 [INFO] GET /login took 0.0s
+2025-10-17 13:48:23,234 [INFO] 127.0.0.1 - - [17/Oct/2025 13:48:23] "GET /login HTTP/1.1" 200 -
+2025-10-17 13:48:57,897 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-17 13:48:57,897 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-17 13:49:07,840 [INFO] GET /login took 0.0s
+2025-10-17 13:49:07,841 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:07] "GET /login HTTP/1.1" 200 -
+2025-10-17 13:49:12,619 [INFO] GET / took 0.01s
+2025-10-17 13:49:12,619 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-17 13:49:12,627 [INFO] GET /register took 0.0s
+2025-10-17 13:49:12,628 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:12] "GET /register HTTP/1.1" 200 -
+2025-10-17 13:49:12,695 [INFO] GET /static/css/forms.css took 0.01s
+2025-10-17 13:49:12,695 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:12] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-17 13:49:25,517 [INFO] POST /create took 0.13s
+2025-10-17 13:49:25,518 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:25] "POST /create HTTP/1.1" 200 -
+2025-10-17 13:49:25,684 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-17 13:49:25,684 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:25] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-17 13:49:30,668 [INFO] GET /main_layout took 0.01s
+2025-10-17 13:49:30,669 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:30] "GET /main_layout HTTP/1.1" 200 -
+2025-10-17 13:49:30,695 [INFO] GET /static/css/main.css took 0.0s
+2025-10-17 13:49:30,696 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-17 13:49:47,101 [WARNING] GET /list_projects has not start time set
+2025-10-17 13:49:47,102 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:47] "[32mGET /list_projects HTTP/1.1[0m" 302 -
+2025-10-17 13:49:47,106 [INFO] GET /login took 0.0s
+2025-10-17 13:49:47,106 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:47] "GET /login HTTP/1.1" 200 -
+2025-10-17 13:49:58,547 [INFO] POST /login took 0.12s
+2025-10-17 13:49:58,548 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-17 13:49:58,559 [INFO] GET /main_layout took 0.0s
+2025-10-17 13:49:58,560 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:58] "GET /main_layout HTTP/1.1" 200 -
+2025-10-17 13:49:58,711 [INFO] GET /static/css/main.css took 0.0s
+2025-10-17 13:49:58,712 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-17 13:50:02,309 [INFO] GET /list_projects took 0.04s
+2025-10-17 13:50:02,309 [INFO] 127.0.0.1 - - [17/Oct/2025 13:50:02] "GET /list_projects HTTP/1.1" 200 -

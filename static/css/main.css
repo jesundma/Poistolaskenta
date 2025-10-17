@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Centered container */
 .container {
     max-width: 600px;
     margin: 60px auto;
@@ -16,14 +15,12 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Main title */
 h1 {
     text-align: center;
     color: #2c3e50;
     margin-bottom: 20px;
 }
 
-/* Logged-in user text */
 .user-info {
     text-align: center;
     font-size: 16px;
@@ -31,7 +28,6 @@ h1 {
     margin-bottom: 25px;
 }
 
-/* Menu buttons container */
 .menu {
     display: flex;
     flex-direction: column;
@@ -39,7 +35,6 @@ h1 {
     gap: 15px;
 }
 
-/* Individual menu buttons */
 .menu a {
     display: block;
     width: 80%;
@@ -53,7 +48,6 @@ h1 {
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Hover and click effects */
 .menu a:hover {
     background-color: #45a049;
     transform: translateY(-2px);
@@ -63,7 +57,6 @@ h1 {
     transform: translateY(0);
 }
 
-/* Logout button variant */
 .menu a.logout {
     background-color: #e74c3c;
 }

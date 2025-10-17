@@ -1,9 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash, abort, get_flashed_messages
+import time
+import logging
+from flask import Flask, render_template, request, redirect, url_for, session, flash, abort, get_flashed_messages, g
 from werkzeug.security import generate_password_hash, check_password_hash
 import service_functions
 import sqlite3
 import db
 import config
+import seed
 #import markupsafe # check whether required
 import secrets
 import math #math required for pagination
@@ -38,6 +41,8 @@ protected_routes = [
     'user_statistics'
 ]
 
+logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
+
 def login_required():
     if "user_id" not in session:
         return redirect(url_for("login"))
@@ -65,6 +70,20 @@ def before_request_csrf():
         form_token = request.form.get("csrf_token")
         if not form_token or form_token != session.get("csrf_token"):
             abort(400, description="CSRF tietovirhe")
+
+@app.before_request
+def before_request():
+    g.start_time = time.time()
+
+@app.after_request
+def after_request(response):
+    start_time = getattr(g, "start_time", None)
+    if start_time:
+        elapsed_time = round(time.time() - g.start_time, 2)
+        app.logger.info(f"{request.method} {request.path} took {elapsed_time}s")
+    else:
+        app.logger.warning(f"{request.method} {request.path} has not start time set")
+    return response
 
 @app.route("/")
 def user_check():
@@ -499,6 +518,16 @@ def user_statistics():
         "user_statistics.html",
         projects=projects
     )
+
+@app.route("/seed")
+def run_seed():
+    try:
+        seed.seed_database(logger=app.logger)
+        app.logger.info("Database seeded successfully.")
+        return "Database seeded successfully."
+    except Exception as e:
+        app.logger.exception("Error seeding database")
+        return f"Error seeding database: {e}", 500
 
 @app.route("/logout")
 def logout():
