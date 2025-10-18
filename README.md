@@ -55,3 +55,31 @@ Puuttuvia ominaisuuksia:
 - Vakiomuotoiset raportit puuttuvat, toteuttaminen riippuu ajan riittävyydestä
 - Projektien tietosisältöä voi laajentaa lisäämällä projektin muistiinpanot ja mahdollisuus liittää projektiin liittyviä "rakennuspiirustuksia". Toteuttaminen riippuu ajan riittävyydestä.
 - template- muotoiluja ei ole, kaikki muotoilut (jos niitä on) ovat template- kohtaisia, CSS- rakenne puuttuu.
+
+Suuret tietomäärät
+
+1000 käyttäjää, 100 000 projektia ja 5 kassavirtaa kussakin (500 000 kassavirtaa):
+2025-10-18 18:21:43,958 [INFO] Clearing Users, Projects, and Investments
+2025-10-18 18:23:17,483 [INFO] Inserted 1001 users in 91.0 seconds
+2025-10-18 18:23:19,364 [INFO] Inserted 100000 projects with 500000 cashflows in 1.88 seconds
+2025-10-18 18:23:19,367 [INFO] GET /seed took 95.41s
+2025-10-18 18:26:26,901 [INFO] GET /list_projects took 0.71s
+2025-10-18 18:26:42,539 [INFO] GET /list_projects took 0.3s (projektin haku nimellä)
+2025-10-18 18:28:14,040 [INFO] GET /cashflow_project/993 took 0.02s
+2025-10-18 18:28:20,921 [INFO] GET /add_new_cashflow/993 took 0.01s
+2025-10-18 18:28:43,292 [INFO] POST /add_new_cashflow/993 took 0.04s
+2025-10-18 18:28:43,309 [INFO] GET /cashflow_project/993 took 0.01s
+2025-10-18 18:28:55,618 [INFO] GET /list_projects took 0.67s
+
+1000 käyttäjää, 1 000 000 projektia ja 5 kassavirtaa kussakin (5 000 000 kassavirtaa):
+
+2025-10-18 18:38:03,343 [INFO] Clearing Users, Projects, and Investments
+2025-10-18 18:39:38,646 [INFO] Inserted 1001 users in 89.87 seconds
+2025-10-18 18:39:56,618 [INFO] Inserted 1000000 projects with 5000000 cashflows in 17.97 seconds
+2025-10-18 18:39:56,620 [INFO] GET /seed took 113.28s
+2025-10-18 18:50:04,889 [INFO] GET /list_projects took 16.62s
+2025-10-18 18:50:35,140 [INFO] GET /list_projects took 12.04s
+2025-10-18 18:50:47,522 [INFO] GET /list_projects took 2.96s (projektin haku nimellä)
+
+Taulussa Users id on pääavain (PRIMARY KEY) ja siten automaattisesti indeksoitu, kuten myös username yksilöllinen- rajoittimen (UNIQUE) takia. Projects- taulun pääavain (PRIMARY KEY) on id ja siten id- perustuvien hakujen osalta indeksoitu. Projektin nimeen (project_name) perustuville hauille, esimerkiksi suodattimet luotiin indeksi (CREATE INDEX idx_projects_name ON Projects(project_name);)
+

@@ -1,227 +1,1027 @@
-2025-10-17 12:53:57,243 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-10-18 18:37:50,478 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2025-10-17 12:53:57,243 [INFO] [33mPress CTRL+C to quit[0m
-2025-10-17 12:54:03,108 [INFO] Clearing Users, Projects, and Investments
-2025-10-17 12:54:48,368 [INFO] 500 users inserted
-2025-10-17 12:55:33,526 [INFO] 1000 users inserted
-2025-10-17 12:55:33,534 [INFO] Inserted 1000 users in 90.41 seconds
-2025-10-17 12:55:33,552 [INFO] 1000 projects inserted with 5000 cashflows
-2025-10-17 12:55:33,566 [INFO] 2000 projects inserted with 10000 cashflows
-2025-10-17 12:55:33,580 [INFO] 3000 projects inserted with 15000 cashflows
-2025-10-17 12:55:33,594 [INFO] 4000 projects inserted with 20000 cashflows
-2025-10-17 12:55:33,608 [INFO] 5000 projects inserted with 25000 cashflows
-2025-10-17 12:55:33,636 [INFO] 6000 projects inserted with 30000 cashflows
-2025-10-17 12:55:33,650 [INFO] 7000 projects inserted with 35000 cashflows
-2025-10-17 12:55:33,664 [INFO] 8000 projects inserted with 40000 cashflows
-2025-10-17 12:55:33,679 [INFO] 9000 projects inserted with 45000 cashflows
-2025-10-17 12:55:33,693 [INFO] 10000 projects inserted with 50000 cashflows
-2025-10-17 12:55:33,721 [INFO] 11000 projects inserted with 55000 cashflows
-2025-10-17 12:55:33,735 [INFO] 12000 projects inserted with 60000 cashflows
-2025-10-17 12:55:33,750 [INFO] 13000 projects inserted with 65000 cashflows
-2025-10-17 12:55:33,765 [INFO] 14000 projects inserted with 70000 cashflows
-2025-10-17 12:55:33,779 [INFO] 15000 projects inserted with 75000 cashflows
-2025-10-17 12:55:33,807 [INFO] 16000 projects inserted with 80000 cashflows
-2025-10-17 12:55:33,821 [INFO] 17000 projects inserted with 85000 cashflows
-2025-10-17 12:55:33,836 [INFO] 18000 projects inserted with 90000 cashflows
-2025-10-17 12:55:33,850 [INFO] 19000 projects inserted with 95000 cashflows
-2025-10-17 12:55:33,865 [INFO] 20000 projects inserted with 100000 cashflows
-2025-10-17 12:55:33,895 [INFO] 21000 projects inserted with 105000 cashflows
-2025-10-17 12:55:33,909 [INFO] 22000 projects inserted with 110000 cashflows
-2025-10-17 12:55:33,924 [INFO] 23000 projects inserted with 115000 cashflows
-2025-10-17 12:55:33,938 [INFO] 24000 projects inserted with 120000 cashflows
-2025-10-17 12:55:33,953 [INFO] 25000 projects inserted with 125000 cashflows
-2025-10-17 12:55:33,980 [INFO] 26000 projects inserted with 130000 cashflows
-2025-10-17 12:55:33,995 [INFO] 27000 projects inserted with 135000 cashflows
-2025-10-17 12:55:34,009 [INFO] 28000 projects inserted with 140000 cashflows
-2025-10-17 12:55:34,023 [INFO] 29000 projects inserted with 145000 cashflows
-2025-10-17 12:55:34,037 [INFO] 30000 projects inserted with 150000 cashflows
-2025-10-17 12:55:34,067 [INFO] 31000 projects inserted with 155000 cashflows
-2025-10-17 12:55:34,082 [INFO] 32000 projects inserted with 160000 cashflows
-2025-10-17 12:55:34,096 [INFO] 33000 projects inserted with 165000 cashflows
-2025-10-17 12:55:34,111 [INFO] 34000 projects inserted with 170000 cashflows
-2025-10-17 12:55:34,126 [INFO] 35000 projects inserted with 175000 cashflows
-2025-10-17 12:55:34,155 [INFO] 36000 projects inserted with 180000 cashflows
-2025-10-17 12:55:34,170 [INFO] 37000 projects inserted with 185000 cashflows
-2025-10-17 12:55:34,184 [INFO] 38000 projects inserted with 190000 cashflows
-2025-10-17 12:55:34,199 [INFO] 39000 projects inserted with 195000 cashflows
-2025-10-17 12:55:34,213 [INFO] 40000 projects inserted with 200000 cashflows
-2025-10-17 12:55:34,241 [INFO] 41000 projects inserted with 205000 cashflows
-2025-10-17 12:55:34,256 [INFO] 42000 projects inserted with 210000 cashflows
-2025-10-17 12:55:34,272 [INFO] 43000 projects inserted with 215000 cashflows
-2025-10-17 12:55:34,286 [INFO] 44000 projects inserted with 220000 cashflows
-2025-10-17 12:55:34,301 [INFO] 45000 projects inserted with 225000 cashflows
-2025-10-17 12:55:34,328 [INFO] 46000 projects inserted with 230000 cashflows
-2025-10-17 12:55:34,343 [INFO] 47000 projects inserted with 235000 cashflows
-2025-10-17 12:55:34,357 [INFO] 48000 projects inserted with 240000 cashflows
-2025-10-17 12:55:34,371 [INFO] 49000 projects inserted with 245000 cashflows
-2025-10-17 12:55:34,387 [INFO] 50000 projects inserted with 250000 cashflows
-2025-10-17 12:55:34,430 [INFO] 51000 projects inserted with 255000 cashflows
-2025-10-17 12:55:34,445 [INFO] 52000 projects inserted with 260000 cashflows
-2025-10-17 12:55:34,460 [INFO] 53000 projects inserted with 265000 cashflows
-2025-10-17 12:55:34,474 [INFO] 54000 projects inserted with 270000 cashflows
-2025-10-17 12:55:34,489 [INFO] 55000 projects inserted with 275000 cashflows
-2025-10-17 12:55:34,521 [INFO] 56000 projects inserted with 280000 cashflows
-2025-10-17 12:55:34,536 [INFO] 57000 projects inserted with 285000 cashflows
-2025-10-17 12:55:34,551 [INFO] 58000 projects inserted with 290000 cashflows
-2025-10-17 12:55:34,566 [INFO] 59000 projects inserted with 295000 cashflows
-2025-10-17 12:55:34,580 [INFO] 60000 projects inserted with 300000 cashflows
-2025-10-17 12:55:34,615 [INFO] 61000 projects inserted with 305000 cashflows
-2025-10-17 12:55:34,632 [INFO] 62000 projects inserted with 310000 cashflows
-2025-10-17 12:55:34,646 [INFO] 63000 projects inserted with 315000 cashflows
-2025-10-17 12:55:34,660 [INFO] 64000 projects inserted with 320000 cashflows
-2025-10-17 12:55:34,675 [INFO] 65000 projects inserted with 325000 cashflows
-2025-10-17 12:55:34,706 [INFO] 66000 projects inserted with 330000 cashflows
-2025-10-17 12:55:34,720 [INFO] 67000 projects inserted with 335000 cashflows
-2025-10-17 12:55:34,735 [INFO] 68000 projects inserted with 340000 cashflows
-2025-10-17 12:55:34,749 [INFO] 69000 projects inserted with 345000 cashflows
-2025-10-17 12:55:34,763 [INFO] 70000 projects inserted with 350000 cashflows
-2025-10-17 12:55:34,801 [INFO] 71000 projects inserted with 355000 cashflows
-2025-10-17 12:55:34,815 [INFO] 72000 projects inserted with 360000 cashflows
-2025-10-17 12:55:34,831 [INFO] 73000 projects inserted with 365000 cashflows
-2025-10-17 12:55:34,846 [INFO] 74000 projects inserted with 370000 cashflows
-2025-10-17 12:55:34,860 [INFO] 75000 projects inserted with 375000 cashflows
-2025-10-17 12:55:34,891 [INFO] 76000 projects inserted with 380000 cashflows
-2025-10-17 12:55:34,906 [INFO] 77000 projects inserted with 385000 cashflows
-2025-10-17 12:55:34,920 [INFO] 78000 projects inserted with 390000 cashflows
-2025-10-17 12:55:34,935 [INFO] 79000 projects inserted with 395000 cashflows
-2025-10-17 12:55:34,949 [INFO] 80000 projects inserted with 400000 cashflows
-2025-10-17 12:55:34,978 [INFO] 81000 projects inserted with 405000 cashflows
-2025-10-17 12:55:34,992 [INFO] 82000 projects inserted with 410000 cashflows
-2025-10-17 12:55:35,007 [INFO] 83000 projects inserted with 415000 cashflows
-2025-10-17 12:55:35,022 [INFO] 84000 projects inserted with 420000 cashflows
-2025-10-17 12:55:35,036 [INFO] 85000 projects inserted with 425000 cashflows
-2025-10-17 12:55:35,068 [INFO] 86000 projects inserted with 430000 cashflows
-2025-10-17 12:55:35,084 [INFO] 87000 projects inserted with 435000 cashflows
-2025-10-17 12:55:35,100 [INFO] 88000 projects inserted with 440000 cashflows
-2025-10-17 12:55:35,114 [INFO] 89000 projects inserted with 445000 cashflows
-2025-10-17 12:55:35,129 [INFO] 90000 projects inserted with 450000 cashflows
-2025-10-17 12:55:35,158 [INFO] 91000 projects inserted with 455000 cashflows
-2025-10-17 12:55:35,174 [INFO] 92000 projects inserted with 460000 cashflows
-2025-10-17 12:55:35,188 [INFO] 93000 projects inserted with 465000 cashflows
-2025-10-17 12:55:35,203 [INFO] 94000 projects inserted with 470000 cashflows
-2025-10-17 12:55:35,219 [INFO] 95000 projects inserted with 475000 cashflows
-2025-10-17 12:55:35,248 [INFO] 96000 projects inserted with 480000 cashflows
-2025-10-17 12:55:35,263 [INFO] 97000 projects inserted with 485000 cashflows
-2025-10-17 12:55:35,278 [INFO] 98000 projects inserted with 490000 cashflows
-2025-10-17 12:55:35,292 [INFO] 99000 projects inserted with 495000 cashflows
-2025-10-17 12:55:35,307 [INFO] 100000 projects inserted with 500000 cashflows
-2025-10-17 12:55:35,316 [INFO] Inserted 100000 projects with 500000 cashflows in 1.78 seconds
-2025-10-17 12:55:35,317 [INFO] Database seeding completed
-2025-10-17 12:55:35,317 [INFO] Database seeded successfully.
-2025-10-17 12:55:35,318 [INFO] GET /seed took 92.21s
-2025-10-17 12:55:35,319 [INFO] 127.0.0.1 - - [17/Oct/2025 12:55:35] "GET /seed HTTP/1.1" 200 -
-2025-10-17 13:42:46,386 [ERROR] Exception on /list_projects [GET]
-Traceback (most recent call last):
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 920, in full_dispatch_request
-    return self.finalize_request(rv)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 941, in finalize_request
-    response = self.process_response(response)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1319, in process_response
-    response = self.ensure_sync(func)(response)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 80, in after_request
-    elapsed_time = round(time.time() - g.start_time, 2)
-                                       ^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
-    raise AttributeError(name) from None
-AttributeError: start_time
-2025-10-17 13:42:46,398 [ERROR] Request finalizing failed with an error while handling an error
-Traceback (most recent call last):
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 941, in finalize_request
-    response = self.process_response(response)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1319, in process_response
-    response = self.ensure_sync(func)(response)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 80, in after_request
-    elapsed_time = round(time.time() - g.start_time, 2)
-                                       ^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
-    raise AttributeError(name) from None
-AttributeError: start_time
-2025-10-17 13:42:46,400 [INFO] 127.0.0.1 - - [17/Oct/2025 13:42:46] "[35m[1mGET /list_projects HTTP/1.1[0m" 500 -
-2025-10-17 13:43:13,818 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-10-17 13:43:13,818 [INFO] [33mPress CTRL+C to quit[0m
-2025-10-17 13:43:19,214 [ERROR] Exception on /list_projects [GET]
-Traceback (most recent call last):
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 920, in full_dispatch_request
-    return self.finalize_request(rv)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 941, in finalize_request
-    response = self.process_response(response)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1319, in process_response
-    response = self.ensure_sync(func)(response)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 80, in after_request
-    elapsed_time = round(time.time() - g.start_time, 2)
-                                       ^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
-    raise AttributeError(name) from None
-AttributeError: start_time
-2025-10-17 13:43:19,219 [ERROR] Request finalizing failed with an error while handling an error
-Traceback (most recent call last):
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 941, in finalize_request
-    response = self.process_response(response)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1319, in process_response
-    response = self.ensure_sync(func)(response)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 80, in after_request
-    elapsed_time = round(time.time() - g.start_time, 2)
-                                       ^^^^^^^^^^^^
-  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/ctx.py", line 56, in __getattr__
-    raise AttributeError(name) from None
-AttributeError: start_time
-2025-10-17 13:43:19,220 [INFO] 127.0.0.1 - - [17/Oct/2025 13:43:19] "[35m[1mGET /list_projects HTTP/1.1[0m" 500 -
-2025-10-17 13:48:11,160 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-10-17 13:48:11,160 [INFO] [33mPress CTRL+C to quit[0m
-2025-10-17 13:48:16,430 [WARNING] GET /list_projects has not start time set
-2025-10-17 13:48:16,431 [INFO] 127.0.0.1 - - [17/Oct/2025 13:48:16] "[32mGET /list_projects HTTP/1.1[0m" 302 -
-2025-10-17 13:48:16,439 [INFO] GET /login took 0.01s
-2025-10-17 13:48:16,439 [INFO] 127.0.0.1 - - [17/Oct/2025 13:48:16] "GET /login HTTP/1.1" 200 -
-2025-10-17 13:48:23,227 [INFO] POST /login took 0.01s
-2025-10-17 13:48:23,227 [INFO] 127.0.0.1 - - [17/Oct/2025 13:48:23] "[32mPOST /login HTTP/1.1[0m" 302 -
-2025-10-17 13:48:23,233 [INFO] GET /login took 0.0s
-2025-10-17 13:48:23,234 [INFO] 127.0.0.1 - - [17/Oct/2025 13:48:23] "GET /login HTTP/1.1" 200 -
-2025-10-17 13:48:57,897 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-10-17 13:48:57,897 [INFO] [33mPress CTRL+C to quit[0m
-2025-10-17 13:49:07,840 [INFO] GET /login took 0.0s
-2025-10-17 13:49:07,841 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:07] "GET /login HTTP/1.1" 200 -
-2025-10-17 13:49:12,619 [INFO] GET / took 0.01s
-2025-10-17 13:49:12,619 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:12] "[32mGET / HTTP/1.1[0m" 302 -
-2025-10-17 13:49:12,627 [INFO] GET /register took 0.0s
-2025-10-17 13:49:12,628 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:12] "GET /register HTTP/1.1" 200 -
-2025-10-17 13:49:12,695 [INFO] GET /static/css/forms.css took 0.01s
-2025-10-17 13:49:12,695 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:12] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
-2025-10-17 13:49:25,517 [INFO] POST /create took 0.13s
-2025-10-17 13:49:25,518 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:25] "POST /create HTTP/1.1" 200 -
-2025-10-17 13:49:25,684 [INFO] GET /static/css/forms.css took 0.0s
-2025-10-17 13:49:25,684 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:25] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
-2025-10-17 13:49:30,668 [INFO] GET /main_layout took 0.01s
-2025-10-17 13:49:30,669 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:30] "GET /main_layout HTTP/1.1" 200 -
-2025-10-17 13:49:30,695 [INFO] GET /static/css/main.css took 0.0s
-2025-10-17 13:49:30,696 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2025-10-17 13:49:47,101 [WARNING] GET /list_projects has not start time set
-2025-10-17 13:49:47,102 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:47] "[32mGET /list_projects HTTP/1.1[0m" 302 -
-2025-10-17 13:49:47,106 [INFO] GET /login took 0.0s
-2025-10-17 13:49:47,106 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:47] "GET /login HTTP/1.1" 200 -
-2025-10-17 13:49:58,547 [INFO] POST /login took 0.12s
-2025-10-17 13:49:58,548 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:58] "[32mPOST /login HTTP/1.1[0m" 302 -
-2025-10-17 13:49:58,559 [INFO] GET /main_layout took 0.0s
-2025-10-17 13:49:58,560 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:58] "GET /main_layout HTTP/1.1" 200 -
-2025-10-17 13:49:58,711 [INFO] GET /static/css/main.css took 0.0s
-2025-10-17 13:49:58,712 [INFO] 127.0.0.1 - - [17/Oct/2025 13:49:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2025-10-17 13:50:02,309 [INFO] GET /list_projects took 0.04s
-2025-10-17 13:50:02,309 [INFO] 127.0.0.1 - - [17/Oct/2025 13:50:02] "GET /list_projects HTTP/1.1" 200 -
+2025-10-18 18:37:50,478 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-18 18:38:03,343 [INFO] Clearing Users, Projects, and Investments
+2025-10-18 18:38:53,450 [INFO] 500 users inserted
+2025-10-18 18:39:38,549 [INFO] 1000 users inserted
+2025-10-18 18:39:38,639 [INFO] Added default login user 'admin' with password 'admin123'
+2025-10-18 18:39:38,646 [INFO] Inserted 1001 users in 89.87 seconds
+2025-10-18 18:39:38,672 [INFO] 1000 projects inserted with 5000 cashflows
+2025-10-18 18:39:38,686 [INFO] 2000 projects inserted with 10000 cashflows
+2025-10-18 18:39:38,700 [INFO] 3000 projects inserted with 15000 cashflows
+2025-10-18 18:39:38,714 [INFO] 4000 projects inserted with 20000 cashflows
+2025-10-18 18:39:38,728 [INFO] 5000 projects inserted with 25000 cashflows
+2025-10-18 18:39:38,761 [INFO] 6000 projects inserted with 30000 cashflows
+2025-10-18 18:39:38,776 [INFO] 7000 projects inserted with 35000 cashflows
+2025-10-18 18:39:38,790 [INFO] 8000 projects inserted with 40000 cashflows
+2025-10-18 18:39:38,804 [INFO] 9000 projects inserted with 45000 cashflows
+2025-10-18 18:39:38,819 [INFO] 10000 projects inserted with 50000 cashflows
+2025-10-18 18:39:38,857 [INFO] 11000 projects inserted with 55000 cashflows
+2025-10-18 18:39:38,871 [INFO] 12000 projects inserted with 60000 cashflows
+2025-10-18 18:39:38,885 [INFO] 13000 projects inserted with 65000 cashflows
+2025-10-18 18:39:38,899 [INFO] 14000 projects inserted with 70000 cashflows
+2025-10-18 18:39:38,914 [INFO] 15000 projects inserted with 75000 cashflows
+2025-10-18 18:39:38,946 [INFO] 16000 projects inserted with 80000 cashflows
+2025-10-18 18:39:38,960 [INFO] 17000 projects inserted with 85000 cashflows
+2025-10-18 18:39:38,974 [INFO] 18000 projects inserted with 90000 cashflows
+2025-10-18 18:39:38,988 [INFO] 19000 projects inserted with 95000 cashflows
+2025-10-18 18:39:39,003 [INFO] 20000 projects inserted with 100000 cashflows
+2025-10-18 18:39:39,035 [INFO] 21000 projects inserted with 105000 cashflows
+2025-10-18 18:39:39,049 [INFO] 22000 projects inserted with 110000 cashflows
+2025-10-18 18:39:39,063 [INFO] 23000 projects inserted with 115000 cashflows
+2025-10-18 18:39:39,077 [INFO] 24000 projects inserted with 120000 cashflows
+2025-10-18 18:39:39,092 [INFO] 25000 projects inserted with 125000 cashflows
+2025-10-18 18:39:39,125 [INFO] 26000 projects inserted with 130000 cashflows
+2025-10-18 18:39:39,139 [INFO] 27000 projects inserted with 135000 cashflows
+2025-10-18 18:39:39,154 [INFO] 28000 projects inserted with 140000 cashflows
+2025-10-18 18:39:39,168 [INFO] 29000 projects inserted with 145000 cashflows
+2025-10-18 18:39:39,183 [INFO] 30000 projects inserted with 150000 cashflows
+2025-10-18 18:39:39,215 [INFO] 31000 projects inserted with 155000 cashflows
+2025-10-18 18:39:39,230 [INFO] 32000 projects inserted with 160000 cashflows
+2025-10-18 18:39:39,245 [INFO] 33000 projects inserted with 165000 cashflows
+2025-10-18 18:39:39,260 [INFO] 34000 projects inserted with 170000 cashflows
+2025-10-18 18:39:39,274 [INFO] 35000 projects inserted with 175000 cashflows
+2025-10-18 18:39:39,306 [INFO] 36000 projects inserted with 180000 cashflows
+2025-10-18 18:39:39,321 [INFO] 37000 projects inserted with 185000 cashflows
+2025-10-18 18:39:39,335 [INFO] 38000 projects inserted with 190000 cashflows
+2025-10-18 18:39:39,350 [INFO] 39000 projects inserted with 195000 cashflows
+2025-10-18 18:39:39,364 [INFO] 40000 projects inserted with 200000 cashflows
+2025-10-18 18:39:39,397 [INFO] 41000 projects inserted with 205000 cashflows
+2025-10-18 18:39:39,412 [INFO] 42000 projects inserted with 210000 cashflows
+2025-10-18 18:39:39,428 [INFO] 43000 projects inserted with 215000 cashflows
+2025-10-18 18:39:39,443 [INFO] 44000 projects inserted with 220000 cashflows
+2025-10-18 18:39:39,460 [INFO] 45000 projects inserted with 225000 cashflows
+2025-10-18 18:39:39,491 [INFO] 46000 projects inserted with 230000 cashflows
+2025-10-18 18:39:39,506 [INFO] 47000 projects inserted with 235000 cashflows
+2025-10-18 18:39:39,520 [INFO] 48000 projects inserted with 240000 cashflows
+2025-10-18 18:39:39,535 [INFO] 49000 projects inserted with 245000 cashflows
+2025-10-18 18:39:39,552 [INFO] 50000 projects inserted with 250000 cashflows
+2025-10-18 18:39:39,584 [INFO] 51000 projects inserted with 255000 cashflows
+2025-10-18 18:39:39,599 [INFO] 52000 projects inserted with 260000 cashflows
+2025-10-18 18:39:39,613 [INFO] 53000 projects inserted with 265000 cashflows
+2025-10-18 18:39:39,628 [INFO] 54000 projects inserted with 270000 cashflows
+2025-10-18 18:39:39,642 [INFO] 55000 projects inserted with 275000 cashflows
+2025-10-18 18:39:39,677 [INFO] 56000 projects inserted with 280000 cashflows
+2025-10-18 18:39:39,693 [INFO] 57000 projects inserted with 285000 cashflows
+2025-10-18 18:39:39,708 [INFO] 58000 projects inserted with 290000 cashflows
+2025-10-18 18:39:39,723 [INFO] 59000 projects inserted with 295000 cashflows
+2025-10-18 18:39:39,738 [INFO] 60000 projects inserted with 300000 cashflows
+2025-10-18 18:39:39,772 [INFO] 61000 projects inserted with 305000 cashflows
+2025-10-18 18:39:39,786 [INFO] 62000 projects inserted with 310000 cashflows
+2025-10-18 18:39:39,804 [INFO] 63000 projects inserted with 315000 cashflows
+2025-10-18 18:39:39,820 [INFO] 64000 projects inserted with 320000 cashflows
+2025-10-18 18:39:39,836 [INFO] 65000 projects inserted with 325000 cashflows
+2025-10-18 18:39:39,869 [INFO] 66000 projects inserted with 330000 cashflows
+2025-10-18 18:39:39,883 [INFO] 67000 projects inserted with 335000 cashflows
+2025-10-18 18:39:39,898 [INFO] 68000 projects inserted with 340000 cashflows
+2025-10-18 18:39:39,913 [INFO] 69000 projects inserted with 345000 cashflows
+2025-10-18 18:39:39,927 [INFO] 70000 projects inserted with 350000 cashflows
+2025-10-18 18:39:39,959 [INFO] 71000 projects inserted with 355000 cashflows
+2025-10-18 18:39:39,974 [INFO] 72000 projects inserted with 360000 cashflows
+2025-10-18 18:39:39,989 [INFO] 73000 projects inserted with 365000 cashflows
+2025-10-18 18:39:40,004 [INFO] 74000 projects inserted with 370000 cashflows
+2025-10-18 18:39:40,019 [INFO] 75000 projects inserted with 375000 cashflows
+2025-10-18 18:39:40,056 [INFO] 76000 projects inserted with 380000 cashflows
+2025-10-18 18:39:40,071 [INFO] 77000 projects inserted with 385000 cashflows
+2025-10-18 18:39:40,085 [INFO] 78000 projects inserted with 390000 cashflows
+2025-10-18 18:39:40,100 [INFO] 79000 projects inserted with 395000 cashflows
+2025-10-18 18:39:40,114 [INFO] 80000 projects inserted with 400000 cashflows
+2025-10-18 18:39:40,157 [INFO] 81000 projects inserted with 405000 cashflows
+2025-10-18 18:39:40,175 [INFO] 82000 projects inserted with 410000 cashflows
+2025-10-18 18:39:40,190 [INFO] 83000 projects inserted with 415000 cashflows
+2025-10-18 18:39:40,204 [INFO] 84000 projects inserted with 420000 cashflows
+2025-10-18 18:39:40,219 [INFO] 85000 projects inserted with 425000 cashflows
+2025-10-18 18:39:40,251 [INFO] 86000 projects inserted with 430000 cashflows
+2025-10-18 18:39:40,266 [INFO] 87000 projects inserted with 435000 cashflows
+2025-10-18 18:39:40,281 [INFO] 88000 projects inserted with 440000 cashflows
+2025-10-18 18:39:40,295 [INFO] 89000 projects inserted with 445000 cashflows
+2025-10-18 18:39:40,310 [INFO] 90000 projects inserted with 450000 cashflows
+2025-10-18 18:39:40,347 [INFO] 91000 projects inserted with 455000 cashflows
+2025-10-18 18:39:40,362 [INFO] 92000 projects inserted with 460000 cashflows
+2025-10-18 18:39:40,377 [INFO] 93000 projects inserted with 465000 cashflows
+2025-10-18 18:39:40,391 [INFO] 94000 projects inserted with 470000 cashflows
+2025-10-18 18:39:40,407 [INFO] 95000 projects inserted with 475000 cashflows
+2025-10-18 18:39:40,442 [INFO] 96000 projects inserted with 480000 cashflows
+2025-10-18 18:39:40,456 [INFO] 97000 projects inserted with 485000 cashflows
+2025-10-18 18:39:40,471 [INFO] 98000 projects inserted with 490000 cashflows
+2025-10-18 18:39:40,486 [INFO] 99000 projects inserted with 495000 cashflows
+2025-10-18 18:39:40,500 [INFO] 100000 projects inserted with 500000 cashflows
+2025-10-18 18:39:40,537 [INFO] 101000 projects inserted with 505000 cashflows
+2025-10-18 18:39:40,551 [INFO] 102000 projects inserted with 510000 cashflows
+2025-10-18 18:39:40,566 [INFO] 103000 projects inserted with 515000 cashflows
+2025-10-18 18:39:40,581 [INFO] 104000 projects inserted with 520000 cashflows
+2025-10-18 18:39:40,595 [INFO] 105000 projects inserted with 525000 cashflows
+2025-10-18 18:39:40,630 [INFO] 106000 projects inserted with 530000 cashflows
+2025-10-18 18:39:40,645 [INFO] 107000 projects inserted with 535000 cashflows
+2025-10-18 18:39:40,659 [INFO] 108000 projects inserted with 540000 cashflows
+2025-10-18 18:39:40,674 [INFO] 109000 projects inserted with 545000 cashflows
+2025-10-18 18:39:40,688 [INFO] 110000 projects inserted with 550000 cashflows
+2025-10-18 18:39:40,719 [INFO] 111000 projects inserted with 555000 cashflows
+2025-10-18 18:39:40,734 [INFO] 112000 projects inserted with 560000 cashflows
+2025-10-18 18:39:40,749 [INFO] 113000 projects inserted with 565000 cashflows
+2025-10-18 18:39:40,763 [INFO] 114000 projects inserted with 570000 cashflows
+2025-10-18 18:39:40,778 [INFO] 115000 projects inserted with 575000 cashflows
+2025-10-18 18:39:40,808 [INFO] 116000 projects inserted with 580000 cashflows
+2025-10-18 18:39:40,823 [INFO] 117000 projects inserted with 585000 cashflows
+2025-10-18 18:39:40,837 [INFO] 118000 projects inserted with 590000 cashflows
+2025-10-18 18:39:40,852 [INFO] 119000 projects inserted with 595000 cashflows
+2025-10-18 18:39:40,866 [INFO] 120000 projects inserted with 600000 cashflows
+2025-10-18 18:39:40,905 [INFO] 121000 projects inserted with 605000 cashflows
+2025-10-18 18:39:40,920 [INFO] 122000 projects inserted with 610000 cashflows
+2025-10-18 18:39:40,934 [INFO] 123000 projects inserted with 615000 cashflows
+2025-10-18 18:39:40,949 [INFO] 124000 projects inserted with 620000 cashflows
+2025-10-18 18:39:40,963 [INFO] 125000 projects inserted with 625000 cashflows
+2025-10-18 18:39:40,995 [INFO] 126000 projects inserted with 630000 cashflows
+2025-10-18 18:39:41,009 [INFO] 127000 projects inserted with 635000 cashflows
+2025-10-18 18:39:41,025 [INFO] 128000 projects inserted with 640000 cashflows
+2025-10-18 18:39:41,039 [INFO] 129000 projects inserted with 645000 cashflows
+2025-10-18 18:39:41,054 [INFO] 130000 projects inserted with 650000 cashflows
+2025-10-18 18:39:41,082 [INFO] 131000 projects inserted with 655000 cashflows
+2025-10-18 18:39:41,097 [INFO] 132000 projects inserted with 660000 cashflows
+2025-10-18 18:39:41,112 [INFO] 133000 projects inserted with 665000 cashflows
+2025-10-18 18:39:41,126 [INFO] 134000 projects inserted with 670000 cashflows
+2025-10-18 18:39:41,141 [INFO] 135000 projects inserted with 675000 cashflows
+2025-10-18 18:39:41,181 [INFO] 136000 projects inserted with 680000 cashflows
+2025-10-18 18:39:41,196 [INFO] 137000 projects inserted with 685000 cashflows
+2025-10-18 18:39:41,210 [INFO] 138000 projects inserted with 690000 cashflows
+2025-10-18 18:39:41,224 [INFO] 139000 projects inserted with 695000 cashflows
+2025-10-18 18:39:41,239 [INFO] 140000 projects inserted with 700000 cashflows
+2025-10-18 18:39:41,270 [INFO] 141000 projects inserted with 705000 cashflows
+2025-10-18 18:39:41,284 [INFO] 142000 projects inserted with 710000 cashflows
+2025-10-18 18:39:41,299 [INFO] 143000 projects inserted with 715000 cashflows
+2025-10-18 18:39:41,313 [INFO] 144000 projects inserted with 720000 cashflows
+2025-10-18 18:39:41,328 [INFO] 145000 projects inserted with 725000 cashflows
+2025-10-18 18:39:41,360 [INFO] 146000 projects inserted with 730000 cashflows
+2025-10-18 18:39:41,375 [INFO] 147000 projects inserted with 735000 cashflows
+2025-10-18 18:39:41,389 [INFO] 148000 projects inserted with 740000 cashflows
+2025-10-18 18:39:41,404 [INFO] 149000 projects inserted with 745000 cashflows
+2025-10-18 18:39:41,419 [INFO] 150000 projects inserted with 750000 cashflows
+2025-10-18 18:39:41,448 [INFO] 151000 projects inserted with 755000 cashflows
+2025-10-18 18:39:41,463 [INFO] 152000 projects inserted with 760000 cashflows
+2025-10-18 18:39:41,477 [INFO] 153000 projects inserted with 765000 cashflows
+2025-10-18 18:39:41,492 [INFO] 154000 projects inserted with 770000 cashflows
+2025-10-18 18:39:41,506 [INFO] 155000 projects inserted with 775000 cashflows
+2025-10-18 18:39:41,544 [INFO] 156000 projects inserted with 780000 cashflows
+2025-10-18 18:39:41,559 [INFO] 157000 projects inserted with 785000 cashflows
+2025-10-18 18:39:41,574 [INFO] 158000 projects inserted with 790000 cashflows
+2025-10-18 18:39:41,590 [INFO] 159000 projects inserted with 795000 cashflows
+2025-10-18 18:39:41,604 [INFO] 160000 projects inserted with 800000 cashflows
+2025-10-18 18:39:41,635 [INFO] 161000 projects inserted with 805000 cashflows
+2025-10-18 18:39:41,650 [INFO] 162000 projects inserted with 810000 cashflows
+2025-10-18 18:39:41,665 [INFO] 163000 projects inserted with 815000 cashflows
+2025-10-18 18:39:41,680 [INFO] 164000 projects inserted with 820000 cashflows
+2025-10-18 18:39:41,694 [INFO] 165000 projects inserted with 825000 cashflows
+2025-10-18 18:39:41,723 [INFO] 166000 projects inserted with 830000 cashflows
+2025-10-18 18:39:41,738 [INFO] 167000 projects inserted with 835000 cashflows
+2025-10-18 18:39:41,752 [INFO] 168000 projects inserted with 840000 cashflows
+2025-10-18 18:39:41,767 [INFO] 169000 projects inserted with 845000 cashflows
+2025-10-18 18:39:41,781 [INFO] 170000 projects inserted with 850000 cashflows
+2025-10-18 18:39:41,812 [INFO] 171000 projects inserted with 855000 cashflows
+2025-10-18 18:39:41,828 [INFO] 172000 projects inserted with 860000 cashflows
+2025-10-18 18:39:41,843 [INFO] 173000 projects inserted with 865000 cashflows
+2025-10-18 18:39:41,857 [INFO] 174000 projects inserted with 870000 cashflows
+2025-10-18 18:39:41,872 [INFO] 175000 projects inserted with 875000 cashflows
+2025-10-18 18:39:41,903 [INFO] 176000 projects inserted with 880000 cashflows
+2025-10-18 18:39:41,918 [INFO] 177000 projects inserted with 885000 cashflows
+2025-10-18 18:39:41,933 [INFO] 178000 projects inserted with 890000 cashflows
+2025-10-18 18:39:41,947 [INFO] 179000 projects inserted with 895000 cashflows
+2025-10-18 18:39:41,962 [INFO] 180000 projects inserted with 900000 cashflows
+2025-10-18 18:39:41,994 [INFO] 181000 projects inserted with 905000 cashflows
+2025-10-18 18:39:42,009 [INFO] 182000 projects inserted with 910000 cashflows
+2025-10-18 18:39:42,023 [INFO] 183000 projects inserted with 915000 cashflows
+2025-10-18 18:39:42,038 [INFO] 184000 projects inserted with 920000 cashflows
+2025-10-18 18:39:42,053 [INFO] 185000 projects inserted with 925000 cashflows
+2025-10-18 18:39:42,083 [INFO] 186000 projects inserted with 930000 cashflows
+2025-10-18 18:39:42,098 [INFO] 187000 projects inserted with 935000 cashflows
+2025-10-18 18:39:42,113 [INFO] 188000 projects inserted with 940000 cashflows
+2025-10-18 18:39:42,128 [INFO] 189000 projects inserted with 945000 cashflows
+2025-10-18 18:39:42,143 [INFO] 190000 projects inserted with 950000 cashflows
+2025-10-18 18:39:42,171 [INFO] 191000 projects inserted with 955000 cashflows
+2025-10-18 18:39:42,186 [INFO] 192000 projects inserted with 960000 cashflows
+2025-10-18 18:39:42,200 [INFO] 193000 projects inserted with 965000 cashflows
+2025-10-18 18:39:42,215 [INFO] 194000 projects inserted with 970000 cashflows
+2025-10-18 18:39:42,229 [INFO] 195000 projects inserted with 975000 cashflows
+2025-10-18 18:39:42,260 [INFO] 196000 projects inserted with 980000 cashflows
+2025-10-18 18:39:42,275 [INFO] 197000 projects inserted with 985000 cashflows
+2025-10-18 18:39:42,289 [INFO] 198000 projects inserted with 990000 cashflows
+2025-10-18 18:39:42,304 [INFO] 199000 projects inserted with 995000 cashflows
+2025-10-18 18:39:42,318 [INFO] 200000 projects inserted with 1000000 cashflows
+2025-10-18 18:39:42,346 [INFO] 201000 projects inserted with 1005000 cashflows
+2025-10-18 18:39:42,360 [INFO] 202000 projects inserted with 1010000 cashflows
+2025-10-18 18:39:42,375 [INFO] 203000 projects inserted with 1015000 cashflows
+2025-10-18 18:39:42,390 [INFO] 204000 projects inserted with 1020000 cashflows
+2025-10-18 18:39:42,404 [INFO] 205000 projects inserted with 1025000 cashflows
+2025-10-18 18:39:42,433 [INFO] 206000 projects inserted with 1030000 cashflows
+2025-10-18 18:39:42,448 [INFO] 207000 projects inserted with 1035000 cashflows
+2025-10-18 18:39:42,462 [INFO] 208000 projects inserted with 1040000 cashflows
+2025-10-18 18:39:42,478 [INFO] 209000 projects inserted with 1045000 cashflows
+2025-10-18 18:39:42,492 [INFO] 210000 projects inserted with 1050000 cashflows
+2025-10-18 18:39:42,520 [INFO] 211000 projects inserted with 1055000 cashflows
+2025-10-18 18:39:42,535 [INFO] 212000 projects inserted with 1060000 cashflows
+2025-10-18 18:39:42,550 [INFO] 213000 projects inserted with 1065000 cashflows
+2025-10-18 18:39:42,565 [INFO] 214000 projects inserted with 1070000 cashflows
+2025-10-18 18:39:42,579 [INFO] 215000 projects inserted with 1075000 cashflows
+2025-10-18 18:39:42,609 [INFO] 216000 projects inserted with 1080000 cashflows
+2025-10-18 18:39:42,623 [INFO] 217000 projects inserted with 1085000 cashflows
+2025-10-18 18:39:42,638 [INFO] 218000 projects inserted with 1090000 cashflows
+2025-10-18 18:39:42,652 [INFO] 219000 projects inserted with 1095000 cashflows
+2025-10-18 18:39:42,667 [INFO] 220000 projects inserted with 1100000 cashflows
+2025-10-18 18:39:42,696 [INFO] 221000 projects inserted with 1105000 cashflows
+2025-10-18 18:39:42,710 [INFO] 222000 projects inserted with 1110000 cashflows
+2025-10-18 18:39:42,725 [INFO] 223000 projects inserted with 1115000 cashflows
+2025-10-18 18:39:42,739 [INFO] 224000 projects inserted with 1120000 cashflows
+2025-10-18 18:39:42,754 [INFO] 225000 projects inserted with 1125000 cashflows
+2025-10-18 18:39:42,782 [INFO] 226000 projects inserted with 1130000 cashflows
+2025-10-18 18:39:42,797 [INFO] 227000 projects inserted with 1135000 cashflows
+2025-10-18 18:39:42,812 [INFO] 228000 projects inserted with 1140000 cashflows
+2025-10-18 18:39:42,828 [INFO] 229000 projects inserted with 1145000 cashflows
+2025-10-18 18:39:42,842 [INFO] 230000 projects inserted with 1150000 cashflows
+2025-10-18 18:39:42,871 [INFO] 231000 projects inserted with 1155000 cashflows
+2025-10-18 18:39:42,886 [INFO] 232000 projects inserted with 1160000 cashflows
+2025-10-18 18:39:42,900 [INFO] 233000 projects inserted with 1165000 cashflows
+2025-10-18 18:39:42,915 [INFO] 234000 projects inserted with 1170000 cashflows
+2025-10-18 18:39:42,930 [INFO] 235000 projects inserted with 1175000 cashflows
+2025-10-18 18:39:42,960 [INFO] 236000 projects inserted with 1180000 cashflows
+2025-10-18 18:39:42,974 [INFO] 237000 projects inserted with 1185000 cashflows
+2025-10-18 18:39:42,989 [INFO] 238000 projects inserted with 1190000 cashflows
+2025-10-18 18:39:43,005 [INFO] 239000 projects inserted with 1195000 cashflows
+2025-10-18 18:39:43,021 [INFO] 240000 projects inserted with 1200000 cashflows
+2025-10-18 18:39:43,049 [INFO] 241000 projects inserted with 1205000 cashflows
+2025-10-18 18:39:43,064 [INFO] 242000 projects inserted with 1210000 cashflows
+2025-10-18 18:39:43,079 [INFO] 243000 projects inserted with 1215000 cashflows
+2025-10-18 18:39:43,094 [INFO] 244000 projects inserted with 1220000 cashflows
+2025-10-18 18:39:43,108 [INFO] 245000 projects inserted with 1225000 cashflows
+2025-10-18 18:39:43,136 [INFO] 246000 projects inserted with 1230000 cashflows
+2025-10-18 18:39:43,151 [INFO] 247000 projects inserted with 1235000 cashflows
+2025-10-18 18:39:43,166 [INFO] 248000 projects inserted with 1240000 cashflows
+2025-10-18 18:39:43,181 [INFO] 249000 projects inserted with 1245000 cashflows
+2025-10-18 18:39:43,195 [INFO] 250000 projects inserted with 1250000 cashflows
+2025-10-18 18:39:43,232 [INFO] 251000 projects inserted with 1255000 cashflows
+2025-10-18 18:39:43,247 [INFO] 252000 projects inserted with 1260000 cashflows
+2025-10-18 18:39:43,261 [INFO] 253000 projects inserted with 1265000 cashflows
+2025-10-18 18:39:43,276 [INFO] 254000 projects inserted with 1270000 cashflows
+2025-10-18 18:39:43,290 [INFO] 255000 projects inserted with 1275000 cashflows
+2025-10-18 18:39:43,319 [INFO] 256000 projects inserted with 1280000 cashflows
+2025-10-18 18:39:43,335 [INFO] 257000 projects inserted with 1285000 cashflows
+2025-10-18 18:39:43,349 [INFO] 258000 projects inserted with 1290000 cashflows
+2025-10-18 18:39:43,364 [INFO] 259000 projects inserted with 1295000 cashflows
+2025-10-18 18:39:43,378 [INFO] 260000 projects inserted with 1300000 cashflows
+2025-10-18 18:39:43,406 [INFO] 261000 projects inserted with 1305000 cashflows
+2025-10-18 18:39:43,421 [INFO] 262000 projects inserted with 1310000 cashflows
+2025-10-18 18:39:43,436 [INFO] 263000 projects inserted with 1315000 cashflows
+2025-10-18 18:39:43,450 [INFO] 264000 projects inserted with 1320000 cashflows
+2025-10-18 18:39:43,465 [INFO] 265000 projects inserted with 1325000 cashflows
+2025-10-18 18:39:43,493 [INFO] 266000 projects inserted with 1330000 cashflows
+2025-10-18 18:39:43,508 [INFO] 267000 projects inserted with 1335000 cashflows
+2025-10-18 18:39:43,522 [INFO] 268000 projects inserted with 1340000 cashflows
+2025-10-18 18:39:43,537 [INFO] 269000 projects inserted with 1345000 cashflows
+2025-10-18 18:39:43,551 [INFO] 270000 projects inserted with 1350000 cashflows
+2025-10-18 18:39:43,582 [INFO] 271000 projects inserted with 1355000 cashflows
+2025-10-18 18:39:43,597 [INFO] 272000 projects inserted with 1360000 cashflows
+2025-10-18 18:39:43,611 [INFO] 273000 projects inserted with 1365000 cashflows
+2025-10-18 18:39:43,626 [INFO] 274000 projects inserted with 1370000 cashflows
+2025-10-18 18:39:43,640 [INFO] 275000 projects inserted with 1375000 cashflows
+2025-10-18 18:39:43,672 [INFO] 276000 projects inserted with 1380000 cashflows
+2025-10-18 18:39:43,687 [INFO] 277000 projects inserted with 1385000 cashflows
+2025-10-18 18:39:43,702 [INFO] 278000 projects inserted with 1390000 cashflows
+2025-10-18 18:39:43,716 [INFO] 279000 projects inserted with 1395000 cashflows
+2025-10-18 18:39:43,731 [INFO] 280000 projects inserted with 1400000 cashflows
+2025-10-18 18:39:43,762 [INFO] 281000 projects inserted with 1405000 cashflows
+2025-10-18 18:39:43,776 [INFO] 282000 projects inserted with 1410000 cashflows
+2025-10-18 18:39:43,791 [INFO] 283000 projects inserted with 1415000 cashflows
+2025-10-18 18:39:43,805 [INFO] 284000 projects inserted with 1420000 cashflows
+2025-10-18 18:39:43,821 [INFO] 285000 projects inserted with 1425000 cashflows
+2025-10-18 18:39:43,851 [INFO] 286000 projects inserted with 1430000 cashflows
+2025-10-18 18:39:43,866 [INFO] 287000 projects inserted with 1435000 cashflows
+2025-10-18 18:39:43,880 [INFO] 288000 projects inserted with 1440000 cashflows
+2025-10-18 18:39:43,896 [INFO] 289000 projects inserted with 1445000 cashflows
+2025-10-18 18:39:43,910 [INFO] 290000 projects inserted with 1450000 cashflows
+2025-10-18 18:39:43,944 [INFO] 291000 projects inserted with 1455000 cashflows
+2025-10-18 18:39:43,959 [INFO] 292000 projects inserted with 1460000 cashflows
+2025-10-18 18:39:43,973 [INFO] 293000 projects inserted with 1465000 cashflows
+2025-10-18 18:39:43,988 [INFO] 294000 projects inserted with 1470000 cashflows
+2025-10-18 18:39:44,002 [INFO] 295000 projects inserted with 1475000 cashflows
+2025-10-18 18:39:44,031 [INFO] 296000 projects inserted with 1480000 cashflows
+2025-10-18 18:39:44,046 [INFO] 297000 projects inserted with 1485000 cashflows
+2025-10-18 18:39:44,061 [INFO] 298000 projects inserted with 1490000 cashflows
+2025-10-18 18:39:44,076 [INFO] 299000 projects inserted with 1495000 cashflows
+2025-10-18 18:39:44,090 [INFO] 300000 projects inserted with 1500000 cashflows
+2025-10-18 18:39:44,121 [INFO] 301000 projects inserted with 1505000 cashflows
+2025-10-18 18:39:44,136 [INFO] 302000 projects inserted with 1510000 cashflows
+2025-10-18 18:39:44,151 [INFO] 303000 projects inserted with 1515000 cashflows
+2025-10-18 18:39:44,166 [INFO] 304000 projects inserted with 1520000 cashflows
+2025-10-18 18:39:44,181 [INFO] 305000 projects inserted with 1525000 cashflows
+2025-10-18 18:39:44,211 [INFO] 306000 projects inserted with 1530000 cashflows
+2025-10-18 18:39:44,226 [INFO] 307000 projects inserted with 1535000 cashflows
+2025-10-18 18:39:44,241 [INFO] 308000 projects inserted with 1540000 cashflows
+2025-10-18 18:39:44,255 [INFO] 309000 projects inserted with 1545000 cashflows
+2025-10-18 18:39:44,270 [INFO] 310000 projects inserted with 1550000 cashflows
+2025-10-18 18:39:44,299 [INFO] 311000 projects inserted with 1555000 cashflows
+2025-10-18 18:39:44,314 [INFO] 312000 projects inserted with 1560000 cashflows
+2025-10-18 18:39:44,329 [INFO] 313000 projects inserted with 1565000 cashflows
+2025-10-18 18:39:44,344 [INFO] 314000 projects inserted with 1570000 cashflows
+2025-10-18 18:39:44,358 [INFO] 315000 projects inserted with 1575000 cashflows
+2025-10-18 18:39:44,389 [INFO] 316000 projects inserted with 1580000 cashflows
+2025-10-18 18:39:44,404 [INFO] 317000 projects inserted with 1585000 cashflows
+2025-10-18 18:39:44,418 [INFO] 318000 projects inserted with 1590000 cashflows
+2025-10-18 18:39:44,433 [INFO] 319000 projects inserted with 1595000 cashflows
+2025-10-18 18:39:44,448 [INFO] 320000 projects inserted with 1600000 cashflows
+2025-10-18 18:39:44,477 [INFO] 321000 projects inserted with 1605000 cashflows
+2025-10-18 18:39:44,492 [INFO] 322000 projects inserted with 1610000 cashflows
+2025-10-18 18:39:44,506 [INFO] 323000 projects inserted with 1615000 cashflows
+2025-10-18 18:39:44,521 [INFO] 324000 projects inserted with 1620000 cashflows
+2025-10-18 18:39:44,535 [INFO] 325000 projects inserted with 1625000 cashflows
+2025-10-18 18:39:44,565 [INFO] 326000 projects inserted with 1630000 cashflows
+2025-10-18 18:39:44,579 [INFO] 327000 projects inserted with 1635000 cashflows
+2025-10-18 18:39:44,594 [INFO] 328000 projects inserted with 1640000 cashflows
+2025-10-18 18:39:44,609 [INFO] 329000 projects inserted with 1645000 cashflows
+2025-10-18 18:39:44,624 [INFO] 330000 projects inserted with 1650000 cashflows
+2025-10-18 18:39:44,652 [INFO] 331000 projects inserted with 1655000 cashflows
+2025-10-18 18:39:44,667 [INFO] 332000 projects inserted with 1660000 cashflows
+2025-10-18 18:39:44,681 [INFO] 333000 projects inserted with 1665000 cashflows
+2025-10-18 18:39:44,696 [INFO] 334000 projects inserted with 1670000 cashflows
+2025-10-18 18:39:44,711 [INFO] 335000 projects inserted with 1675000 cashflows
+2025-10-18 18:39:44,746 [INFO] 336000 projects inserted with 1680000 cashflows
+2025-10-18 18:39:44,761 [INFO] 337000 projects inserted with 1685000 cashflows
+2025-10-18 18:39:44,775 [INFO] 338000 projects inserted with 1690000 cashflows
+2025-10-18 18:39:44,790 [INFO] 339000 projects inserted with 1695000 cashflows
+2025-10-18 18:39:44,804 [INFO] 340000 projects inserted with 1700000 cashflows
+2025-10-18 18:39:44,834 [INFO] 341000 projects inserted with 1705000 cashflows
+2025-10-18 18:39:44,850 [INFO] 342000 projects inserted with 1710000 cashflows
+2025-10-18 18:39:44,865 [INFO] 343000 projects inserted with 1715000 cashflows
+2025-10-18 18:39:44,879 [INFO] 344000 projects inserted with 1720000 cashflows
+2025-10-18 18:39:44,894 [INFO] 345000 projects inserted with 1725000 cashflows
+2025-10-18 18:39:44,924 [INFO] 346000 projects inserted with 1730000 cashflows
+2025-10-18 18:39:44,938 [INFO] 347000 projects inserted with 1735000 cashflows
+2025-10-18 18:39:44,953 [INFO] 348000 projects inserted with 1740000 cashflows
+2025-10-18 18:39:44,968 [INFO] 349000 projects inserted with 1745000 cashflows
+2025-10-18 18:39:44,982 [INFO] 350000 projects inserted with 1750000 cashflows
+2025-10-18 18:39:45,011 [INFO] 351000 projects inserted with 1755000 cashflows
+2025-10-18 18:39:45,033 [INFO] 352000 projects inserted with 1760000 cashflows
+2025-10-18 18:39:45,058 [INFO] 353000 projects inserted with 1765000 cashflows
+2025-10-18 18:39:45,082 [INFO] 354000 projects inserted with 1770000 cashflows
+2025-10-18 18:39:45,097 [INFO] 355000 projects inserted with 1775000 cashflows
+2025-10-18 18:39:45,125 [INFO] 356000 projects inserted with 1780000 cashflows
+2025-10-18 18:39:45,140 [INFO] 357000 projects inserted with 1785000 cashflows
+2025-10-18 18:39:45,154 [INFO] 358000 projects inserted with 1790000 cashflows
+2025-10-18 18:39:45,169 [INFO] 359000 projects inserted with 1795000 cashflows
+2025-10-18 18:39:45,185 [INFO] 360000 projects inserted with 1800000 cashflows
+2025-10-18 18:39:45,214 [INFO] 361000 projects inserted with 1805000 cashflows
+2025-10-18 18:39:45,229 [INFO] 362000 projects inserted with 1810000 cashflows
+2025-10-18 18:39:45,244 [INFO] 363000 projects inserted with 1815000 cashflows
+2025-10-18 18:39:45,258 [INFO] 364000 projects inserted with 1820000 cashflows
+2025-10-18 18:39:45,273 [INFO] 365000 projects inserted with 1825000 cashflows
+2025-10-18 18:39:45,302 [INFO] 366000 projects inserted with 1830000 cashflows
+2025-10-18 18:39:45,316 [INFO] 367000 projects inserted with 1835000 cashflows
+2025-10-18 18:39:45,331 [INFO] 368000 projects inserted with 1840000 cashflows
+2025-10-18 18:39:45,346 [INFO] 369000 projects inserted with 1845000 cashflows
+2025-10-18 18:39:45,361 [INFO] 370000 projects inserted with 1850000 cashflows
+2025-10-18 18:39:45,389 [INFO] 371000 projects inserted with 1855000 cashflows
+2025-10-18 18:39:45,404 [INFO] 372000 projects inserted with 1860000 cashflows
+2025-10-18 18:39:45,419 [INFO] 373000 projects inserted with 1865000 cashflows
+2025-10-18 18:39:45,433 [INFO] 374000 projects inserted with 1870000 cashflows
+2025-10-18 18:39:45,450 [INFO] 375000 projects inserted with 1875000 cashflows
+2025-10-18 18:39:45,479 [INFO] 376000 projects inserted with 1880000 cashflows
+2025-10-18 18:39:45,494 [INFO] 377000 projects inserted with 1885000 cashflows
+2025-10-18 18:39:45,508 [INFO] 378000 projects inserted with 1890000 cashflows
+2025-10-18 18:39:45,523 [INFO] 379000 projects inserted with 1895000 cashflows
+2025-10-18 18:39:45,537 [INFO] 380000 projects inserted with 1900000 cashflows
+2025-10-18 18:39:45,567 [INFO] 381000 projects inserted with 1905000 cashflows
+2025-10-18 18:39:45,582 [INFO] 382000 projects inserted with 1910000 cashflows
+2025-10-18 18:39:45,597 [INFO] 383000 projects inserted with 1915000 cashflows
+2025-10-18 18:39:45,611 [INFO] 384000 projects inserted with 1920000 cashflows
+2025-10-18 18:39:45,626 [INFO] 385000 projects inserted with 1925000 cashflows
+2025-10-18 18:39:45,656 [INFO] 386000 projects inserted with 1930000 cashflows
+2025-10-18 18:39:45,671 [INFO] 387000 projects inserted with 1935000 cashflows
+2025-10-18 18:39:45,685 [INFO] 388000 projects inserted with 1940000 cashflows
+2025-10-18 18:39:45,700 [INFO] 389000 projects inserted with 1945000 cashflows
+2025-10-18 18:39:45,715 [INFO] 390000 projects inserted with 1950000 cashflows
+2025-10-18 18:39:45,743 [INFO] 391000 projects inserted with 1955000 cashflows
+2025-10-18 18:39:45,758 [INFO] 392000 projects inserted with 1960000 cashflows
+2025-10-18 18:39:45,772 [INFO] 393000 projects inserted with 1965000 cashflows
+2025-10-18 18:39:45,787 [INFO] 394000 projects inserted with 1970000 cashflows
+2025-10-18 18:39:45,801 [INFO] 395000 projects inserted with 1975000 cashflows
+2025-10-18 18:39:45,829 [INFO] 396000 projects inserted with 1980000 cashflows
+2025-10-18 18:39:45,844 [INFO] 397000 projects inserted with 1985000 cashflows
+2025-10-18 18:39:45,859 [INFO] 398000 projects inserted with 1990000 cashflows
+2025-10-18 18:39:45,873 [INFO] 399000 projects inserted with 1995000 cashflows
+2025-10-18 18:39:45,888 [INFO] 400000 projects inserted with 2000000 cashflows
+2025-10-18 18:39:45,916 [INFO] 401000 projects inserted with 2005000 cashflows
+2025-10-18 18:39:45,931 [INFO] 402000 projects inserted with 2010000 cashflows
+2025-10-18 18:39:45,946 [INFO] 403000 projects inserted with 2015000 cashflows
+2025-10-18 18:39:45,960 [INFO] 404000 projects inserted with 2020000 cashflows
+2025-10-18 18:39:45,975 [INFO] 405000 projects inserted with 2025000 cashflows
+2025-10-18 18:39:46,003 [INFO] 406000 projects inserted with 2030000 cashflows
+2025-10-18 18:39:46,018 [INFO] 407000 projects inserted with 2035000 cashflows
+2025-10-18 18:39:46,032 [INFO] 408000 projects inserted with 2040000 cashflows
+2025-10-18 18:39:46,047 [INFO] 409000 projects inserted with 2045000 cashflows
+2025-10-18 18:39:46,061 [INFO] 410000 projects inserted with 2050000 cashflows
+2025-10-18 18:39:46,089 [INFO] 411000 projects inserted with 2055000 cashflows
+2025-10-18 18:39:46,104 [INFO] 412000 projects inserted with 2060000 cashflows
+2025-10-18 18:39:46,120 [INFO] 413000 projects inserted with 2065000 cashflows
+2025-10-18 18:39:46,134 [INFO] 414000 projects inserted with 2070000 cashflows
+2025-10-18 18:39:46,149 [INFO] 415000 projects inserted with 2075000 cashflows
+2025-10-18 18:39:46,192 [INFO] 416000 projects inserted with 2080000 cashflows
+2025-10-18 18:39:46,206 [INFO] 417000 projects inserted with 2085000 cashflows
+2025-10-18 18:39:46,221 [INFO] 418000 projects inserted with 2090000 cashflows
+2025-10-18 18:39:46,236 [INFO] 419000 projects inserted with 2095000 cashflows
+2025-10-18 18:39:46,251 [INFO] 420000 projects inserted with 2100000 cashflows
+2025-10-18 18:39:46,281 [INFO] 421000 projects inserted with 2105000 cashflows
+2025-10-18 18:39:46,296 [INFO] 422000 projects inserted with 2110000 cashflows
+2025-10-18 18:39:46,311 [INFO] 423000 projects inserted with 2115000 cashflows
+2025-10-18 18:39:46,325 [INFO] 424000 projects inserted with 2120000 cashflows
+2025-10-18 18:39:46,340 [INFO] 425000 projects inserted with 2125000 cashflows
+2025-10-18 18:39:46,373 [INFO] 426000 projects inserted with 2130000 cashflows
+2025-10-18 18:39:46,388 [INFO] 427000 projects inserted with 2135000 cashflows
+2025-10-18 18:39:46,402 [INFO] 428000 projects inserted with 2140000 cashflows
+2025-10-18 18:39:46,417 [INFO] 429000 projects inserted with 2145000 cashflows
+2025-10-18 18:39:46,432 [INFO] 430000 projects inserted with 2150000 cashflows
+2025-10-18 18:39:46,462 [INFO] 431000 projects inserted with 2155000 cashflows
+2025-10-18 18:39:46,476 [INFO] 432000 projects inserted with 2160000 cashflows
+2025-10-18 18:39:46,491 [INFO] 433000 projects inserted with 2165000 cashflows
+2025-10-18 18:39:46,505 [INFO] 434000 projects inserted with 2170000 cashflows
+2025-10-18 18:39:46,520 [INFO] 435000 projects inserted with 2175000 cashflows
+2025-10-18 18:39:46,547 [INFO] 436000 projects inserted with 2180000 cashflows
+2025-10-18 18:39:46,562 [INFO] 437000 projects inserted with 2185000 cashflows
+2025-10-18 18:39:46,576 [INFO] 438000 projects inserted with 2190000 cashflows
+2025-10-18 18:39:46,591 [INFO] 439000 projects inserted with 2195000 cashflows
+2025-10-18 18:39:46,605 [INFO] 440000 projects inserted with 2200000 cashflows
+2025-10-18 18:39:46,635 [INFO] 441000 projects inserted with 2205000 cashflows
+2025-10-18 18:39:46,650 [INFO] 442000 projects inserted with 2210000 cashflows
+2025-10-18 18:39:46,665 [INFO] 443000 projects inserted with 2215000 cashflows
+2025-10-18 18:39:46,679 [INFO] 444000 projects inserted with 2220000 cashflows
+2025-10-18 18:39:46,695 [INFO] 445000 projects inserted with 2225000 cashflows
+2025-10-18 18:39:46,723 [INFO] 446000 projects inserted with 2230000 cashflows
+2025-10-18 18:39:46,737 [INFO] 447000 projects inserted with 2235000 cashflows
+2025-10-18 18:39:46,752 [INFO] 448000 projects inserted with 2240000 cashflows
+2025-10-18 18:39:46,766 [INFO] 449000 projects inserted with 2245000 cashflows
+2025-10-18 18:39:46,781 [INFO] 450000 projects inserted with 2250000 cashflows
+2025-10-18 18:39:46,810 [INFO] 451000 projects inserted with 2255000 cashflows
+2025-10-18 18:39:46,825 [INFO] 452000 projects inserted with 2260000 cashflows
+2025-10-18 18:39:46,840 [INFO] 453000 projects inserted with 2265000 cashflows
+2025-10-18 18:39:46,855 [INFO] 454000 projects inserted with 2270000 cashflows
+2025-10-18 18:39:46,869 [INFO] 455000 projects inserted with 2275000 cashflows
+2025-10-18 18:39:46,898 [INFO] 456000 projects inserted with 2280000 cashflows
+2025-10-18 18:39:46,912 [INFO] 457000 projects inserted with 2285000 cashflows
+2025-10-18 18:39:46,927 [INFO] 458000 projects inserted with 2290000 cashflows
+2025-10-18 18:39:46,941 [INFO] 459000 projects inserted with 2295000 cashflows
+2025-10-18 18:39:46,956 [INFO] 460000 projects inserted with 2300000 cashflows
+2025-10-18 18:39:46,985 [INFO] 461000 projects inserted with 2305000 cashflows
+2025-10-18 18:39:47,000 [INFO] 462000 projects inserted with 2310000 cashflows
+2025-10-18 18:39:47,014 [INFO] 463000 projects inserted with 2315000 cashflows
+2025-10-18 18:39:47,029 [INFO] 464000 projects inserted with 2320000 cashflows
+2025-10-18 18:39:47,043 [INFO] 465000 projects inserted with 2325000 cashflows
+2025-10-18 18:39:47,075 [INFO] 466000 projects inserted with 2330000 cashflows
+2025-10-18 18:39:47,089 [INFO] 467000 projects inserted with 2335000 cashflows
+2025-10-18 18:39:47,104 [INFO] 468000 projects inserted with 2340000 cashflows
+2025-10-18 18:39:47,118 [INFO] 469000 projects inserted with 2345000 cashflows
+2025-10-18 18:39:47,133 [INFO] 470000 projects inserted with 2350000 cashflows
+2025-10-18 18:39:47,162 [INFO] 471000 projects inserted with 2355000 cashflows
+2025-10-18 18:39:47,176 [INFO] 472000 projects inserted with 2360000 cashflows
+2025-10-18 18:39:47,190 [INFO] 473000 projects inserted with 2365000 cashflows
+2025-10-18 18:39:47,205 [INFO] 474000 projects inserted with 2370000 cashflows
+2025-10-18 18:39:47,221 [INFO] 475000 projects inserted with 2375000 cashflows
+2025-10-18 18:39:47,258 [INFO] 476000 projects inserted with 2380000 cashflows
+2025-10-18 18:39:47,274 [INFO] 477000 projects inserted with 2385000 cashflows
+2025-10-18 18:39:47,289 [INFO] 478000 projects inserted with 2390000 cashflows
+2025-10-18 18:39:47,304 [INFO] 479000 projects inserted with 2395000 cashflows
+2025-10-18 18:39:47,318 [INFO] 480000 projects inserted with 2400000 cashflows
+2025-10-18 18:39:47,346 [INFO] 481000 projects inserted with 2405000 cashflows
+2025-10-18 18:39:47,361 [INFO] 482000 projects inserted with 2410000 cashflows
+2025-10-18 18:39:47,375 [INFO] 483000 projects inserted with 2415000 cashflows
+2025-10-18 18:39:47,390 [INFO] 484000 projects inserted with 2420000 cashflows
+2025-10-18 18:39:47,404 [INFO] 485000 projects inserted with 2425000 cashflows
+2025-10-18 18:39:47,434 [INFO] 486000 projects inserted with 2430000 cashflows
+2025-10-18 18:39:47,450 [INFO] 487000 projects inserted with 2435000 cashflows
+2025-10-18 18:39:47,464 [INFO] 488000 projects inserted with 2440000 cashflows
+2025-10-18 18:39:47,479 [INFO] 489000 projects inserted with 2445000 cashflows
+2025-10-18 18:39:47,494 [INFO] 490000 projects inserted with 2450000 cashflows
+2025-10-18 18:39:47,522 [INFO] 491000 projects inserted with 2455000 cashflows
+2025-10-18 18:39:47,537 [INFO] 492000 projects inserted with 2460000 cashflows
+2025-10-18 18:39:47,552 [INFO] 493000 projects inserted with 2465000 cashflows
+2025-10-18 18:39:47,566 [INFO] 494000 projects inserted with 2470000 cashflows
+2025-10-18 18:39:47,581 [INFO] 495000 projects inserted with 2475000 cashflows
+2025-10-18 18:39:47,611 [INFO] 496000 projects inserted with 2480000 cashflows
+2025-10-18 18:39:47,625 [INFO] 497000 projects inserted with 2485000 cashflows
+2025-10-18 18:39:47,640 [INFO] 498000 projects inserted with 2490000 cashflows
+2025-10-18 18:39:47,654 [INFO] 499000 projects inserted with 2495000 cashflows
+2025-10-18 18:39:47,670 [INFO] 500000 projects inserted with 2500000 cashflows
+2025-10-18 18:39:47,699 [INFO] 501000 projects inserted with 2505000 cashflows
+2025-10-18 18:39:47,714 [INFO] 502000 projects inserted with 2510000 cashflows
+2025-10-18 18:39:47,729 [INFO] 503000 projects inserted with 2515000 cashflows
+2025-10-18 18:39:47,743 [INFO] 504000 projects inserted with 2520000 cashflows
+2025-10-18 18:39:47,758 [INFO] 505000 projects inserted with 2525000 cashflows
+2025-10-18 18:39:47,786 [INFO] 506000 projects inserted with 2530000 cashflows
+2025-10-18 18:39:47,800 [INFO] 507000 projects inserted with 2535000 cashflows
+2025-10-18 18:39:47,815 [INFO] 508000 projects inserted with 2540000 cashflows
+2025-10-18 18:39:47,829 [INFO] 509000 projects inserted with 2545000 cashflows
+2025-10-18 18:39:47,844 [INFO] 510000 projects inserted with 2550000 cashflows
+2025-10-18 18:39:47,877 [INFO] 511000 projects inserted with 2555000 cashflows
+2025-10-18 18:39:47,892 [INFO] 512000 projects inserted with 2560000 cashflows
+2025-10-18 18:39:47,906 [INFO] 513000 projects inserted with 2565000 cashflows
+2025-10-18 18:39:47,921 [INFO] 514000 projects inserted with 2570000 cashflows
+2025-10-18 18:39:47,935 [INFO] 515000 projects inserted with 2575000 cashflows
+2025-10-18 18:39:47,966 [INFO] 516000 projects inserted with 2580000 cashflows
+2025-10-18 18:39:47,981 [INFO] 517000 projects inserted with 2585000 cashflows
+2025-10-18 18:39:47,995 [INFO] 518000 projects inserted with 2590000 cashflows
+2025-10-18 18:39:48,010 [INFO] 519000 projects inserted with 2595000 cashflows
+2025-10-18 18:39:48,026 [INFO] 520000 projects inserted with 2600000 cashflows
+2025-10-18 18:39:48,059 [INFO] 521000 projects inserted with 2605000 cashflows
+2025-10-18 18:39:48,074 [INFO] 522000 projects inserted with 2610000 cashflows
+2025-10-18 18:39:48,089 [INFO] 523000 projects inserted with 2615000 cashflows
+2025-10-18 18:39:48,103 [INFO] 524000 projects inserted with 2620000 cashflows
+2025-10-18 18:39:48,118 [INFO] 525000 projects inserted with 2625000 cashflows
+2025-10-18 18:39:48,148 [INFO] 526000 projects inserted with 2630000 cashflows
+2025-10-18 18:39:48,162 [INFO] 527000 projects inserted with 2635000 cashflows
+2025-10-18 18:39:48,178 [INFO] 528000 projects inserted with 2640000 cashflows
+2025-10-18 18:39:48,192 [INFO] 529000 projects inserted with 2645000 cashflows
+2025-10-18 18:39:48,207 [INFO] 530000 projects inserted with 2650000 cashflows
+2025-10-18 18:39:48,237 [INFO] 531000 projects inserted with 2655000 cashflows
+2025-10-18 18:39:48,252 [INFO] 532000 projects inserted with 2660000 cashflows
+2025-10-18 18:39:48,266 [INFO] 533000 projects inserted with 2665000 cashflows
+2025-10-18 18:39:48,281 [INFO] 534000 projects inserted with 2670000 cashflows
+2025-10-18 18:39:48,295 [INFO] 535000 projects inserted with 2675000 cashflows
+2025-10-18 18:39:48,325 [INFO] 536000 projects inserted with 2680000 cashflows
+2025-10-18 18:39:48,340 [INFO] 537000 projects inserted with 2685000 cashflows
+2025-10-18 18:39:48,354 [INFO] 538000 projects inserted with 2690000 cashflows
+2025-10-18 18:39:48,369 [INFO] 539000 projects inserted with 2695000 cashflows
+2025-10-18 18:39:48,383 [INFO] 540000 projects inserted with 2700000 cashflows
+2025-10-18 18:39:48,420 [INFO] 541000 projects inserted with 2705000 cashflows
+2025-10-18 18:39:48,434 [INFO] 542000 projects inserted with 2710000 cashflows
+2025-10-18 18:39:48,449 [INFO] 543000 projects inserted with 2715000 cashflows
+2025-10-18 18:39:48,464 [INFO] 544000 projects inserted with 2720000 cashflows
+2025-10-18 18:39:48,478 [INFO] 545000 projects inserted with 2725000 cashflows
+2025-10-18 18:39:48,507 [INFO] 546000 projects inserted with 2730000 cashflows
+2025-10-18 18:39:48,522 [INFO] 547000 projects inserted with 2735000 cashflows
+2025-10-18 18:39:48,536 [INFO] 548000 projects inserted with 2740000 cashflows
+2025-10-18 18:39:48,551 [INFO] 549000 projects inserted with 2745000 cashflows
+2025-10-18 18:39:48,565 [INFO] 550000 projects inserted with 2750000 cashflows
+2025-10-18 18:39:48,595 [INFO] 551000 projects inserted with 2755000 cashflows
+2025-10-18 18:39:48,610 [INFO] 552000 projects inserted with 2760000 cashflows
+2025-10-18 18:39:48,625 [INFO] 553000 projects inserted with 2765000 cashflows
+2025-10-18 18:39:48,639 [INFO] 554000 projects inserted with 2770000 cashflows
+2025-10-18 18:39:48,654 [INFO] 555000 projects inserted with 2775000 cashflows
+2025-10-18 18:39:48,694 [INFO] 556000 projects inserted with 2780000 cashflows
+2025-10-18 18:39:48,709 [INFO] 557000 projects inserted with 2785000 cashflows
+2025-10-18 18:39:48,723 [INFO] 558000 projects inserted with 2790000 cashflows
+2025-10-18 18:39:48,738 [INFO] 559000 projects inserted with 2795000 cashflows
+2025-10-18 18:39:48,752 [INFO] 560000 projects inserted with 2800000 cashflows
+2025-10-18 18:39:48,781 [INFO] 561000 projects inserted with 2805000 cashflows
+2025-10-18 18:39:48,796 [INFO] 562000 projects inserted with 2810000 cashflows
+2025-10-18 18:39:48,810 [INFO] 563000 projects inserted with 2815000 cashflows
+2025-10-18 18:39:48,825 [INFO] 564000 projects inserted with 2820000 cashflows
+2025-10-18 18:39:48,840 [INFO] 565000 projects inserted with 2825000 cashflows
+2025-10-18 18:39:48,870 [INFO] 566000 projects inserted with 2830000 cashflows
+2025-10-18 18:39:48,884 [INFO] 567000 projects inserted with 2835000 cashflows
+2025-10-18 18:39:48,899 [INFO] 568000 projects inserted with 2840000 cashflows
+2025-10-18 18:39:48,913 [INFO] 569000 projects inserted with 2845000 cashflows
+2025-10-18 18:39:48,928 [INFO] 570000 projects inserted with 2850000 cashflows
+2025-10-18 18:39:48,958 [INFO] 571000 projects inserted with 2855000 cashflows
+2025-10-18 18:39:48,974 [INFO] 572000 projects inserted with 2860000 cashflows
+2025-10-18 18:39:48,989 [INFO] 573000 projects inserted with 2865000 cashflows
+2025-10-18 18:39:49,003 [INFO] 574000 projects inserted with 2870000 cashflows
+2025-10-18 18:39:49,018 [INFO] 575000 projects inserted with 2875000 cashflows
+2025-10-18 18:39:49,048 [INFO] 576000 projects inserted with 2880000 cashflows
+2025-10-18 18:39:49,063 [INFO] 577000 projects inserted with 2885000 cashflows
+2025-10-18 18:39:49,078 [INFO] 578000 projects inserted with 2890000 cashflows
+2025-10-18 18:39:49,092 [INFO] 579000 projects inserted with 2895000 cashflows
+2025-10-18 18:39:49,107 [INFO] 580000 projects inserted with 2900000 cashflows
+2025-10-18 18:39:49,137 [INFO] 581000 projects inserted with 2905000 cashflows
+2025-10-18 18:39:49,152 [INFO] 582000 projects inserted with 2910000 cashflows
+2025-10-18 18:39:49,166 [INFO] 583000 projects inserted with 2915000 cashflows
+2025-10-18 18:39:49,181 [INFO] 584000 projects inserted with 2920000 cashflows
+2025-10-18 18:39:49,196 [INFO] 585000 projects inserted with 2925000 cashflows
+2025-10-18 18:39:49,230 [INFO] 586000 projects inserted with 2930000 cashflows
+2025-10-18 18:39:49,245 [INFO] 587000 projects inserted with 2935000 cashflows
+2025-10-18 18:39:49,259 [INFO] 588000 projects inserted with 2940000 cashflows
+2025-10-18 18:39:49,274 [INFO] 589000 projects inserted with 2945000 cashflows
+2025-10-18 18:39:49,288 [INFO] 590000 projects inserted with 2950000 cashflows
+2025-10-18 18:39:49,318 [INFO] 591000 projects inserted with 2955000 cashflows
+2025-10-18 18:39:49,334 [INFO] 592000 projects inserted with 2960000 cashflows
+2025-10-18 18:39:49,349 [INFO] 593000 projects inserted with 2965000 cashflows
+2025-10-18 18:39:49,363 [INFO] 594000 projects inserted with 2970000 cashflows
+2025-10-18 18:39:49,378 [INFO] 595000 projects inserted with 2975000 cashflows
+2025-10-18 18:39:49,417 [INFO] 596000 projects inserted with 2980000 cashflows
+2025-10-18 18:39:49,433 [INFO] 597000 projects inserted with 2985000 cashflows
+2025-10-18 18:39:49,448 [INFO] 598000 projects inserted with 2990000 cashflows
+2025-10-18 18:39:49,462 [INFO] 599000 projects inserted with 2995000 cashflows
+2025-10-18 18:39:49,477 [INFO] 600000 projects inserted with 3000000 cashflows
+2025-10-18 18:39:49,511 [INFO] 601000 projects inserted with 3005000 cashflows
+2025-10-18 18:39:49,525 [INFO] 602000 projects inserted with 3010000 cashflows
+2025-10-18 18:39:49,540 [INFO] 603000 projects inserted with 3015000 cashflows
+2025-10-18 18:39:49,555 [INFO] 604000 projects inserted with 3020000 cashflows
+2025-10-18 18:39:49,569 [INFO] 605000 projects inserted with 3025000 cashflows
+2025-10-18 18:39:49,598 [INFO] 606000 projects inserted with 3030000 cashflows
+2025-10-18 18:39:49,612 [INFO] 607000 projects inserted with 3035000 cashflows
+2025-10-18 18:39:49,627 [INFO] 608000 projects inserted with 3040000 cashflows
+2025-10-18 18:39:49,642 [INFO] 609000 projects inserted with 3045000 cashflows
+2025-10-18 18:39:49,658 [INFO] 610000 projects inserted with 3050000 cashflows
+2025-10-18 18:39:49,689 [INFO] 611000 projects inserted with 3055000 cashflows
+2025-10-18 18:39:49,704 [INFO] 612000 projects inserted with 3060000 cashflows
+2025-10-18 18:39:49,718 [INFO] 613000 projects inserted with 3065000 cashflows
+2025-10-18 18:39:49,733 [INFO] 614000 projects inserted with 3070000 cashflows
+2025-10-18 18:39:49,748 [INFO] 615000 projects inserted with 3075000 cashflows
+2025-10-18 18:39:49,780 [INFO] 616000 projects inserted with 3080000 cashflows
+2025-10-18 18:39:49,794 [INFO] 617000 projects inserted with 3085000 cashflows
+2025-10-18 18:39:49,809 [INFO] 618000 projects inserted with 3090000 cashflows
+2025-10-18 18:39:49,823 [INFO] 619000 projects inserted with 3095000 cashflows
+2025-10-18 18:39:49,838 [INFO] 620000 projects inserted with 3100000 cashflows
+2025-10-18 18:39:49,868 [INFO] 621000 projects inserted with 3105000 cashflows
+2025-10-18 18:39:49,883 [INFO] 622000 projects inserted with 3110000 cashflows
+2025-10-18 18:39:49,898 [INFO] 623000 projects inserted with 3115000 cashflows
+2025-10-18 18:39:49,912 [INFO] 624000 projects inserted with 3120000 cashflows
+2025-10-18 18:39:49,927 [INFO] 625000 projects inserted with 3125000 cashflows
+2025-10-18 18:39:49,957 [INFO] 626000 projects inserted with 3130000 cashflows
+2025-10-18 18:39:49,972 [INFO] 627000 projects inserted with 3135000 cashflows
+2025-10-18 18:39:49,987 [INFO] 628000 projects inserted with 3140000 cashflows
+2025-10-18 18:39:50,002 [INFO] 629000 projects inserted with 3145000 cashflows
+2025-10-18 18:39:50,016 [INFO] 630000 projects inserted with 3150000 cashflows
+2025-10-18 18:39:50,046 [INFO] 631000 projects inserted with 3155000 cashflows
+2025-10-18 18:39:50,061 [INFO] 632000 projects inserted with 3160000 cashflows
+2025-10-18 18:39:50,075 [INFO] 633000 projects inserted with 3165000 cashflows
+2025-10-18 18:39:50,090 [INFO] 634000 projects inserted with 3170000 cashflows
+2025-10-18 18:39:50,105 [INFO] 635000 projects inserted with 3175000 cashflows
+2025-10-18 18:39:50,134 [INFO] 636000 projects inserted with 3180000 cashflows
+2025-10-18 18:39:50,149 [INFO] 637000 projects inserted with 3185000 cashflows
+2025-10-18 18:39:50,163 [INFO] 638000 projects inserted with 3190000 cashflows
+2025-10-18 18:39:50,178 [INFO] 639000 projects inserted with 3195000 cashflows
+2025-10-18 18:39:50,192 [INFO] 640000 projects inserted with 3200000 cashflows
+2025-10-18 18:39:50,256 [INFO] 641000 projects inserted with 3205000 cashflows
+2025-10-18 18:39:50,270 [INFO] 642000 projects inserted with 3210000 cashflows
+2025-10-18 18:39:50,285 [INFO] 643000 projects inserted with 3215000 cashflows
+2025-10-18 18:39:50,300 [INFO] 644000 projects inserted with 3220000 cashflows
+2025-10-18 18:39:50,314 [INFO] 645000 projects inserted with 3225000 cashflows
+2025-10-18 18:39:50,352 [INFO] 646000 projects inserted with 3230000 cashflows
+2025-10-18 18:39:50,367 [INFO] 647000 projects inserted with 3235000 cashflows
+2025-10-18 18:39:50,381 [INFO] 648000 projects inserted with 3240000 cashflows
+2025-10-18 18:39:50,396 [INFO] 649000 projects inserted with 3245000 cashflows
+2025-10-18 18:39:50,410 [INFO] 650000 projects inserted with 3250000 cashflows
+2025-10-18 18:39:50,438 [INFO] 651000 projects inserted with 3255000 cashflows
+2025-10-18 18:39:50,453 [INFO] 652000 projects inserted with 3260000 cashflows
+2025-10-18 18:39:50,467 [INFO] 653000 projects inserted with 3265000 cashflows
+2025-10-18 18:39:50,482 [INFO] 654000 projects inserted with 3270000 cashflows
+2025-10-18 18:39:50,498 [INFO] 655000 projects inserted with 3275000 cashflows
+2025-10-18 18:39:50,527 [INFO] 656000 projects inserted with 3280000 cashflows
+2025-10-18 18:39:50,543 [INFO] 657000 projects inserted with 3285000 cashflows
+2025-10-18 18:39:50,558 [INFO] 658000 projects inserted with 3290000 cashflows
+2025-10-18 18:39:50,572 [INFO] 659000 projects inserted with 3295000 cashflows
+2025-10-18 18:39:50,587 [INFO] 660000 projects inserted with 3300000 cashflows
+2025-10-18 18:39:50,618 [INFO] 661000 projects inserted with 3305000 cashflows
+2025-10-18 18:39:50,633 [INFO] 662000 projects inserted with 3310000 cashflows
+2025-10-18 18:39:50,648 [INFO] 663000 projects inserted with 3315000 cashflows
+2025-10-18 18:39:50,662 [INFO] 664000 projects inserted with 3320000 cashflows
+2025-10-18 18:39:50,677 [INFO] 665000 projects inserted with 3325000 cashflows
+2025-10-18 18:39:50,705 [INFO] 666000 projects inserted with 3330000 cashflows
+2025-10-18 18:39:50,719 [INFO] 667000 projects inserted with 3335000 cashflows
+2025-10-18 18:39:50,734 [INFO] 668000 projects inserted with 3340000 cashflows
+2025-10-18 18:39:50,749 [INFO] 669000 projects inserted with 3345000 cashflows
+2025-10-18 18:39:50,764 [INFO] 670000 projects inserted with 3350000 cashflows
+2025-10-18 18:39:50,793 [INFO] 671000 projects inserted with 3355000 cashflows
+2025-10-18 18:39:50,808 [INFO] 672000 projects inserted with 3360000 cashflows
+2025-10-18 18:39:50,822 [INFO] 673000 projects inserted with 3365000 cashflows
+2025-10-18 18:39:50,837 [INFO] 674000 projects inserted with 3370000 cashflows
+2025-10-18 18:39:50,851 [INFO] 675000 projects inserted with 3375000 cashflows
+2025-10-18 18:39:50,880 [INFO] 676000 projects inserted with 3380000 cashflows
+2025-10-18 18:39:50,895 [INFO] 677000 projects inserted with 3385000 cashflows
+2025-10-18 18:39:50,910 [INFO] 678000 projects inserted with 3390000 cashflows
+2025-10-18 18:39:50,924 [INFO] 679000 projects inserted with 3395000 cashflows
+2025-10-18 18:39:50,939 [INFO] 680000 projects inserted with 3400000 cashflows
+2025-10-18 18:39:50,967 [INFO] 681000 projects inserted with 3405000 cashflows
+2025-10-18 18:39:50,982 [INFO] 682000 projects inserted with 3410000 cashflows
+2025-10-18 18:39:50,997 [INFO] 683000 projects inserted with 3415000 cashflows
+2025-10-18 18:39:51,011 [INFO] 684000 projects inserted with 3420000 cashflows
+2025-10-18 18:39:51,026 [INFO] 685000 projects inserted with 3425000 cashflows
+2025-10-18 18:39:51,057 [INFO] 686000 projects inserted with 3430000 cashflows
+2025-10-18 18:39:51,071 [INFO] 687000 projects inserted with 3435000 cashflows
+2025-10-18 18:39:51,086 [INFO] 688000 projects inserted with 3440000 cashflows
+2025-10-18 18:39:51,100 [INFO] 689000 projects inserted with 3445000 cashflows
+2025-10-18 18:39:51,115 [INFO] 690000 projects inserted with 3450000 cashflows
+2025-10-18 18:39:51,144 [INFO] 691000 projects inserted with 3455000 cashflows
+2025-10-18 18:39:51,158 [INFO] 692000 projects inserted with 3460000 cashflows
+2025-10-18 18:39:51,173 [INFO] 693000 projects inserted with 3465000 cashflows
+2025-10-18 18:39:51,187 [INFO] 694000 projects inserted with 3470000 cashflows
+2025-10-18 18:39:51,202 [INFO] 695000 projects inserted with 3475000 cashflows
+2025-10-18 18:39:51,234 [INFO] 696000 projects inserted with 3480000 cashflows
+2025-10-18 18:39:51,249 [INFO] 697000 projects inserted with 3485000 cashflows
+2025-10-18 18:39:51,263 [INFO] 698000 projects inserted with 3490000 cashflows
+2025-10-18 18:39:51,278 [INFO] 699000 projects inserted with 3495000 cashflows
+2025-10-18 18:39:51,292 [INFO] 700000 projects inserted with 3500000 cashflows
+2025-10-18 18:39:51,327 [INFO] 701000 projects inserted with 3505000 cashflows
+2025-10-18 18:39:51,341 [INFO] 702000 projects inserted with 3510000 cashflows
+2025-10-18 18:39:51,356 [INFO] 703000 projects inserted with 3515000 cashflows
+2025-10-18 18:39:51,370 [INFO] 704000 projects inserted with 3520000 cashflows
+2025-10-18 18:39:51,385 [INFO] 705000 projects inserted with 3525000 cashflows
+2025-10-18 18:39:51,415 [INFO] 706000 projects inserted with 3530000 cashflows
+2025-10-18 18:39:51,431 [INFO] 707000 projects inserted with 3535000 cashflows
+2025-10-18 18:39:51,445 [INFO] 708000 projects inserted with 3540000 cashflows
+2025-10-18 18:39:51,460 [INFO] 709000 projects inserted with 3545000 cashflows
+2025-10-18 18:39:51,474 [INFO] 710000 projects inserted with 3550000 cashflows
+2025-10-18 18:39:51,505 [INFO] 711000 projects inserted with 3555000 cashflows
+2025-10-18 18:39:51,520 [INFO] 712000 projects inserted with 3560000 cashflows
+2025-10-18 18:39:51,535 [INFO] 713000 projects inserted with 3565000 cashflows
+2025-10-18 18:39:51,550 [INFO] 714000 projects inserted with 3570000 cashflows
+2025-10-18 18:39:51,564 [INFO] 715000 projects inserted with 3575000 cashflows
+2025-10-18 18:39:51,593 [INFO] 716000 projects inserted with 3580000 cashflows
+2025-10-18 18:39:51,608 [INFO] 717000 projects inserted with 3585000 cashflows
+2025-10-18 18:39:51,622 [INFO] 718000 projects inserted with 3590000 cashflows
+2025-10-18 18:39:51,638 [INFO] 719000 projects inserted with 3595000 cashflows
+2025-10-18 18:39:51,652 [INFO] 720000 projects inserted with 3600000 cashflows
+2025-10-18 18:39:51,680 [INFO] 721000 projects inserted with 3605000 cashflows
+2025-10-18 18:39:51,695 [INFO] 722000 projects inserted with 3610000 cashflows
+2025-10-18 18:39:51,709 [INFO] 723000 projects inserted with 3615000 cashflows
+2025-10-18 18:39:51,724 [INFO] 724000 projects inserted with 3620000 cashflows
+2025-10-18 18:39:51,739 [INFO] 725000 projects inserted with 3625000 cashflows
+2025-10-18 18:39:51,768 [INFO] 726000 projects inserted with 3630000 cashflows
+2025-10-18 18:39:51,783 [INFO] 727000 projects inserted with 3635000 cashflows
+2025-10-18 18:39:51,798 [INFO] 728000 projects inserted with 3640000 cashflows
+2025-10-18 18:39:51,812 [INFO] 729000 projects inserted with 3645000 cashflows
+2025-10-18 18:39:51,826 [INFO] 730000 projects inserted with 3650000 cashflows
+2025-10-18 18:39:51,857 [INFO] 731000 projects inserted with 3655000 cashflows
+2025-10-18 18:39:51,871 [INFO] 732000 projects inserted with 3660000 cashflows
+2025-10-18 18:39:51,886 [INFO] 733000 projects inserted with 3665000 cashflows
+2025-10-18 18:39:51,901 [INFO] 734000 projects inserted with 3670000 cashflows
+2025-10-18 18:39:51,915 [INFO] 735000 projects inserted with 3675000 cashflows
+2025-10-18 18:39:51,943 [INFO] 736000 projects inserted with 3680000 cashflows
+2025-10-18 18:39:51,958 [INFO] 737000 projects inserted with 3685000 cashflows
+2025-10-18 18:39:51,972 [INFO] 738000 projects inserted with 3690000 cashflows
+2025-10-18 18:39:51,987 [INFO] 739000 projects inserted with 3695000 cashflows
+2025-10-18 18:39:52,001 [INFO] 740000 projects inserted with 3700000 cashflows
+2025-10-18 18:39:52,030 [INFO] 741000 projects inserted with 3705000 cashflows
+2025-10-18 18:39:52,045 [INFO] 742000 projects inserted with 3710000 cashflows
+2025-10-18 18:39:52,059 [INFO] 743000 projects inserted with 3715000 cashflows
+2025-10-18 18:39:52,074 [INFO] 744000 projects inserted with 3720000 cashflows
+2025-10-18 18:39:52,088 [INFO] 745000 projects inserted with 3725000 cashflows
+2025-10-18 18:39:52,116 [INFO] 746000 projects inserted with 3730000 cashflows
+2025-10-18 18:39:52,131 [INFO] 747000 projects inserted with 3735000 cashflows
+2025-10-18 18:39:52,145 [INFO] 748000 projects inserted with 3740000 cashflows
+2025-10-18 18:39:52,160 [INFO] 749000 projects inserted with 3745000 cashflows
+2025-10-18 18:39:52,175 [INFO] 750000 projects inserted with 3750000 cashflows
+2025-10-18 18:39:52,204 [INFO] 751000 projects inserted with 3755000 cashflows
+2025-10-18 18:39:52,219 [INFO] 752000 projects inserted with 3760000 cashflows
+2025-10-18 18:39:52,234 [INFO] 753000 projects inserted with 3765000 cashflows
+2025-10-18 18:39:52,248 [INFO] 754000 projects inserted with 3770000 cashflows
+2025-10-18 18:39:52,264 [INFO] 755000 projects inserted with 3775000 cashflows
+2025-10-18 18:39:52,292 [INFO] 756000 projects inserted with 3780000 cashflows
+2025-10-18 18:39:52,306 [INFO] 757000 projects inserted with 3785000 cashflows
+2025-10-18 18:39:52,321 [INFO] 758000 projects inserted with 3790000 cashflows
+2025-10-18 18:39:52,335 [INFO] 759000 projects inserted with 3795000 cashflows
+2025-10-18 18:39:52,350 [INFO] 760000 projects inserted with 3800000 cashflows
+2025-10-18 18:39:52,379 [INFO] 761000 projects inserted with 3805000 cashflows
+2025-10-18 18:39:52,393 [INFO] 762000 projects inserted with 3810000 cashflows
+2025-10-18 18:39:52,408 [INFO] 763000 projects inserted with 3815000 cashflows
+2025-10-18 18:39:52,423 [INFO] 764000 projects inserted with 3820000 cashflows
+2025-10-18 18:39:52,437 [INFO] 765000 projects inserted with 3825000 cashflows
+2025-10-18 18:39:52,469 [INFO] 766000 projects inserted with 3830000 cashflows
+2025-10-18 18:39:52,483 [INFO] 767000 projects inserted with 3835000 cashflows
+2025-10-18 18:39:52,498 [INFO] 768000 projects inserted with 3840000 cashflows
+2025-10-18 18:39:52,513 [INFO] 769000 projects inserted with 3845000 cashflows
+2025-10-18 18:39:52,527 [INFO] 770000 projects inserted with 3850000 cashflows
+2025-10-18 18:39:52,556 [INFO] 771000 projects inserted with 3855000 cashflows
+2025-10-18 18:39:52,570 [INFO] 772000 projects inserted with 3860000 cashflows
+2025-10-18 18:39:52,585 [INFO] 773000 projects inserted with 3865000 cashflows
+2025-10-18 18:39:52,599 [INFO] 774000 projects inserted with 3870000 cashflows
+2025-10-18 18:39:52,614 [INFO] 775000 projects inserted with 3875000 cashflows
+2025-10-18 18:39:52,644 [INFO] 776000 projects inserted with 3880000 cashflows
+2025-10-18 18:39:52,658 [INFO] 777000 projects inserted with 3885000 cashflows
+2025-10-18 18:39:52,673 [INFO] 778000 projects inserted with 3890000 cashflows
+2025-10-18 18:39:52,687 [INFO] 779000 projects inserted with 3895000 cashflows
+2025-10-18 18:39:52,702 [INFO] 780000 projects inserted with 3900000 cashflows
+2025-10-18 18:39:52,730 [INFO] 781000 projects inserted with 3905000 cashflows
+2025-10-18 18:39:52,746 [INFO] 782000 projects inserted with 3910000 cashflows
+2025-10-18 18:39:52,760 [INFO] 783000 projects inserted with 3915000 cashflows
+2025-10-18 18:39:52,775 [INFO] 784000 projects inserted with 3920000 cashflows
+2025-10-18 18:39:52,790 [INFO] 785000 projects inserted with 3925000 cashflows
+2025-10-18 18:39:52,819 [INFO] 786000 projects inserted with 3930000 cashflows
+2025-10-18 18:39:52,833 [INFO] 787000 projects inserted with 3935000 cashflows
+2025-10-18 18:39:52,848 [INFO] 788000 projects inserted with 3940000 cashflows
+2025-10-18 18:39:52,862 [INFO] 789000 projects inserted with 3945000 cashflows
+2025-10-18 18:39:52,877 [INFO] 790000 projects inserted with 3950000 cashflows
+2025-10-18 18:39:52,909 [INFO] 791000 projects inserted with 3955000 cashflows
+2025-10-18 18:39:52,925 [INFO] 792000 projects inserted with 3960000 cashflows
+2025-10-18 18:39:52,939 [INFO] 793000 projects inserted with 3965000 cashflows
+2025-10-18 18:39:52,954 [INFO] 794000 projects inserted with 3970000 cashflows
+2025-10-18 18:39:52,968 [INFO] 795000 projects inserted with 3975000 cashflows
+2025-10-18 18:39:53,000 [INFO] 796000 projects inserted with 3980000 cashflows
+2025-10-18 18:39:53,016 [INFO] 797000 projects inserted with 3985000 cashflows
+2025-10-18 18:39:53,030 [INFO] 798000 projects inserted with 3990000 cashflows
+2025-10-18 18:39:53,045 [INFO] 799000 projects inserted with 3995000 cashflows
+2025-10-18 18:39:53,061 [INFO] 800000 projects inserted with 4000000 cashflows
+2025-10-18 18:39:53,090 [INFO] 801000 projects inserted with 4005000 cashflows
+2025-10-18 18:39:53,105 [INFO] 802000 projects inserted with 4010000 cashflows
+2025-10-18 18:39:53,119 [INFO] 803000 projects inserted with 4015000 cashflows
+2025-10-18 18:39:53,134 [INFO] 804000 projects inserted with 4020000 cashflows
+2025-10-18 18:39:53,149 [INFO] 805000 projects inserted with 4025000 cashflows
+2025-10-18 18:39:53,178 [INFO] 806000 projects inserted with 4030000 cashflows
+2025-10-18 18:39:53,193 [INFO] 807000 projects inserted with 4035000 cashflows
+2025-10-18 18:39:53,207 [INFO] 808000 projects inserted with 4040000 cashflows
+2025-10-18 18:39:53,222 [INFO] 809000 projects inserted with 4045000 cashflows
+2025-10-18 18:39:53,237 [INFO] 810000 projects inserted with 4050000 cashflows
+2025-10-18 18:39:53,266 [INFO] 811000 projects inserted with 4055000 cashflows
+2025-10-18 18:39:53,281 [INFO] 812000 projects inserted with 4060000 cashflows
+2025-10-18 18:39:53,295 [INFO] 813000 projects inserted with 4065000 cashflows
+2025-10-18 18:39:53,310 [INFO] 814000 projects inserted with 4070000 cashflows
+2025-10-18 18:39:53,324 [INFO] 815000 projects inserted with 4075000 cashflows
+2025-10-18 18:39:53,354 [INFO] 816000 projects inserted with 4080000 cashflows
+2025-10-18 18:39:53,369 [INFO] 817000 projects inserted with 4085000 cashflows
+2025-10-18 18:39:53,384 [INFO] 818000 projects inserted with 4090000 cashflows
+2025-10-18 18:39:53,398 [INFO] 819000 projects inserted with 4095000 cashflows
+2025-10-18 18:39:53,413 [INFO] 820000 projects inserted with 4100000 cashflows
+2025-10-18 18:39:53,441 [INFO] 821000 projects inserted with 4105000 cashflows
+2025-10-18 18:39:53,456 [INFO] 822000 projects inserted with 4110000 cashflows
+2025-10-18 18:39:53,470 [INFO] 823000 projects inserted with 4115000 cashflows
+2025-10-18 18:39:53,485 [INFO] 824000 projects inserted with 4120000 cashflows
+2025-10-18 18:39:53,499 [INFO] 825000 projects inserted with 4125000 cashflows
+2025-10-18 18:39:53,528 [INFO] 826000 projects inserted with 4130000 cashflows
+2025-10-18 18:39:53,543 [INFO] 827000 projects inserted with 4135000 cashflows
+2025-10-18 18:39:53,558 [INFO] 828000 projects inserted with 4140000 cashflows
+2025-10-18 18:39:53,572 [INFO] 829000 projects inserted with 4145000 cashflows
+2025-10-18 18:39:53,587 [INFO] 830000 projects inserted with 4150000 cashflows
+2025-10-18 18:39:53,616 [INFO] 831000 projects inserted with 4155000 cashflows
+2025-10-18 18:39:53,630 [INFO] 832000 projects inserted with 4160000 cashflows
+2025-10-18 18:39:53,645 [INFO] 833000 projects inserted with 4165000 cashflows
+2025-10-18 18:39:53,660 [INFO] 834000 projects inserted with 4170000 cashflows
+2025-10-18 18:39:53,674 [INFO] 835000 projects inserted with 4175000 cashflows
+2025-10-18 18:39:53,710 [INFO] 836000 projects inserted with 4180000 cashflows
+2025-10-18 18:39:53,725 [INFO] 837000 projects inserted with 4185000 cashflows
+2025-10-18 18:39:53,739 [INFO] 838000 projects inserted with 4190000 cashflows
+2025-10-18 18:39:53,754 [INFO] 839000 projects inserted with 4195000 cashflows
+2025-10-18 18:39:53,768 [INFO] 840000 projects inserted with 4200000 cashflows
+2025-10-18 18:39:53,797 [INFO] 841000 projects inserted with 4205000 cashflows
+2025-10-18 18:39:53,812 [INFO] 842000 projects inserted with 4210000 cashflows
+2025-10-18 18:39:53,827 [INFO] 843000 projects inserted with 4215000 cashflows
+2025-10-18 18:39:53,841 [INFO] 844000 projects inserted with 4220000 cashflows
+2025-10-18 18:39:53,858 [INFO] 845000 projects inserted with 4225000 cashflows
+2025-10-18 18:39:53,886 [INFO] 846000 projects inserted with 4230000 cashflows
+2025-10-18 18:39:53,901 [INFO] 847000 projects inserted with 4235000 cashflows
+2025-10-18 18:39:53,915 [INFO] 848000 projects inserted with 4240000 cashflows
+2025-10-18 18:39:53,930 [INFO] 849000 projects inserted with 4245000 cashflows
+2025-10-18 18:39:53,945 [INFO] 850000 projects inserted with 4250000 cashflows
+2025-10-18 18:39:53,973 [INFO] 851000 projects inserted with 4255000 cashflows
+2025-10-18 18:39:53,987 [INFO] 852000 projects inserted with 4260000 cashflows
+2025-10-18 18:39:54,003 [INFO] 853000 projects inserted with 4265000 cashflows
+2025-10-18 18:39:54,018 [INFO] 854000 projects inserted with 4270000 cashflows
+2025-10-18 18:39:54,032 [INFO] 855000 projects inserted with 4275000 cashflows
+2025-10-18 18:39:54,062 [INFO] 856000 projects inserted with 4280000 cashflows
+2025-10-18 18:39:54,078 [INFO] 857000 projects inserted with 4285000 cashflows
+2025-10-18 18:39:54,092 [INFO] 858000 projects inserted with 4290000 cashflows
+2025-10-18 18:39:54,107 [INFO] 859000 projects inserted with 4295000 cashflows
+2025-10-18 18:39:54,121 [INFO] 860000 projects inserted with 4300000 cashflows
+2025-10-18 18:39:54,150 [INFO] 861000 projects inserted with 4305000 cashflows
+2025-10-18 18:39:54,165 [INFO] 862000 projects inserted with 4310000 cashflows
+2025-10-18 18:39:54,179 [INFO] 863000 projects inserted with 4315000 cashflows
+2025-10-18 18:39:54,194 [INFO] 864000 projects inserted with 4320000 cashflows
+2025-10-18 18:39:54,209 [INFO] 865000 projects inserted with 4325000 cashflows
+2025-10-18 18:39:54,238 [INFO] 866000 projects inserted with 4330000 cashflows
+2025-10-18 18:39:54,252 [INFO] 867000 projects inserted with 4335000 cashflows
+2025-10-18 18:39:54,267 [INFO] 868000 projects inserted with 4340000 cashflows
+2025-10-18 18:39:54,282 [INFO] 869000 projects inserted with 4345000 cashflows
+2025-10-18 18:39:54,297 [INFO] 870000 projects inserted with 4350000 cashflows
+2025-10-18 18:39:54,326 [INFO] 871000 projects inserted with 4355000 cashflows
+2025-10-18 18:39:54,340 [INFO] 872000 projects inserted with 4360000 cashflows
+2025-10-18 18:39:54,355 [INFO] 873000 projects inserted with 4365000 cashflows
+2025-10-18 18:39:54,369 [INFO] 874000 projects inserted with 4370000 cashflows
+2025-10-18 18:39:54,384 [INFO] 875000 projects inserted with 4375000 cashflows
+2025-10-18 18:39:54,414 [INFO] 876000 projects inserted with 4380000 cashflows
+2025-10-18 18:39:54,430 [INFO] 877000 projects inserted with 4385000 cashflows
+2025-10-18 18:39:54,444 [INFO] 878000 projects inserted with 4390000 cashflows
+2025-10-18 18:39:54,459 [INFO] 879000 projects inserted with 4395000 cashflows
+2025-10-18 18:39:54,474 [INFO] 880000 projects inserted with 4400000 cashflows
+2025-10-18 18:39:54,507 [INFO] 881000 projects inserted with 4405000 cashflows
+2025-10-18 18:39:54,521 [INFO] 882000 projects inserted with 4410000 cashflows
+2025-10-18 18:39:54,536 [INFO] 883000 projects inserted with 4415000 cashflows
+2025-10-18 18:39:54,551 [INFO] 884000 projects inserted with 4420000 cashflows
+2025-10-18 18:39:54,565 [INFO] 885000 projects inserted with 4425000 cashflows
+2025-10-18 18:39:54,594 [INFO] 886000 projects inserted with 4430000 cashflows
+2025-10-18 18:39:54,608 [INFO] 887000 projects inserted with 4435000 cashflows
+2025-10-18 18:39:54,623 [INFO] 888000 projects inserted with 4440000 cashflows
+2025-10-18 18:39:54,638 [INFO] 889000 projects inserted with 4445000 cashflows
+2025-10-18 18:39:54,653 [INFO] 890000 projects inserted with 4450000 cashflows
+2025-10-18 18:39:54,681 [INFO] 891000 projects inserted with 4455000 cashflows
+2025-10-18 18:39:54,696 [INFO] 892000 projects inserted with 4460000 cashflows
+2025-10-18 18:39:54,710 [INFO] 893000 projects inserted with 4465000 cashflows
+2025-10-18 18:39:54,725 [INFO] 894000 projects inserted with 4470000 cashflows
+2025-10-18 18:39:54,739 [INFO] 895000 projects inserted with 4475000 cashflows
+2025-10-18 18:39:54,767 [INFO] 896000 projects inserted with 4480000 cashflows
+2025-10-18 18:39:54,782 [INFO] 897000 projects inserted with 4485000 cashflows
+2025-10-18 18:39:54,797 [INFO] 898000 projects inserted with 4490000 cashflows
+2025-10-18 18:39:54,811 [INFO] 899000 projects inserted with 4495000 cashflows
+2025-10-18 18:39:54,826 [INFO] 900000 projects inserted with 4500000 cashflows
+2025-10-18 18:39:54,855 [INFO] 901000 projects inserted with 4505000 cashflows
+2025-10-18 18:39:54,871 [INFO] 902000 projects inserted with 4510000 cashflows
+2025-10-18 18:39:54,886 [INFO] 903000 projects inserted with 4515000 cashflows
+2025-10-18 18:39:54,900 [INFO] 904000 projects inserted with 4520000 cashflows
+2025-10-18 18:39:54,915 [INFO] 905000 projects inserted with 4525000 cashflows
+2025-10-18 18:39:54,943 [INFO] 906000 projects inserted with 4530000 cashflows
+2025-10-18 18:39:54,958 [INFO] 907000 projects inserted with 4535000 cashflows
+2025-10-18 18:39:54,973 [INFO] 908000 projects inserted with 4540000 cashflows
+2025-10-18 18:39:54,987 [INFO] 909000 projects inserted with 4545000 cashflows
+2025-10-18 18:39:55,002 [INFO] 910000 projects inserted with 4550000 cashflows
+2025-10-18 18:39:55,032 [INFO] 911000 projects inserted with 4555000 cashflows
+2025-10-18 18:39:55,046 [INFO] 912000 projects inserted with 4560000 cashflows
+2025-10-18 18:39:55,061 [INFO] 913000 projects inserted with 4565000 cashflows
+2025-10-18 18:39:55,076 [INFO] 914000 projects inserted with 4570000 cashflows
+2025-10-18 18:39:55,091 [INFO] 915000 projects inserted with 4575000 cashflows
+2025-10-18 18:39:55,121 [INFO] 916000 projects inserted with 4580000 cashflows
+2025-10-18 18:39:55,136 [INFO] 917000 projects inserted with 4585000 cashflows
+2025-10-18 18:39:55,151 [INFO] 918000 projects inserted with 4590000 cashflows
+2025-10-18 18:39:55,166 [INFO] 919000 projects inserted with 4595000 cashflows
+2025-10-18 18:39:55,180 [INFO] 920000 projects inserted with 4600000 cashflows
+2025-10-18 18:39:55,209 [INFO] 921000 projects inserted with 4605000 cashflows
+2025-10-18 18:39:55,223 [INFO] 922000 projects inserted with 4610000 cashflows
+2025-10-18 18:39:55,239 [INFO] 923000 projects inserted with 4615000 cashflows
+2025-10-18 18:39:55,254 [INFO] 924000 projects inserted with 4620000 cashflows
+2025-10-18 18:39:55,268 [INFO] 925000 projects inserted with 4625000 cashflows
+2025-10-18 18:39:55,297 [INFO] 926000 projects inserted with 4630000 cashflows
+2025-10-18 18:39:55,312 [INFO] 927000 projects inserted with 4635000 cashflows
+2025-10-18 18:39:55,326 [INFO] 928000 projects inserted with 4640000 cashflows
+2025-10-18 18:39:55,341 [INFO] 929000 projects inserted with 4645000 cashflows
+2025-10-18 18:39:55,355 [INFO] 930000 projects inserted with 4650000 cashflows
+2025-10-18 18:39:55,384 [INFO] 931000 projects inserted with 4655000 cashflows
+2025-10-18 18:39:55,399 [INFO] 932000 projects inserted with 4660000 cashflows
+2025-10-18 18:39:55,414 [INFO] 933000 projects inserted with 4665000 cashflows
+2025-10-18 18:39:55,428 [INFO] 934000 projects inserted with 4670000 cashflows
+2025-10-18 18:39:55,442 [INFO] 935000 projects inserted with 4675000 cashflows
+2025-10-18 18:39:55,474 [INFO] 936000 projects inserted with 4680000 cashflows
+2025-10-18 18:39:55,489 [INFO] 937000 projects inserted with 4685000 cashflows
+2025-10-18 18:39:55,505 [INFO] 938000 projects inserted with 4690000 cashflows
+2025-10-18 18:39:55,520 [INFO] 939000 projects inserted with 4695000 cashflows
+2025-10-18 18:39:55,535 [INFO] 940000 projects inserted with 4700000 cashflows
+2025-10-18 18:39:55,564 [INFO] 941000 projects inserted with 4705000 cashflows
+2025-10-18 18:39:55,579 [INFO] 942000 projects inserted with 4710000 cashflows
+2025-10-18 18:39:55,594 [INFO] 943000 projects inserted with 4715000 cashflows
+2025-10-18 18:39:55,608 [INFO] 944000 projects inserted with 4720000 cashflows
+2025-10-18 18:39:55,623 [INFO] 945000 projects inserted with 4725000 cashflows
+2025-10-18 18:39:55,652 [INFO] 946000 projects inserted with 4730000 cashflows
+2025-10-18 18:39:55,667 [INFO] 947000 projects inserted with 4735000 cashflows
+2025-10-18 18:39:55,681 [INFO] 948000 projects inserted with 4740000 cashflows
+2025-10-18 18:39:55,696 [INFO] 949000 projects inserted with 4745000 cashflows
+2025-10-18 18:39:55,710 [INFO] 950000 projects inserted with 4750000 cashflows
+2025-10-18 18:39:55,739 [INFO] 951000 projects inserted with 4755000 cashflows
+2025-10-18 18:39:55,754 [INFO] 952000 projects inserted with 4760000 cashflows
+2025-10-18 18:39:55,769 [INFO] 953000 projects inserted with 4765000 cashflows
+2025-10-18 18:39:55,783 [INFO] 954000 projects inserted with 4770000 cashflows
+2025-10-18 18:39:55,798 [INFO] 955000 projects inserted with 4775000 cashflows
+2025-10-18 18:39:55,828 [INFO] 956000 projects inserted with 4780000 cashflows
+2025-10-18 18:39:55,842 [INFO] 957000 projects inserted with 4785000 cashflows
+2025-10-18 18:39:55,857 [INFO] 958000 projects inserted with 4790000 cashflows
+2025-10-18 18:39:55,871 [INFO] 959000 projects inserted with 4795000 cashflows
+2025-10-18 18:39:55,885 [INFO] 960000 projects inserted with 4800000 cashflows
+2025-10-18 18:39:55,920 [INFO] 961000 projects inserted with 4805000 cashflows
+2025-10-18 18:39:55,935 [INFO] 962000 projects inserted with 4810000 cashflows
+2025-10-18 18:39:55,949 [INFO] 963000 projects inserted with 4815000 cashflows
+2025-10-18 18:39:55,964 [INFO] 964000 projects inserted with 4820000 cashflows
+2025-10-18 18:39:55,978 [INFO] 965000 projects inserted with 4825000 cashflows
+2025-10-18 18:39:56,006 [INFO] 966000 projects inserted with 4830000 cashflows
+2025-10-18 18:39:56,021 [INFO] 967000 projects inserted with 4835000 cashflows
+2025-10-18 18:39:56,035 [INFO] 968000 projects inserted with 4840000 cashflows
+2025-10-18 18:39:56,049 [INFO] 969000 projects inserted with 4845000 cashflows
+2025-10-18 18:39:56,064 [INFO] 970000 projects inserted with 4850000 cashflows
+2025-10-18 18:39:56,093 [INFO] 971000 projects inserted with 4855000 cashflows
+2025-10-18 18:39:56,107 [INFO] 972000 projects inserted with 4860000 cashflows
+2025-10-18 18:39:56,122 [INFO] 973000 projects inserted with 4865000 cashflows
+2025-10-18 18:39:56,136 [INFO] 974000 projects inserted with 4870000 cashflows
+2025-10-18 18:39:56,151 [INFO] 975000 projects inserted with 4875000 cashflows
+2025-10-18 18:39:56,186 [INFO] 976000 projects inserted with 4880000 cashflows
+2025-10-18 18:39:56,201 [INFO] 977000 projects inserted with 4885000 cashflows
+2025-10-18 18:39:56,216 [INFO] 978000 projects inserted with 4890000 cashflows
+2025-10-18 18:39:56,230 [INFO] 979000 projects inserted with 4895000 cashflows
+2025-10-18 18:39:56,245 [INFO] 980000 projects inserted with 4900000 cashflows
+2025-10-18 18:39:56,274 [INFO] 981000 projects inserted with 4905000 cashflows
+2025-10-18 18:39:56,289 [INFO] 982000 projects inserted with 4910000 cashflows
+2025-10-18 18:39:56,304 [INFO] 983000 projects inserted with 4915000 cashflows
+2025-10-18 18:39:56,318 [INFO] 984000 projects inserted with 4920000 cashflows
+2025-10-18 18:39:56,333 [INFO] 985000 projects inserted with 4925000 cashflows
+2025-10-18 18:39:56,368 [INFO] 986000 projects inserted with 4930000 cashflows
+2025-10-18 18:39:56,384 [INFO] 987000 projects inserted with 4935000 cashflows
+2025-10-18 18:39:56,399 [INFO] 988000 projects inserted with 4940000 cashflows
+2025-10-18 18:39:56,413 [INFO] 989000 projects inserted with 4945000 cashflows
+2025-10-18 18:39:56,429 [INFO] 990000 projects inserted with 4950000 cashflows
+2025-10-18 18:39:56,460 [INFO] 991000 projects inserted with 4955000 cashflows
+2025-10-18 18:39:56,475 [INFO] 992000 projects inserted with 4960000 cashflows
+2025-10-18 18:39:56,489 [INFO] 993000 projects inserted with 4965000 cashflows
+2025-10-18 18:39:56,505 [INFO] 994000 projects inserted with 4970000 cashflows
+2025-10-18 18:39:56,520 [INFO] 995000 projects inserted with 4975000 cashflows
+2025-10-18 18:39:56,549 [INFO] 996000 projects inserted with 4980000 cashflows
+2025-10-18 18:39:56,564 [INFO] 997000 projects inserted with 4985000 cashflows
+2025-10-18 18:39:56,578 [INFO] 998000 projects inserted with 4990000 cashflows
+2025-10-18 18:39:56,593 [INFO] 999000 projects inserted with 4995000 cashflows
+2025-10-18 18:39:56,607 [INFO] 1000000 projects inserted with 5000000 cashflows
+2025-10-18 18:39:56,618 [INFO] Inserted 1000000 projects with 5000000 cashflows in 17.97 seconds
+2025-10-18 18:39:56,619 [INFO] Database seeding completed
+2025-10-18 18:39:56,619 [INFO] Database seeded successfully.
+2025-10-18 18:39:56,620 [INFO] GET /seed took 113.28s
+2025-10-18 18:39:56,620 [INFO] 127.0.0.1 - - [18/Oct/2025 18:39:56] "GET /seed HTTP/1.1" 200 -
+2025-10-18 18:49:30,288 [INFO] GET /login took 0.0s
+2025-10-18 18:49:30,289 [INFO] 127.0.0.1 - - [18/Oct/2025 18:49:30] "GET /login HTTP/1.1" 200 -
+2025-10-18 18:49:41,968 [INFO] POST /login took 0.11s
+2025-10-18 18:49:41,969 [INFO] 127.0.0.1 - - [18/Oct/2025 18:49:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-18 18:49:41,979 [INFO] GET /main_layout took 0.0s
+2025-10-18 18:49:41,979 [INFO] 127.0.0.1 - - [18/Oct/2025 18:49:41] "GET /main_layout HTTP/1.1" 200 -
+2025-10-18 18:49:42,121 [INFO] GET /static/css/main.css took 0.01s
+2025-10-18 18:49:42,122 [INFO] 127.0.0.1 - - [18/Oct/2025 18:49:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-18 18:50:04,889 [INFO] GET /list_projects took 16.62s
+2025-10-18 18:50:04,890 [INFO] 127.0.0.1 - - [18/Oct/2025 18:50:04] "GET /list_projects HTTP/1.1" 200 -
+2025-10-18 18:50:35,140 [INFO] GET /list_projects took 12.04s
+2025-10-18 18:50:35,141 [INFO] 127.0.0.1 - - [18/Oct/2025 18:50:35] "GET /list_projects?project_name=*89*&project_type=&depreciation_method= HTTP/1.1" 200 -
+2025-10-18 18:50:47,522 [INFO] GET /list_projects took 2.96s
+2025-10-18 18:50:47,523 [INFO] 127.0.0.1 - - [18/Oct/2025 18:50:47] "GET /list_projects?project_name=89&project_type=&depreciation_method= HTTP/1.1" 200 -
