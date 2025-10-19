@@ -64,3 +64,9 @@ CREATE TABLE ProjectPermissions (
     FOREIGN KEY (user_id) REFERENCES Users(id),
     FOREIGN KEY (granted_by) REFERENCES Users(id)
 );
+
+CREATE INDEX idx_projects_name ON Projects(project_name);
+CREATE INDEX idx_investments_project_id ON Investments(project_id);
+CREATE INDEX idx_investments_year ON Investments(investment_year);
+CREATE INDEX idx_projdef_project ON Project_definitions(project_id);
+CREATE INDEX idx_projdef_title ON Project_definitions(title);

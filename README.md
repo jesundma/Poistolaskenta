@@ -58,28 +58,82 @@ Puuttuvia ominaisuuksia:
 
 Suuret tietomäärät
 
-1000 käyttäjää, 100 000 projektia ja 5 kassavirtaa kussakin (500 000 kassavirtaa):
-2025-10-18 18:21:43,958 [INFO] Clearing Users, Projects, and Investments
-2025-10-18 18:23:17,483 [INFO] Inserted 1001 users in 91.0 seconds
-2025-10-18 18:23:19,364 [INFO] Inserted 100000 projects with 500000 cashflows in 1.88 seconds
-2025-10-18 18:23:19,367 [INFO] GET /seed took 95.41s
-2025-10-18 18:26:26,901 [INFO] GET /list_projects took 0.71s
-2025-10-18 18:26:42,539 [INFO] GET /list_projects took 0.3s (projektin haku nimellä)
-2025-10-18 18:28:14,040 [INFO] GET /cashflow_project/993 took 0.02s
-2025-10-18 18:28:20,921 [INFO] GET /add_new_cashflow/993 took 0.01s
-2025-10-18 18:28:43,292 [INFO] POST /add_new_cashflow/993 took 0.04s
-2025-10-18 18:28:43,309 [INFO] GET /cashflow_project/993 took 0.01s
-2025-10-18 18:28:55,618 [INFO] GET /list_projects took 0.67s
 
-1000 käyttäjää, 1 000 000 projektia ja 5 kassavirtaa kussakin (5 000 000 kassavirtaa):
+Seed.py on jätetty sovellukseen reitiksi /seed ja se käynnistyy ilman oikeuksien tarkastamista reitille siirryttäessä. Tämä ei tuotantovalmiissa sovelluksessa tietenkään olisi käytössä oleva reitti. Alunperin lisäykset oli tehty erittäin jakamalla lisättävät rivit määriteltyihin eräkokoihin, esimerkiksi 5 000 tai 10 000 riviä. Kurssiaineistossa olleessa seed.py ei tätä tekniikkaa oltu käytetty ja tietokannan täyttäminen muutettiin esimerkin mukaiseksi. Yllättävä havainto vain muutaman ajon perusteella oli, että eräajo ei näyttänyt olevan nopeampi tapa, itse asiassa se oli aavistuksen hitaampi tietokannan täyttämistapa. Tietokannan ja sovelluksen ollessa samalla koneella sekä vain muutaman kokeilun perusteella ei kannata tehdä pitkälle vietyjä oletuksia. Reittien pyynnöt kirjattiin app.log tiedostoon, joka on jätetty sovellukseen lokiksi. App.py tiedostossa on määritelty @app.before_request ja @app.after_request funktiot, jotka mittaavat ja lokittavat pyyntöjä ja niiden kestoa.
 
-2025-10-18 18:38:03,343 [INFO] Clearing Users, Projects, and Investments
-2025-10-18 18:39:38,646 [INFO] Inserted 1001 users in 89.87 seconds
-2025-10-18 18:39:56,618 [INFO] Inserted 1000000 projects with 5000000 cashflows in 17.97 seconds
-2025-10-18 18:39:56,620 [INFO] GET /seed took 113.28s
-2025-10-18 18:50:04,889 [INFO] GET /list_projects took 16.62s
-2025-10-18 18:50:35,140 [INFO] GET /list_projects took 12.04s
-2025-10-18 18:50:47,522 [INFO] GET /list_projects took 2.96s (projektin haku nimellä)
+1000 käyttäjää, 100 000 projektia ja 5 kassavirtaa kussakin (500 000 kassavirtaa) sekä jokaisella projektilla 2 määrettä (100 000 ja 100 000):
 
-Taulussa Users id on pääavain (PRIMARY KEY) ja siten automaattisesti indeksoitu, kuten myös username yksilöllinen- rajoittimen (UNIQUE) takia. Projects- taulun pääavain (PRIMARY KEY) on id ja siten id- perustuvien hakujen osalta indeksoitu. Projektin nimeen (project_name) perustuville hauille, esimerkiksi suodattimet luotiin indeksi (CREATE INDEX idx_projects_name ON Projects(project_name);)
+2025-10-19 11:47:20,447 [INFO] 127.0.0.1 - - [19/Oct/2025 11:47:20] "GET /seed HTTP/1.1" 200 -
+2025-10-19 12:06:04,224 [INFO] Clearing Users, Projects, Investments, and Project_definitions
+2025-10-19 12:07:22,305 [INFO] Loaded 4 Projektityyppi and 4 Poistomenetelmä options
+2025-10-19 12:08:53,628 [INFO] Added default login user 'admin' with password 'admin123'
+2025-10-19 12:08:53,636 [INFO] Inserted 1001 users in 91.33 seconds
+2025-10-19 12:08:55,041 [INFO] Inserted 1000000 projects in 1.4 seconds
+2025-10-19 12:09:02,936 [INFO] Inserted 2000000 project definitions in 7.9 seconds
+2025-10-19 12:09:19,496 [INFO] Inserted 5000000 cashflows in 16.56 seconds
+2025-10-19 12:09:19,496 [INFO] ---- Seeding Summary ----
+2025-10-19 12:09:19,496 [INFO] Users inserted in 91.33s
+2025-10-19 12:09:19,497 [INFO] Projects inserted in 1.4s
+2025-10-19 12:09:19,498 [INFO] Definitions inserted in 7.9s
+2025-10-19 12:09:19,498 [INFO] Cashflows inserted in 16.56s
+2025-10-19 12:09:19,499 [INFO] Total seeding time: 117.19s
+2025-10-19 12:09:19,499 [INFO] --------------------------
+2025-10-19 12:09:19,501 [INFO] Database seeding completed successfully
+2025-10-19 12:09:19,517 [INFO] Database seeded successfully.
 
+Projektilistauksen haku (toiminta, jossa haetaan projektit sivutettuina viisi proktia sivulla), haku projektin nimeä käyttäen (nimessä: 34), haku proktityypillä Muutostyö ja haku projektin poistomenetelmällä tasapoisto 10 vuotta:
+
+2025-10-19 15:32:19,591 [INFO] GET /list_projects took 26.47s
+2025-10-19 15:32:19,593 [INFO] 127.0.0.1 - - [19/Oct/2025 15:32:19] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 15:34:18,891 [INFO] GET /list_projects took 18.74s
+2025-10-19 15:34:18,891 [INFO] 127.0.0.1 - - [19/Oct/2025 15:34:18] "GET /list_projects?project_name=34&project_type=&depreciation_method= HTTP/1.1" 200 -
+2025-10-19 15:36:18,540 [INFO] GET /list_projects took 26.59s
+2025-10-19 15:36:18,541 [INFO] 127.0.0.1 - - [19/Oct/2025 15:36:18] "GET /list_projects?project_name=&project_type=Muutostyö&depreciation_method= HTTP/1.1" 200 -
+2025-10-19 15:40:33,670 [INFO] GET /list_projects took 4.46s
+2025-10-19 15:40:33,670 [INFO] 127.0.0.1 - - [19/Oct/2025 15:40:33] "GET /list_projects?project_name=&project_type=&depreciation_method=Tasapoisto+10+vuotta HTTP/1.1" 200 -
+
+Projektilistan latauduttua siirtymä toiselle sivulle sivutetussa projektilistassa:
+
+2025-10-19 15:44:13,863 [INFO] GET /list_projects/39 took 7.57s
+2025-10-19 15:44:13,863 [INFO] 127.0.0.1 - - [19/Oct/2025 15:44:13] "GET /list_projects/39?project_name=&project_type=&depreciation_method= HTTP/1.1" 200 -
+
+Taulussa Users id on pääavain (PRIMARY KEY) ja siten automaattisesti indeksoitu, kuten myös username yksilöllinen- rajoittimen (UNIQUE) takia. 
+
+Projects- taulun pääavain (PRIMARY KEY) on id ja siten id- perustuvien hakujen osalta indeksoitu. Projektin nimeen (project_name) perustuville hauille, esimerkiksi suodattimet luotiin indeksi (CREATE INDEX idx_projects_name ON Projects(project_name);)
+
+ProjectTypes pääavain (PRIMARY KEY) on project_id. Kenttä on nimetty muista tauluista poikkeavasti ja nimen muutos olisi hyvä tehdä (id). Esimerkiksi suodattamissa käytetään hakutekijänä taulukon arvoja, joten niitä varten luotiin oma indeksi (CREATE INDEX idx_projecttypes_type ON ProjectTypes(project_type);)
+
+Taulun Investments yhdistelmäavain (PRIMARY KEY) on kenttien project_id ja investment_year yhdistelmä, joka tarkoittaa projektissa samalle vuodelle ei voi projektissa olla useampaa kassavirtaa. Sovelluksessa ei käytetä aikaväli tai vuosiväli kyselyitä, mutta mahdollista jatkokehittelyä varten tauluun lisättiin tätä varten indeksi CREATE INDEX idx_investments_year ON Investments(investment_year);
+
+Taulu Project_definitions sisältää projektin määritteet. Määritteet on määritelty taulussa Classes. Tauluun lisättiin indeksit CREATE INDEX idx_projdef_project ON Project_definitions(project_id); ja CREATE INDEX idx_projdef_title ON Project_definitions(title);, jonka avulla suodattimiin Projektityyppi ja Poistomenetelmä perustuvat kyselyt toimivat nopeammin.
+
+Tietokannan tietojen syöttäminen ei olennaisesti muutu, vaikka tietokantaan on rakennettu indeksit.
+
+2025-10-19 17:47:59,867 [INFO] Users inserted in 90.37s
+2025-10-19 17:47:59,867 [INFO] Projects inserted in 1.51s
+2025-10-19 17:47:59,867 [INFO] Definitions inserted in 6.99s
+2025-10-19 17:47:59,867 [INFO] Cashflows inserted in 17.26s
+2025-10-19 17:47:59,870 [INFO] Total seeding time: 116.12s
+
+Indeksi lisättynä koko projektilistan noutaminen kestää 19 - 20 sekuntia verrattuna ennen indeksiä noin 26 sekunnin kestoon. Itse en kyllä ymmärrä, miten indeksin lisäys vaikuttaisi tähän.
+
+2025-10-19 20:35:54,782 [INFO] GET /list_projects took 19.22s
+2025-10-19 20:35:54,783 [INFO] 127.0.0.1 - - [19/Oct/2025 20:35:54] "GET /list_projects HTTP/1.1" 200 -
+
+Projektin nimihaulla hakuaika laski 9 - 10 sekunnin välille, joka oli melkein puolittuminen ilman indeksointia.
+
+2025-10-19 20:40:04,054 [INFO] GET /list_projects took 9.24s
+2025-10-19 20:40:04,054 [INFO] 127.0.0.1 - - [19/Oct/2025 20:40:04] "GET /list_projects?project_name=34&project_type=&depreciation_method= HTTP/1.1" 200 -
+
+Hakemalla projektityypillä muutos ei näyttäisi olevan kuin muutaman sekuntin luokkaa, hakuaika muuttui 26 - 27 sekunnista 24 - 25 sekunttiin. Poistometodilla hakuaika oli hieman nopeampi 22 - 23 sekunnin välillä suhteessa projektityypillä hakemiseen. Saattaa olla, että olen lokista kopioinut väärän rivin, mutta ilman indeksointia tähän kului noin 4,8 sekuntia. Jos tämä on oikea tulos, niin en ymmärrä, miksi ero olisi tämä.
+
+2025-10-19 20:42:38,194 [INFO] GET /list_projects took 24.53s
+2025-10-19 20:42:38,194 [INFO] 127.0.0.1 - - [19/Oct/2025 20:42:38] "GET /list_projects?project_name=&project_type=Muutostyö&depreciation_method= HTTP/1.1" 200 -
+2025-10-19 20:45:11,160 [INFO] GET /list_projects took 22.71s
+2025-10-19 20:45:11,160 [INFO] 127.0.0.1 - - [19/Oct/2025 20:45:11] "GET /list_projects?project_name=&project_type=&depreciation_method=Tasapoisto+10+vuotta HTTP/1.1" 200 -
+
+Kokonaisuutena indeksointi kyllä paransi hakuaikoja vaikuttamaan kirjoitusaikoihin. Uskoisin eron tulevan paremmin esille, jos sovelluksessa olisi enemmän JOIN- tyyppisiä kyselyitä. Tällä hetkellä kyselyt ovat suurimmaksi osaksi helppoja yhteen tauluun kohdistuvia suodatuskyselyitä.
+
+Pylint
+
+Repossa on viimeisin pylint- raportti, mutta sitä ei ole ehditty käsitellä. Raportissa on normaaleja, ohitettavia huomioita ja oikeita koodivirheitä tai -puutteita. Raportti on JSON- muodossa, koska en rakentamani ympäristön vuoksi saanut sitä suoraan plain text- muotoon repoon.
