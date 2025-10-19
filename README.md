@@ -47,7 +47,9 @@ Tunnettuja virheitä ja ongelmia:
 - Projektisuodatin ei säily, jos käyttäjä yrittää muuttaa projektin oikeuksia ja saa sitä koskevan virheilmoituksen
 - Projektin muokkausoikeudet voi antaa vain omistaja, mikä on oikein, mutta projektin oikeuksien poistaminen ei toimi
 - Kaikilla sivuilla muotoilu ei tule .css muotoilusta
-- validoinnit on siirretty palvelinpuolelle, mutta kaikkia ei ole tarkistettu ja osa validoinneista puuttuu kokonaan asiakas- ja palvelinpuolelta tai sitten palvelinpuolelta.
+- Validoinnit on siirretty palvelinpuolelle, mutta kaikkia ei ole tarkistettu ja osa validoinneista puuttuu kokonaan asiakas- ja palvelinpuolelta tai sitten palvelinpuolelta.
+- Funktioiden toimintaa, syötteitä tai tulosteita ei ole kommentoitu koodissa.
+- Virheelliset polut eivät uudelleen ohjaa.
 
 Puuttuvia ominaisuuksia:
 - poistettu väliversiosta
