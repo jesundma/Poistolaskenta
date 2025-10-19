@@ -5,13 +5,14 @@
   <title>Rekisteröinti</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
 </head>
-  {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-      {% for category, message in messages %}
-        <div class="flash {{ category }}">{{ message }}</div>
-      {% endfor %}
-    {% endif %}
-  {% endwith %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="flash {{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
 
 <body>
   <form action="/create" method="post" autocomplete="off">
@@ -24,8 +25,9 @@
         <input 
           type="text" 
           name="username" 
-          value="" 
-          autocomplete="new-username" 
+          required 
+          minlength="6" 
+          autocomplete="new-username"
         />
         <span class="tooltiptext">Syötä käyttäjätunnus (vähintään 6 merkkiä)</span>
       </div>
@@ -37,8 +39,9 @@
         <input 
           type="password" 
           name="password1" 
-          value="" 
-          autocomplete="new-password" 
+          required 
+          minlength="8" 
+          autocomplete="new-password"
         />
         <span class="tooltiptext">Salasanan tulee olla vähintään 8 merkkiä</span>
       </div>
@@ -50,8 +53,9 @@
         <input 
           type="password" 
           name="password2" 
-          value="" 
-          autocomplete="new-password" 
+          required 
+          minlength="8" 
+          autocomplete="new-password"
         />
         <span class="tooltiptext">Toista salasana</span>
       </div>
@@ -60,7 +64,11 @@
     <input type="submit" value="Luo tunnus" />
   </form>
 
-  <p><a href="{{ url_for('main_layout') }}">Takaisin pääsivulle</a></p>
+  {% if session.get("user_id") %}
+    <p>Olet jo kirjautunut sisään. Siirry <a href="{{ url_for('main_layout') }}">pääsivulle</a>.</p>
+  {% else %}
+    <p>Onnistuneen rekisteröinnin jälkeen kirjaudu sisään <a href="{{ url_for('login') }}">täällä</a>.</p>
+  {% endif %}
 </body>
 
 </html>

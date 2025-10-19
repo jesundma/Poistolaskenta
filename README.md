@@ -56,8 +56,8 @@ Puuttuvia ominaisuuksia:
 - Projektien tietosisältöä voi laajentaa lisäämällä projektin muistiinpanot ja mahdollisuus liittää projektiin liittyviä "rakennuspiirustuksia". Toteuttaminen riippuu ajan riittävyydestä.
 - template- muotoiluja ei ole, kaikki muotoilut (jos niitä on) ovat template- kohtaisia, CSS- rakenne puuttuu.
 
-Suuret tietomäärät
 
+Suuret tietomäärät
 
 Seed.py on jätetty sovellukseen reitiksi /seed ja se käynnistyy ilman oikeuksien tarkastamista reitille siirryttäessä. Tämä ei tuotantovalmiissa sovelluksessa tietenkään olisi käytössä oleva reitti. Alunperin lisäykset oli tehty erittäin jakamalla lisättävät rivit määriteltyihin eräkokoihin, esimerkiksi 5 000 tai 10 000 riviä. Kurssiaineistossa olleessa seed.py ei tätä tekniikkaa oltu käytetty ja tietokannan täyttäminen muutettiin esimerkin mukaiseksi. Yllättävä havainto vain muutaman ajon perusteella oli, että eräajo ei näyttänyt olevan nopeampi tapa, itse asiassa se oli aavistuksen hitaampi tietokannan täyttämistapa. Tietokannan ja sovelluksen ollessa samalla koneella sekä vain muutaman kokeilun perusteella ei kannata tehdä pitkälle vietyjä oletuksia. Reittien pyynnöt kirjattiin app.log tiedostoon, joka on jätetty sovellukseen lokiksi. App.py tiedostossa on määritelty @app.before_request ja @app.after_request funktiot, jotka mittaavat ja lokittavat pyyntöjä ja niiden kestoa.
 
