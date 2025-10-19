@@ -45,17 +45,12 @@ Siirry käyttäjätilastoon näyttää kaikki projektit, joissa käyttäjä on l
 
 Tunnettuja virheitä ja ongelmia:
 - Projektisuodatin ei säily, jos käyttäjä yrittää muuttaa projektin oikeuksia ja saa sitä koskevan virheilmoituksen
-- Jos rekisteröinti (register.html) sivulta siirtyy Pääsivulle (main_layout) käyttäen linkkiä, sivulle pääsee vaikka tietokannassa ei olisi ainuttakaan käyttäjää. Pääsivun linkit ohjaavat takaisin rekisteröintisivulle, mutta rekisteröinnistä ei pitäisi päästä pääsivulle ilman, että käyttäjiä olisi vähintään yksi.
-- Yritys projektihallinnan oikeuksien antamiseen ilman käyttäjän oikeuksia siihenrikkoo sivun, ongelma sivun templatessa.
+- Projektin muokkausoikeudet voi antaa vain omistaja, mikä on oikein, mutta projektin oikeuksien poistaminen ei toimi
+- Kaikilla sivuilla muotoilu ei tule .css muotoilusta
+- validoinnit on siirretty palvelinpuolelle, mutta kaikkia ei ole tarkistettu ja osa validoinneista puuttuu kokonaan asiakas- ja palvelinpuolelta tai sitten palvelinpuolelta.
 
 Puuttuvia ominaisuuksia:
-- Käyttäjien poistaminen tietokannasta. Jos toteutetaan, niin ratkaistava ristiriita puuttuvan käyttäjän ja olemassa olevien projektien välillä. Mahdollinen uusi taulu "lukituille" projekteille. Voi vaatia ison uudelleen koodauksen ja tietokannan taulujen muokkauksen
-- Tietokannan taulut ovat indeksoimattomia.
-- Käyttäjätilastojen tietojen laajentaminen, projektikohtaisten muutoksien näkeminen.
-- Vakiomuotoiset raportit puuttuvat, toteuttaminen riippuu ajan riittävyydestä
-- Projektien tietosisältöä voi laajentaa lisäämällä projektin muistiinpanot ja mahdollisuus liittää projektiin liittyviä "rakennuspiirustuksia". Toteuttaminen riippuu ajan riittävyydestä.
-- template- muotoiluja ei ole, kaikki muotoilut (jos niitä on) ovat template- kohtaisia, CSS- rakenne puuttuu.
-
+- poistettu väliversiosta
 
 Suuret tietomäärät
 
@@ -136,4 +131,4 @@ Kokonaisuutena indeksointi kyllä paransi hakuaikoja vaikuttamaan kirjoitusaikoi
 
 Pylint
 
-Repossa on viimeisin pylint- raportti, mutta sitä ei ole ehditty käsitellä. Raportissa on normaaleja, ohitettavia huomioita ja oikeita koodivirheitä tai -puutteita. Raportti on JSON- muodossa, koska en rakentamani ympäristön vuoksi saanut sitä suoraan plain text- muotoon repoon.
+Repossa on viimeisin pylint- raportti, mutta sitä ei ole ehditty käsitellä. Raportissa on normaaleja, ohitettavia huomioita ja oikeita koodivirheitä tai -puutteita.
