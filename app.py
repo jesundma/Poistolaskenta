@@ -420,18 +420,15 @@ def management_project(project_id):
 def rights_project(project_id):
     user_id = session.get("user_id")
 
-    # --- 1. User not logged in ---
     if not user_id:
         flash("Sinun täytyy kirjautua sisään nähdäksesi projektin oikeudet.", "error")
         return redirect(url_for("login"))
 
-    # --- 2. Project must exist ---
     project = service_functions.get_project_by_id(project_id)
     if not project:
         flash("Projektia ei löytynyt.", "error")
         return redirect(url_for("list_projects", page=1))
 
-    # --- 3. Get creator and all users ---
     creator_id = service_functions.get_project_creator_id(project_id)
     all_users = service_functions.get_project_permissions(project_id)
 
@@ -439,7 +436,6 @@ def rights_project(project_id):
     users = [u for u in all_users if u["id"] != creator_id]
     can_edit = user_id == creator_id  # Only creator can edit
 
-    # --- 4. Handle POST (saving changes) ---
     if request.method == "POST":
         if not can_edit:
             flash("Sinulla ei ole oikeutta muuttaa tämän projektin käyttöoikeuksia.", "error")
@@ -458,7 +454,6 @@ def rights_project(project_id):
 
         return redirect(url_for("rights_project", project_id=project_id))
 
-    # --- 5. Render GET page ---
     return render_template(
         "rights_project.html",
         project_id=project_id,

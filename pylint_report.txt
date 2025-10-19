@@ -17679,3 +17679,147 @@ configuration:1:0: E0603: Undefined variable name 'TestcaseFormatter' in __all__
 /home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/reporters/ureports/nodes.py:31:4: C0116: Missing function or method docstring (missing-function-docstring)
 /home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/reporters/ureports/nodes.py:39:4: C0116: Missing function or method docstring (missing-function-docstring)
 /home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/reporters/ureports/nodes.py:139:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/reporters/ureports/nodes.py:181:4: R0913: Too many arguments (6/5) (too-many-arguments)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/reporters/ureports/nodes.py:181:4: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+************* Module venv.lib.python3.12.site-packages.pylint.reporters.ureports.text_writer
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/reporters/ureports/text_writer.py:52:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils._run
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_run.py:26:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.checker_test_case
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/checker_test_case.py:22:5: W0511: TODO: Figure out way to type this as type[BaseChecker] while also (fixme)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/checker_test_case.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/checker_test_case.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/checker_test_case.py:35:4: C0103: Method name "assertNoMessages" doesn't conform to snake_case naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/checker_test_case.py:41:4: C0103: Method name "assertAddsMessages" doesn't conform to snake_case naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/checker_test_case.py:28:8: W0201: Attribute 'linter' defined outside __init__ (attribute-defined-outside-init)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/checker_test_case.py:29:8: W0201: Attribute 'checker' defined outside __init__ (attribute-defined-outside-init)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.constants
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/constants.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.decorator
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/decorator.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.get_test_info
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/get_test_info.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.global_test_linter
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/global_test_linter.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/global_test_linter.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.lint_module_test
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:16:0: E0401: Unable to import 'pytest' (import-error)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:17:0: E0401: Unable to import '_pytest.config' (import-error)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:42:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:115:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:115:4: C0103: Method name "setUp" doesn't conform to snake_case naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:144:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:144:4: C0103: Method name "runTest" doesn't conform to snake_case naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:248:4: C0103: Method name "_runTest" doesn't conform to snake_case naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:261:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/lint_module_test.py:289:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.output_line
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/output_line.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/output_line.py:18:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/output_line.py:33:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.pyreverse
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/pyreverse.py:16:0: C0301: Line too long (107/100) (line-too-long)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/pyreverse.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/pyreverse.py:18:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/pyreverse.py:77:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.reporter_for_tests
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/reporter_for_tests.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/reporter_for_tests.py:29:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/reporter_for_tests.py:66:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/reporter_for_tests.py:74:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.tokenize_str
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/tokenize_str.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.unittest_linter
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/unittest_linter.py:35:9: W0511: TODO: Make node non optional (fixme)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/unittest_linter.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/unittest_linter.py:25:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/unittest_linter.py:31:4: R0913: Too many arguments (9/5) (too-many-arguments)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/unittest_linter.py:31:4: R0917: Too many positional arguments (9/5) (too-many-positional-arguments)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.utils
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/utils.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils._primer
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/__init__.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils._primer.package_to_lint
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/package_to_lint.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/package_to_lint.py:12:0: E0401: Unable to import 'git' (import-error)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/package_to_lint.py:13:0: E0401: Unable to import 'git.cmd' (import-error)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/package_to_lint.py:14:0: E0401: Unable to import 'git.repo' (import-error)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/package_to_lint.py:61:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/package_to_lint.py:83:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils._primer.primer
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer.py:111:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer.py:19:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils._primer.primer_command
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_command.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_command.py:16:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_command.py:38:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_command.py:24:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils._primer.primer_compare_command
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_compare_command.py:115:0: C0301: Line too long (113/100) (line-too-long)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_compare_command.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_compare_command.py:19:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_compare_command.py:19:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils._primer.primer_prepare_command
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_prepare_command.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_prepare_command.py:8:0: E0401: Unable to import 'git.cmd' (import-error)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_prepare_command.py:9:0: E0401: Unable to import 'git.repo' (import-error)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_prepare_command.py:14:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_prepare_command.py:14:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils._primer.primer_run_command
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_run_command.py:84:9: W0511: TODO: Find a way to allow cyclic-import and compare output correctly (fixme)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_run_command.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_run_command.py:12:0: E0401: Unable to import 'git.repo' (import-error)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_run_command.py:28:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/_primer/primer_run_command.py:28:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.functional
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/__init__.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.functional.find_functional_tests
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/find_functional_tests.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.functional.lint_module_output_update
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/lint_module_output_update.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/lint_module_output_update.py:19:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module venv.lib.python3.12.site-packages.pylint.testutils.functional.test_file
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/test_file.py:63:9: W0511: TODO:4.0: Deprecate FunctionalTestFile.options and related code (fixme)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/test_file.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/test_file.py:22:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/test_file.py:26:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/test_file.py:96:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/test_file.py:100:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/test_file.py:105:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/testutils/functional/test_file.py:122:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.utils.ast_walker
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/ast_walker.py:81:0: W0012: Unknown option value for 'disable', expected a valid pylint message and got 'too-many-try-statements' (unknown-option-value)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/ast_walker.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/ast_walker.py:28:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.utils.docs
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/docs.py:27:47: W0212: Access to a protected member _options_and_values of a client class (protected-access)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/docs.py:33:36: W0212: Access to a protected member _options_and_values of a client class (protected-access)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/docs.py:49:36: W0212: Access to a protected member _options_by_section of a client class (protected-access)
+************* Module venv.lib.python3.12.site-packages.pylint.utils.file_state
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/file_state.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/file_state.py:27:0: R0902: Too many instance attributes (9/7) (too-many-instance-attributes)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/file_state.py:225:4: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/file_state.py:253:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.utils.linterstats
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/linterstats.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/linterstats.py:83:4: R0913: Too many arguments (9/5) (too-many-arguments)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/linterstats.py:83:4: R0917: Too many positional arguments (9/5) (too-many-positional-arguments)
+************* Module venv.lib.python3.12.site-packages.pylint.utils.pragma_parser
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/pragma_parser.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/pragma_parser.py:30:0: C0115: Missing class docstring (missing-class-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/pragma_parser.py:61:0: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/pragma_parser.py:89:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module venv.lib.python3.12.site-packages.pylint.utils.utils
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:31:0: C0103: Class name "GLOBAL_OPTION_BOOL" doesn't conform to PascalCase naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:36:0: C0103: Class name "GLOBAL_OPTION_INT" doesn't conform to PascalCase naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:37:0: C0103: Class name "GLOBAL_OPTION_LIST" doesn't conform to PascalCase naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:38:0: C0103: Class name "GLOBAL_OPTION_PATTERN" doesn't conform to PascalCase naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:44:0: C0103: Class name "GLOBAL_OPTION_PATTERN_LIST" doesn't conform to PascalCase naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:45:0: C0103: Class name "GLOBAL_OPTION_TUPLE_INT" doesn't conform to PascalCase naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:54:0: C0103: Type variable name "T_GlobalOptionReturnTypes" doesn't conform to predefined naming style (invalid-name)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:80:0: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:139:0: C0116: Missing function or method docstring (missing-function-docstring)
+/home/jesundma/poistolaskenta/venv/lib/python3.12/site-packages/pylint/utils/utils.py:151:0: C0116: Missing function or method docstring (missing-function-docstring)
