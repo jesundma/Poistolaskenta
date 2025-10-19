@@ -43,9 +43,7 @@
 2025-10-19 20:39:30,758 [INFO] 127.0.0.1 - - [19/Oct/2025 20:39:30] "GET /list_projects HTTP/1.1" 200 -
 2025-10-19 20:40:04,054 [INFO] GET /list_projects took 9.24s
 2025-10-19 20:40:04,054 [INFO] 127.0.0.1 - - [19/Oct/2025 20:40:04] "GET /list_projects?project_name=34&project_type=&depreciation_method= HTTP/1.1" 200 -
-2025-10-19 20:42:38,194 [INFO] GET /list_projects took 24.53s
-2025-10-19 20:42:38,194 [INFO] 127.0.0.1 - - [19/Oct/2025 20:42:38] "GET /list_projects?project_name=&project_type=Muutostyö&depreciation_method= HTTP/1.1" 200 -
 2025-10-19 20:45:11,160 [INFO] GET /list_projects took 22.71s
 2025-10-19 20:45:11,160 [INFO] 127.0.0.1 - - [19/Oct/2025 20:45:11] "GET /list_projects?project_name=&project_type=&depreciation_method=Tasapoisto+10+vuotta HTTP/1.1" 200 -
-2025-10-19 21:04:18,477 [INFO] GET /list_projects took 22.84s
-2025-10-19 21:04:18,478 [INFO] 127.0.0.1 - - [19/Oct/2025 21:04:18] "GET /list_projects?project_name=&project_type=&depreciation_method=Tasapoisto+10+vuotta HTTP/1.1" 200 -
+2025-10-19 20:42:38,194 [INFO] GET /list_projects took 24.53s
+2025-10-19 20:42:38,194 [INFO] 127.0.0.1 - - [19/Oct/2025 20:42:38] "GET /list_projects?project_name=&project_type=Muutostyö&depreciation_method= HTTP/1.1" 200 -
