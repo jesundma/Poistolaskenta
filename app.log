@@ -204,3 +204,475 @@ Traceback (most recent call last):
 jinja2.exceptions.UndefinedError: 'page' is undefined
 2025-10-19 22:17:37,128 [INFO] GET /project/2/rights took 0.17s
 2025-10-19 22:17:37,129 [INFO] 127.0.0.1 - - [19/Oct/2025 22:17:37] "[35m[1mGET /project/2/rights HTTP/1.1[0m" 500 -
+2025-10-19 22:35:23,838 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 22:35:23,838 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 22:35:31,552 [INFO] GET / took 0.01s
+2025-10-19 22:35:31,552 [INFO] 127.0.0.1 - - [19/Oct/2025 22:35:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 22:35:31,562 [INFO] GET /login took 0.0s
+2025-10-19 22:35:31,563 [INFO] 127.0.0.1 - - [19/Oct/2025 22:35:31] "GET /login HTTP/1.1" 200 -
+2025-10-19 22:35:41,729 [INFO] POST /login took 0.1s
+2025-10-19 22:35:41,730 [INFO] 127.0.0.1 - - [19/Oct/2025 22:35:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 22:35:41,741 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:35:41,741 [INFO] 127.0.0.1 - - [19/Oct/2025 22:35:41] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:35:41,922 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 22:35:41,922 [INFO] 127.0.0.1 - - [19/Oct/2025 22:35:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:35:45,246 [INFO] GET /list_projects took 0.03s
+2025-10-19 22:35:45,246 [INFO] 127.0.0.1 - - [19/Oct/2025 22:35:45] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 22:35:47,961 [INFO] GET /management_project/2 took 0.02s
+2025-10-19 22:35:47,961 [INFO] 127.0.0.1 - - [19/Oct/2025 22:35:47] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 22:35:50,208 [ERROR] Exception on /project/2/rights [GET]
+Traceback (most recent call last):
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 437, in rights_project
+    users = service_functions.get_users_with_rights(project_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'service_functions' has no attribute 'get_users_with_rights'
+2025-10-19 22:35:50,213 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 22:35:50,214 [INFO] 127.0.0.1 - - [19/Oct/2025 22:35:50] "[35m[1mGET /project/2/rights HTTP/1.1[0m" 500 -
+2025-10-19 22:43:13,473 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 22:43:13,473 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 22:43:19,810 [INFO] GET / took 0.01s
+2025-10-19 22:43:19,811 [INFO] 127.0.0.1 - - [19/Oct/2025 22:43:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 22:43:19,817 [INFO] GET /login took 0.0s
+2025-10-19 22:43:19,818 [INFO] 127.0.0.1 - - [19/Oct/2025 22:43:19] "GET /login HTTP/1.1" 200 -
+2025-10-19 22:43:29,882 [INFO] POST /login took 0.1s
+2025-10-19 22:43:29,883 [INFO] 127.0.0.1 - - [19/Oct/2025 22:43:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 22:43:29,932 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:43:29,933 [INFO] 127.0.0.1 - - [19/Oct/2025 22:43:29] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:43:30,080 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 22:43:30,080 [INFO] 127.0.0.1 - - [19/Oct/2025 22:43:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:43:34,564 [INFO] GET /list_projects took 0.04s
+2025-10-19 22:43:34,564 [INFO] 127.0.0.1 - - [19/Oct/2025 22:43:34] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 22:43:36,266 [INFO] GET /management_project/2 took 0.02s
+2025-10-19 22:43:36,266 [INFO] 127.0.0.1 - - [19/Oct/2025 22:43:36] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 22:43:37,733 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 22:43:37,733 [INFO] 127.0.0.1 - - [19/Oct/2025 22:43:37] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 22:44:58,116 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 22:44:58,116 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 22:45:09,272 [INFO] GET / took 0.01s
+2025-10-19 22:45:09,273 [INFO] 127.0.0.1 - - [19/Oct/2025 22:45:09] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 22:45:09,280 [INFO] GET /login took 0.0s
+2025-10-19 22:45:09,281 [INFO] 127.0.0.1 - - [19/Oct/2025 22:45:09] "GET /login HTTP/1.1" 200 -
+2025-10-19 22:45:22,809 [INFO] POST /login took 0.11s
+2025-10-19 22:45:22,810 [INFO] 127.0.0.1 - - [19/Oct/2025 22:45:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 22:45:22,828 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:45:22,828 [INFO] 127.0.0.1 - - [19/Oct/2025 22:45:22] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:45:23,034 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 22:45:23,035 [INFO] 127.0.0.1 - - [19/Oct/2025 22:45:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:45:26,073 [INFO] GET /list_projects took 0.05s
+2025-10-19 22:45:26,073 [INFO] 127.0.0.1 - - [19/Oct/2025 22:45:26] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 22:45:29,547 [INFO] GET /management_project/2 took 0.02s
+2025-10-19 22:45:29,547 [INFO] 127.0.0.1 - - [19/Oct/2025 22:45:29] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 22:45:31,177 [ERROR] Exception on /project/2/rights [GET]
+Traceback (most recent call last):
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 436, in rights_project
+    users = service_functions.get_users_with_rights(project_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'service_functions' has no attribute 'get_users_with_rights'
+2025-10-19 22:45:31,182 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 22:45:31,182 [INFO] 127.0.0.1 - - [19/Oct/2025 22:45:31] "[35m[1mGET /project/2/rights HTTP/1.1[0m" 500 -
+2025-10-19 22:47:36,165 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 22:47:36,165 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 22:47:43,857 [INFO] GET / took 0.01s
+2025-10-19 22:47:43,857 [INFO] 127.0.0.1 - - [19/Oct/2025 22:47:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 22:47:43,864 [INFO] GET /login took 0.0s
+2025-10-19 22:47:43,865 [INFO] 127.0.0.1 - - [19/Oct/2025 22:47:43] "GET /login HTTP/1.1" 200 -
+2025-10-19 22:47:53,851 [INFO] POST /login took 0.13s
+2025-10-19 22:47:53,852 [INFO] 127.0.0.1 - - [19/Oct/2025 22:47:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 22:47:53,882 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:47:53,882 [INFO] 127.0.0.1 - - [19/Oct/2025 22:47:53] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:47:54,061 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 22:47:54,062 [INFO] 127.0.0.1 - - [19/Oct/2025 22:47:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:47:56,305 [INFO] GET /list_projects took 0.05s
+2025-10-19 22:47:56,305 [INFO] 127.0.0.1 - - [19/Oct/2025 22:47:56] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 22:47:58,371 [INFO] GET /management_project/2 took 0.11s
+2025-10-19 22:47:58,371 [INFO] 127.0.0.1 - - [19/Oct/2025 22:47:58] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 22:47:59,644 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 22:47:59,644 [INFO] 127.0.0.1 - - [19/Oct/2025 22:47:59] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 22:49:25,708 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 22:49:25,708 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 22:49:31,410 [INFO] GET / took 0.01s
+2025-10-19 22:49:31,411 [INFO] 127.0.0.1 - - [19/Oct/2025 22:49:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 22:49:31,418 [INFO] GET /login took 0.0s
+2025-10-19 22:49:31,419 [INFO] 127.0.0.1 - - [19/Oct/2025 22:49:31] "GET /login HTTP/1.1" 200 -
+2025-10-19 22:49:40,922 [INFO] POST /login took 0.11s
+2025-10-19 22:49:40,922 [INFO] 127.0.0.1 - - [19/Oct/2025 22:49:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 22:49:40,934 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:49:40,934 [INFO] 127.0.0.1 - - [19/Oct/2025 22:49:40] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:49:41,097 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 22:49:41,097 [INFO] 127.0.0.1 - - [19/Oct/2025 22:49:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:49:43,186 [INFO] GET /list_projects took 0.04s
+2025-10-19 22:49:43,186 [INFO] 127.0.0.1 - - [19/Oct/2025 22:49:43] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 22:49:45,794 [INFO] GET /management_project/2 took 0.02s
+2025-10-19 22:49:45,795 [INFO] 127.0.0.1 - - [19/Oct/2025 22:49:45] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 22:49:49,948 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 22:49:49,948 [INFO] 127.0.0.1 - - [19/Oct/2025 22:49:49] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 22:54:55,966 [INFO] GET / took 0.01s
+2025-10-19 22:54:55,967 [INFO] 127.0.0.1 - - [19/Oct/2025 22:54:55] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 22:54:55,975 [INFO] GET /login took 0.0s
+2025-10-19 22:54:55,975 [INFO] 127.0.0.1 - - [19/Oct/2025 22:54:55] "GET /login HTTP/1.1" 200 -
+2025-10-19 22:55:08,519 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 22:55:08,519 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 22:55:17,816 [INFO] POST /login took 0.01s
+2025-10-19 22:55:17,817 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 22:55:17,846 [INFO] GET /login took 0.0s
+2025-10-19 22:55:17,846 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:17] "GET /login HTTP/1.1" 200 -
+2025-10-19 22:55:28,796 [INFO] POST /login took 0.11s
+2025-10-19 22:55:28,797 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 22:55:28,805 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:55:28,805 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:28] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:55:29,008 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 22:55:29,008 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:55:32,409 [INFO] GET /list_projects took 0.04s
+2025-10-19 22:55:32,410 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:32] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 22:55:34,126 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:55:34,127 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:34] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:55:34,152 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 22:55:34,152 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:55:35,338 [INFO] GET /user_statistics took 0.01s
+2025-10-19 22:55:35,339 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:35] "GET /user_statistics HTTP/1.1" 200 -
+2025-10-19 22:55:39,236 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:55:39,237 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:39] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:55:39,257 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 22:55:39,258 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:55:40,849 [INFO] GET /register took 0.0s
+2025-10-19 22:55:40,850 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:40] "GET /register HTTP/1.1" 200 -
+2025-10-19 22:55:40,919 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 22:55:40,919 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:40] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 22:55:44,567 [INFO] GET /main_layout took 0.0s
+2025-10-19 22:55:44,567 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:44] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 22:55:44,596 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 22:55:44,596 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 22:55:46,620 [INFO] GET /list_projects took 0.02s
+2025-10-19 22:55:46,621 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:46] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 22:55:48,632 [INFO] GET /management_project/2 took 0.02s
+2025-10-19 22:55:48,632 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:48] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 22:55:50,759 [INFO] GET /project/2/rights took 0.01s
+2025-10-19 22:55:50,760 [INFO] 127.0.0.1 - - [19/Oct/2025 22:55:50] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:03:57,829 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 23:03:57,829 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 23:03:57,850 [INFO]  * Restarting with stat
+2025-10-19 23:04:03,315 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:04:03,316 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:03] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:04:12,067 [INFO] GET / took 0.01s
+2025-10-19 23:04:12,067 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 23:04:12,073 [INFO] GET /login took 0.0s
+2025-10-19 23:04:12,074 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:12] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:04:21,646 [INFO] POST /login took 0.1s
+2025-10-19 23:04:21,647 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 23:04:21,689 [INFO] GET /main_layout took 0.0s
+2025-10-19 23:04:21,689 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:21] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 23:04:21,835 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 23:04:21,835 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:04:24,186 [INFO] GET /list_projects took 0.04s
+2025-10-19 23:04:24,187 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:24] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:04:26,441 [INFO] GET /cashflow_project/2 took 0.01s
+2025-10-19 23:04:26,441 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:26] "GET /cashflow_project/2 HTTP/1.1" 200 -
+2025-10-19 23:04:26,468 [INFO] GET /static/css/general.css took 0.0s
+2025-10-19 23:04:26,468 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:26] "[36mGET /static/css/general.css HTTP/1.1[0m" 304 -
+2025-10-19 23:04:27,733 [INFO] GET /add_new_cashflow/2 took 0.01s
+2025-10-19 23:04:27,734 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:27] "GET /add_new_cashflow/2 HTTP/1.1" 200 -
+2025-10-19 23:04:27,759 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:04:27,759 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:27] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:04:40,984 [INFO] POST /add_new_cashflow/2 took 0.02s
+2025-10-19 23:04:40,984 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:40] "[32mPOST /add_new_cashflow/2 HTTP/1.1[0m" 302 -
+2025-10-19 23:04:40,997 [INFO] GET /cashflow_project/2 took 0.01s
+2025-10-19 23:04:40,997 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:40] "GET /cashflow_project/2 HTTP/1.1" 200 -
+2025-10-19 23:04:41,019 [INFO] GET /static/css/general.css took 0.0s
+2025-10-19 23:04:41,019 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:41] "[36mGET /static/css/general.css HTTP/1.1[0m" 304 -
+2025-10-19 23:04:43,402 [INFO] GET /list_projects took 0.02s
+2025-10-19 23:04:43,402 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:43] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:04:45,247 [INFO] GET /management_project/2 took 0.03s
+2025-10-19 23:04:45,247 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:45] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 23:04:46,827 [INFO] GET /edit_project/2 took 0.03s
+2025-10-19 23:04:46,828 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:46] "GET /edit_project/2 HTTP/1.1" 200 -
+2025-10-19 23:04:46,848 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:04:46,849 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:46] "[36mGET /static/css/forms.css?v=1 HTTP/1.1[0m" 304 -
+2025-10-19 23:04:50,571 [INFO] POST /edit_project/2 took 0.08s
+2025-10-19 23:04:50,571 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:50] "POST /edit_project/2 HTTP/1.1" 200 -
+2025-10-19 23:04:50,590 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 23:04:50,590 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:04:55,390 [INFO] GET /list_projects took 0.03s
+2025-10-19 23:04:55,390 [INFO] 127.0.0.1 - - [19/Oct/2025 23:04:55] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:05:00,261 [INFO] GET /cashflow_project/2 took 0.01s
+2025-10-19 23:05:00,261 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:00] "GET /cashflow_project/2 HTTP/1.1" 200 -
+2025-10-19 23:05:00,282 [INFO] GET /static/css/general.css took 0.0s
+2025-10-19 23:05:00,282 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:00] "[36mGET /static/css/general.css HTTP/1.1[0m" 304 -
+2025-10-19 23:05:02,602 [INFO] GET /list_projects took 0.02s
+2025-10-19 23:05:02,602 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:02] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:05:04,831 [INFO] GET /management_project/2 took 0.02s
+2025-10-19 23:05:04,831 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:04] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 23:05:06,128 [INFO] GET /edit_project/2 took 0.02s
+2025-10-19 23:05:06,128 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:06] "GET /edit_project/2 HTTP/1.1" 200 -
+2025-10-19 23:05:06,158 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:05:06,158 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:06] "[36mGET /static/css/forms.css?v=1 HTTP/1.1[0m" 304 -
+2025-10-19 23:05:10,120 [INFO] POST /edit_project/2 took 0.08s
+2025-10-19 23:05:10,121 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:10] "POST /edit_project/2 HTTP/1.1" 200 -
+2025-10-19 23:05:10,136 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 23:05:10,136 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:05:11,747 [INFO] GET /list_projects took 0.03s
+2025-10-19 23:05:11,747 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:11] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:05:14,109 [INFO] GET /management_project/2 took 0.02s
+2025-10-19 23:05:14,110 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:14] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 23:05:15,332 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:05:15,332 [INFO] 127.0.0.1 - - [19/Oct/2025 23:05:15] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:09:26,316 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 23:09:26,316 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 23:09:26,320 [INFO]  * Restarting with stat
+2025-10-19 23:09:33,756 [INFO] GET / took 0.01s
+2025-10-19 23:09:33,757 [INFO] 127.0.0.1 - - [19/Oct/2025 23:09:33] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 23:09:33,768 [INFO] GET /login took 0.0s
+2025-10-19 23:09:33,768 [INFO] 127.0.0.1 - - [19/Oct/2025 23:09:33] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:09:43,645 [INFO] POST /login took 0.1s
+2025-10-19 23:09:43,645 [INFO] 127.0.0.1 - - [19/Oct/2025 23:09:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 23:09:43,678 [INFO] GET /main_layout took 0.0s
+2025-10-19 23:09:43,678 [INFO] 127.0.0.1 - - [19/Oct/2025 23:09:43] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 23:09:43,843 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 23:09:43,844 [INFO] 127.0.0.1 - - [19/Oct/2025 23:09:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:09:48,590 [INFO] GET /list_projects took 0.04s
+2025-10-19 23:09:48,590 [INFO] 127.0.0.1 - - [19/Oct/2025 23:09:48] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:09:51,660 [INFO] GET /management_project/2 took 0.02s
+2025-10-19 23:09:51,661 [INFO] 127.0.0.1 - - [19/Oct/2025 23:09:51] "GET /management_project/2 HTTP/1.1" 200 -
+2025-10-19 23:09:58,122 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:09:58,123 [INFO] 127.0.0.1 - - [19/Oct/2025 23:09:58] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:11:45,201 [INFO] GET / took 0.01s
+2025-10-19 23:11:45,201 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 23:11:45,206 [INFO] GET /login took 0.0s
+2025-10-19 23:11:45,207 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:45] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:11:48,040 [INFO] POST /login took 0.01s
+2025-10-19 23:11:48,040 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 23:11:48,045 [INFO] GET /login took 0.0s
+2025-10-19 23:11:48,045 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:48] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:11:49,883 [INFO] GET /register took 0.0s
+2025-10-19 23:11:49,883 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:49] "GET /register HTTP/1.1" 200 -
+2025-10-19 23:11:49,946 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:11:49,946 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:49] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:11:53,527 [INFO] GET /main_layout took 0.0s
+2025-10-19 23:11:53,527 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:53] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 23:11:53,548 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 23:11:53,548 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:11:56,486 [INFO] GET /list_projects took 0.02s
+2025-10-19 23:11:56,487 [INFO] 127.0.0.1 - - [19/Oct/2025 23:11:56] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:17:19,208 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 23:17:19,208 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 23:17:19,211 [INFO]  * Restarting with stat
+2025-10-19 23:17:23,859 [INFO] GET /main_layout took 0.01s
+2025-10-19 23:17:23,859 [INFO] 127.0.0.1 - - [19/Oct/2025 23:17:23] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 23:17:23,899 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 23:17:23,900 [INFO] 127.0.0.1 - - [19/Oct/2025 23:17:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:17:26,585 [INFO] GET /list_projects took 0.04s
+2025-10-19 23:17:26,585 [INFO] 127.0.0.1 - - [19/Oct/2025 23:17:26] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:17:30,006 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:17:30,006 [INFO] 127.0.0.1 - - [19/Oct/2025 23:17:30] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:25:35,778 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 23:25:35,779 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 23:25:35,782 [INFO]  * Restarting with stat
+2025-10-19 23:25:42,646 [INFO] GET / took 0.01s
+2025-10-19 23:25:42,647 [INFO] 127.0.0.1 - - [19/Oct/2025 23:25:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 23:25:42,655 [INFO] GET /login took 0.0s
+2025-10-19 23:25:42,655 [INFO] 127.0.0.1 - - [19/Oct/2025 23:25:42] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:25:53,881 [INFO] POST /login took 0.11s
+2025-10-19 23:25:53,882 [INFO] 127.0.0.1 - - [19/Oct/2025 23:25:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 23:25:53,926 [INFO] GET /main_layout took 0.0s
+2025-10-19 23:25:53,926 [INFO] 127.0.0.1 - - [19/Oct/2025 23:25:53] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 23:25:54,079 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 23:25:54,079 [INFO] 127.0.0.1 - - [19/Oct/2025 23:25:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:25:58,027 [INFO] GET /list_projects took 0.05s
+2025-10-19 23:25:58,027 [INFO] 127.0.0.1 - - [19/Oct/2025 23:25:58] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:25:59,794 [ERROR] Exception on /project/2/rights [GET]
+Traceback (most recent call last):
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py", line 457, in rights_project
+    return render_template(
+           ^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/templates/rights_project.html", line 10, in top-level template code
+    {% include "_flash_messages.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/venv/lib/python3.12/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: _flash_messages.html
+2025-10-19 23:25:59,799 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:25:59,800 [INFO] 127.0.0.1 - - [19/Oct/2025 23:25:59] "[35m[1mGET /project/2/rights HTTP/1.1[0m" 500 -
+2025-10-19 23:28:47,467 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 23:28:47,467 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 23:28:47,470 [INFO]  * Restarting with stat
+2025-10-19 23:28:56,018 [INFO] GET / took 0.01s
+2025-10-19 23:28:56,019 [INFO] 127.0.0.1 - - [19/Oct/2025 23:28:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 23:28:56,025 [INFO] GET /login took 0.0s
+2025-10-19 23:28:56,026 [INFO] 127.0.0.1 - - [19/Oct/2025 23:28:56] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:29:06,863 [INFO] POST /login took 0.1s
+2025-10-19 23:29:06,864 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 23:29:06,921 [INFO] GET /main_layout took 0.0s
+2025-10-19 23:29:06,921 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:06] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 23:29:07,077 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 23:29:07,077 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:29:09,773 [INFO] GET /list_projects took 0.04s
+2025-10-19 23:29:09,773 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:09] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:29:12,653 [INFO] GET /project/2/rights took 0.04s
+2025-10-19 23:29:12,653 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:12] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:29:12,677 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:29:12,677 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:12] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:29:18,388 [INFO] POST /project/2/rights took 0.02s
+2025-10-19 23:29:18,388 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:18] "[32mPOST /project/2/rights HTTP/1.1[0m" 302 -
+2025-10-19 23:29:18,413 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:29:18,413 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:18] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:29:18,430 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:29:18,430 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:18] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:29:52,609 [INFO] POST /project/2/rights took 0.07s
+2025-10-19 23:29:52,609 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:52] "[32mPOST /project/2/rights HTTP/1.1[0m" 302 -
+2025-10-19 23:29:52,639 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:29:52,640 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:52] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:29:52,655 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:29:52,655 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:52] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:29:59,399 [INFO] POST /project/2/rights took 0.01s
+2025-10-19 23:29:59,399 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:59] "[32mPOST /project/2/rights HTTP/1.1[0m" 302 -
+2025-10-19 23:29:59,418 [INFO] GET /project/2/rights took 0.01s
+2025-10-19 23:29:59,418 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:59] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:29:59,432 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:29:59,432 [INFO] 127.0.0.1 - - [19/Oct/2025 23:29:59] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:30:05,860 [INFO] POST /project/2/rights took 0.01s
+2025-10-19 23:30:05,861 [INFO] 127.0.0.1 - - [19/Oct/2025 23:30:05] "[32mPOST /project/2/rights HTTP/1.1[0m" 302 -
+2025-10-19 23:30:05,876 [INFO] GET /project/2/rights took 0.01s
+2025-10-19 23:30:05,877 [INFO] 127.0.0.1 - - [19/Oct/2025 23:30:05] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:30:05,890 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:30:05,890 [INFO] 127.0.0.1 - - [19/Oct/2025 23:30:05] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:33:03,743 [INFO]  * Detected change in '/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py', reloading
+2025-10-19 23:33:03,777 [INFO]  * Restarting with stat
+2025-10-19 23:35:28,400 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 23:35:28,400 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 23:35:28,403 [INFO]  * Restarting with stat
+2025-10-19 23:35:38,261 [INFO] GET /p took 0.0s
+2025-10-19 23:35:38,261 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:38] "[33mGET /p HTTP/1.1[0m" 404 -
+2025-10-19 23:35:42,964 [INFO] GET / took 0.01s
+2025-10-19 23:35:42,965 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 23:35:42,974 [INFO] GET /login took 0.01s
+2025-10-19 23:35:42,974 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:42] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:35:52,038 [INFO] POST /login took 0.1s
+2025-10-19 23:35:52,038 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 23:35:52,077 [INFO] GET /main_layout took 0.0s
+2025-10-19 23:35:52,077 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:52] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 23:35:52,231 [INFO] GET /static/css/main.css took 0.01s
+2025-10-19 23:35:52,231 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:35:55,836 [INFO] GET /list_projects took 0.03s
+2025-10-19 23:35:55,837 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:55] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:35:58,525 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:35:58,526 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:58] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:35:58,550 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:35:58,551 [INFO] 127.0.0.1 - - [19/Oct/2025 23:35:58] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:36:01,820 [INFO] POST /project/2/rights took 0.01s
+2025-10-19 23:36:01,820 [INFO] 127.0.0.1 - - [19/Oct/2025 23:36:01] "[32mPOST /project/2/rights HTTP/1.1[0m" 302 -
+2025-10-19 23:36:01,841 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:36:01,842 [INFO] 127.0.0.1 - - [19/Oct/2025 23:36:01] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:36:01,857 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:36:01,857 [INFO] 127.0.0.1 - - [19/Oct/2025 23:36:01] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:41:33,827 [INFO]  * Detected change in '/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py', reloading
+2025-10-19 23:41:33,866 [INFO]  * Restarting with stat
+2025-10-19 23:41:40,232 [INFO]  * Detected change in '/home/ad/lxhome/j/jesundma/Linux/poistolaskenta/app.py', reloading
+2025-10-19 23:41:40,268 [INFO]  * Restarting with stat
+2025-10-19 23:41:47,548 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 23:41:47,548 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 23:41:47,552 [INFO]  * Restarting with stat
+2025-10-19 23:41:54,073 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:41:54,074 [INFO] 127.0.0.1 - - [19/Oct/2025 23:41:54] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:41:54,105 [INFO] GET /static/css/forms.css took 0.01s
+2025-10-19 23:41:54,106 [INFO] 127.0.0.1 - - [19/Oct/2025 23:41:54] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:42:03,125 [INFO] GET / took 0.01s
+2025-10-19 23:42:03,126 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:03] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-19 23:42:03,134 [INFO] GET /login took 0.0s
+2025-10-19 23:42:03,134 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:03] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:42:08,771 [INFO] POST /login took 0.1s
+2025-10-19 23:42:08,772 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 23:42:08,775 [INFO] GET /login took 0.0s
+2025-10-19 23:42:08,775 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:08] "GET /login HTTP/1.1" 200 -
+2025-10-19 23:42:18,710 [INFO] POST /login took 0.13s
+2025-10-19 23:42:18,710 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-19 23:42:18,820 [INFO] GET /main_layout took 0.01s
+2025-10-19 23:42:18,820 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:18] "GET /main_layout HTTP/1.1" 200 -
+2025-10-19 23:42:19,195 [INFO] GET /static/css/main.css took 0.0s
+2025-10-19 23:42:19,196 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-10-19 23:42:21,813 [INFO] GET /list_projects took 0.04s
+2025-10-19 23:42:21,813 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:21] "GET /list_projects HTTP/1.1" 200 -
+2025-10-19 23:42:24,170 [INFO] GET /project/2/rights took 0.03s
+2025-10-19 23:42:24,170 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:24] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:42:24,192 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:42:24,192 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:24] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:42:27,064 [INFO] POST /project/2/rights took 0.05s
+2025-10-19 23:42:27,065 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:27] "[32mPOST /project/2/rights HTTP/1.1[0m" 302 -
+2025-10-19 23:42:27,091 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:42:27,092 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:27] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:42:27,106 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:42:27,106 [INFO] 127.0.0.1 - - [19/Oct/2025 23:42:27] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:43:10,150 [INFO] POST /project/2/rights took 0.03s
+2025-10-19 23:43:10,150 [INFO] 127.0.0.1 - - [19/Oct/2025 23:43:10] "[32mPOST /project/2/rights HTTP/1.1[0m" 302 -
+2025-10-19 23:43:10,170 [INFO] GET /project/2/rights took 0.02s
+2025-10-19 23:43:10,171 [INFO] 127.0.0.1 - - [19/Oct/2025 23:43:10] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:43:10,187 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:43:10,188 [INFO] 127.0.0.1 - - [19/Oct/2025 23:43:10] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:43:13,192 [INFO] POST /project/2/rights took 0.03s
+2025-10-19 23:43:13,193 [INFO] 127.0.0.1 - - [19/Oct/2025 23:43:13] "[32mPOST /project/2/rights HTTP/1.1[0m" 302 -
+2025-10-19 23:43:13,212 [INFO] GET /project/2/rights took 0.01s
+2025-10-19 23:43:13,212 [INFO] 127.0.0.1 - - [19/Oct/2025 23:43:13] "GET /project/2/rights HTTP/1.1" 200 -
+2025-10-19 23:43:13,227 [INFO] GET /static/css/forms.css took 0.0s
+2025-10-19 23:43:13,227 [INFO] 127.0.0.1 - - [19/Oct/2025 23:43:13] "[36mGET /static/css/forms.css HTTP/1.1[0m" 304 -
+2025-10-19 23:43:14,506 [INFO] GET /list_projects/1 took 0.02s
+2025-10-19 23:43:14,506 [INFO] 127.0.0.1 - - [19/Oct/2025 23:43:14] "GET /list_projects/1 HTTP/1.1" 200 -

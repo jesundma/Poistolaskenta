@@ -417,92 +417,55 @@ def management_project(project_id):
     )
 
 @app.route("/project/<int:project_id>/rights", methods=["GET", "POST"])
-def rights_project(project_id): #tree structure error in VS, not collapsing correctly
+def rights_project(project_id):
     user_id = session.get("user_id")
+
+    # --- 1. User not logged in ---
     if not user_id:
-        flash("Et ole kirjautunut sisään.", "error")
+        flash("Sinun täytyy kirjautua sisään nähdäksesi projektin oikeudet.", "error")
         return redirect(url_for("login"))
 
-    project_name = request.args.get("project_name") or ""
-    project_type = request.args.get("project_type") or ""
-    depreciation_method = request.args.get("depreciation_method") or ""
-
-    creator_id = service_functions.get_project_creator_id(project_id)
-    if creator_id is None:
+    # --- 2. Project must exist ---
+    project = service_functions.get_project_by_id(project_id)
+    if not project:
         flash("Projektia ei löytynyt.", "error")
-        return redirect(url_for(
-            "list_projects",
-            project_name=project_name,
-            project_type=project_type,
-            depreciation_method=depreciation_method
-        ))
+        return redirect(url_for("list_projects", page=1))
 
-    if user_id != creator_id:
-        flash("Vain projektin luoja voi muuttaa oikeuksia.", "error")
+    # --- 3. Get creator and all users ---
+    creator_id = service_functions.get_project_creator_id(project_id)
+    all_users = service_functions.get_project_permissions(project_id)
 
-        # Get projects with filters
-        projects_rows = service_functions.get_projects(
-            search_name=project_name,
-            search_type=project_type,
-            search_method=depreciation_method
-        )
+    # Exclude creator from editable list (creator always has rights)
+    users = [u for u in all_users if u["id"] != creator_id]
+    can_edit = user_id == creator_id  # Only creator can edit
 
-        # Enrich projects
-        projects = []
-        for row in projects_rows:
-            project = dict(row)
-            definitions = service_functions.get_project_definitions(project["project_id"])
-            project["definitions"] = {d["title"]: d["value"] for d in definitions}
-            project["created"] = service_functions.get_project_creator(project["project_id"])
-            project["changes"] = []  # or implement modifications later
-            projects.append(project)
-
-        # Dropdown options
-        all_classes = service_functions.get_all_classes()
-        project_types = all_classes.get("Projektityyppi", [])
-        depreciation_methods = all_classes.get("Poistomenetelmä", [])
-
-        return render_template(
-            "list_projects.html",
-            projects=projects,
-            project_types=project_types,
-            depreciation_methods=depreciation_methods,
-            search_name=project_name,
-            search_type=project_type,
-            search_method=depreciation_method,
-            request=request
-        )
-
+    # --- 4. Handle POST (saving changes) ---
     if request.method == "POST":
-        permissions = {}
-        for user in service_functions.get_all_users():
-            if user["id"] == creator_id:
-                continue
-            can_modify = f"can_modify_{user['id']}" in request.form
-            permissions[user["id"]] = can_modify
+        if not can_edit:
+            flash("Sinulla ei ole oikeutta muuttaa tämän projektin käyttöoikeuksia.", "error")
+            return redirect(url_for("rights_project", project_id=project_id))
 
-        service_functions.update_project_permissions(project_id, creator_id, permissions)
-        flash("Oikeudet päivitetty.", "success")
+        try:
+            # Build permissions dict: {user_id: True/False}
+            permissions = {user["id"]: f"can_modify_{user['id']}" in request.form for user in users}
 
-        return redirect(url_for(
-            "rights_project",
-            project_id=project_id,
-            project_name=project_name,
-            project_type=project_type,
-            depreciation_method=depreciation_method
-        ))
+            # Update all permissions at once, creator is handled inside function
+            service_functions.update_project_permissions(project_id, creator_id, permissions)
 
-    users = service_functions.get_project_permissions(project_id)
+            flash("Oikeudet päivitetty onnistuneesti.", "success")
+        except Exception:
+            flash("Virhe tallennettaessa oikeuksia.", "error")
 
+        return redirect(url_for("rights_project", project_id=project_id))
+
+    # --- 5. Render GET page ---
     return render_template(
         "rights_project.html",
         project_id=project_id,
         users=users,
         creator_id=creator_id,
-        csrf_token=generate_csrf_token(),
-        project_name=project_name,
-        project_type=project_type,
-        depreciation_method=depreciation_method
+        can_edit=can_edit,
+        csrf_token=generate_csrf_token()
     )
 
 @app.route("/user_statistics")
